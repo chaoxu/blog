@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Chao Xu's Timeline</title>
+       <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/files/timeline/lib/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="/files/timeline/lib/mxn/mxn.js?(googlev3)"></script>
+    <script type="text/javascript" src="/files/timeline/lib/timeline-2.3.0.js" ></script>
+    <script type="text/javascript">SimileAjax.History.enabled = false;</script>
+    <script type="text/javascript" src="/files/timeline/src/timemap.js" ></script>
+    <script type="text/javascript">
+
+var tm;
+$(function() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    var td   = mm+'-'+dd+'-'+yyyy;
+    // make a custom map style
+    var styledMapType = new google.maps.StyledMapType([
+        {
+            featureType: "water",
+            elementType: "all",
+            stylers: [
+              { saturation: 0 },
+              { lightness: 100 }
+            ]
+        },
+        {
+            featureType: "all",
+            elementType: "all",
+            stylers: [
+              { saturation: -100 }
+            ]
+        }
+    ], {
+        name: "white"
+    });
+    
+    tm = TimeMap.init({
+        mapId: "map",               // Id of map div element (required)
+        timelineId: "timeline",     // Id of timeline div element (required)
+        options: {
+            eventIconPath: "images/",
+            centerOnItems: false,
+            showMapTypeCtrl: false,
+            mapCenter: {
+                              "lat" : 37.4219, 
+                              "lon" : -122.0839
+                           },
+            mapZoom: 5,
+        },
+        scrollTo: "now",
+        datasets: [
+            {
+                id: "education",
+                title: "Education",
+                theme: "red",
+                type: "basic",
+                options: {
+                    items: [
+                       {
+                          "start" : "2013-06-24",
+                          "end" : "2010-07-5",
+                          "point" : {
+                              "lat" : 47.47490, 
+                              "lon" : 19.0612
+                           },
+                          "title" : "ELTE Summer School in Mathematics",
+                          "options" : {
+                            "description": "Hosted at Eötvös Loránd University. Taking: The Graph Orientation Problem, A glimpse of discrete geometry, Algorithms for location and localization problems in networks",
+                          }
+                        },
+                        {
+                          "start" : "2012-07-16",
+                          "end" : "2012-08-10",
+                          "point" : {
+                              "lat" : 47.5722, 
+                              "lon" : -52.7344
+                           },
+                          "title" : "AARMS Summer School",
+                          "options" : {
+"description": "Held Place at Memorial University of Newfoundland. Courses: Combinatorial Designs and Graph Decompositions, Probabilistic Method and Random Graphs",
+                          }
+                        },
+                        {
+                          "start" : "2009-08-31",
+                          "end" : "2013-05-30",
+                          "point" : {
+                              "lat" : 40.9127,
+                              "lon" : -73.1203
+                           },
+                          "title" : "Stony Brook University",
+                          "options" : {
+"description": "Undergraduate Studies, Majors in Mathematics and Applied Mathematics and Statistics, Minor in Computer Science, Class of 2013",
+                          }
+                        },
+                        {
+                          "start" : "2012-02-01",
+                          "end" : "2012-05-20",
+                          "point" : {
+                              "lat" : 47.503615, 
+                              "lon" : 19.079915
+                           },
+                          "title" : "Budapest Semesters in Mathematics",
+                          "options" : {
+                            "description": "Spring 2012 Semester. Courses: Combinatorial Optimization, Combinatorics of Set Systems, Extremal Combinatorics, Complex Functions, Graph Theory, Real Functions and Measures, Set Theory, Topics in Number Theory: Additive Combinatorics",
+                          }
+                        },
+
+                        
+                        {
+                          "start" : "2005-08-31",
+                          "end" : "2009-05-30",
+                          "point" : {
+                              "lat" : 40.9421, 
+                              "lon" : -72.8675
+                           },
+                          "title" : "Shoreham-Wading River High School",
+                          "options" : {
+                            "description": "High School, Class of 2009",
+                          }
+                        },
+                        {
+                          "start" : "2004-05-31",
+                          "end" : "2005-05-30",
+                          "point" : {
+                              "lat" : -33.9256, 
+                              "lon" : 151.2393
+                           },
+                          "title" : "Randwick Boys High School",
+                          "options" : {
+                            "description": "",
+                          }
+                        },
+                    ]
+                }
+            },
+            {
+                id: "competition",
+                title: "Competitions",
+                theme: "purple",
+                type: "basic",
+                options: {
+                    items: [
+                        {
+                          "start" : "2011-12-03",
+                          "point" : {
+                              "lat" : 40.9127,
+                              "lon" : -73.1203
+                           },
+                          "title" : "William Lowell Putnam Mathematics Competition 2011",
+                          "options" : {
+                            "description": "",
+                          }
+                        },
+                        {
+                          "start" : "2010-12-04",
+                          "point" : {
+                              "lat" : 40.9127,
+                              "lon" : -73.1203
+                           },
+                          "title" : "William Lowell Putnam Mathematics Competition 2010",
+                          "options" : {
+                            "description": "Score 38, Rank 383",
+                          }
+                        },
+                        {
+                          "start" : "2009-12-05",
+                          "point" : {
+                              "lat" : 40.9127,
+                              "lon" : -73.1203
+                           },
+                          "title" : "William Lowell Putnam Mathematics Competition 2009",
+                          "options" : {
+                            "description": "Score 12, Rank 1083",
+                          }
+                        },
+                        {
+                          "start" : "2011-10-30",
+                          "point" : {
+                              "lat" : 40.7212, 
+                              "lon" : -73.6527
+                           },
+                          "title" : "ACM-ICPC Greater NY Regional 2011",
+                          "options" : {
+                            "description": "5th place, 2nd place in undergraduate teams. Hosted at Adelphi University",
+                          }
+                        },
+                        {
+                          "start" : "2010-10-24",
+                          "point" : {
+                              "lat" : 40.7414, 
+                              "lon" : -74.1726
+                           },
+                          "title" : "ACM-ICPC Greater NY Regional 2010",
+                          "options" : {
+                            "description": "16th place, 2nd place in freshman-sophomore teams. Hosted at Rutgers University",
+                          }
+                        },
+                        {
+                          "start" : "2009-10-18",
+                          "point" : {
+                              "lat" : 40.7179, 
+                              "lon" : -73.5996
+                           },
+                          "title" : "ACM-ICPC Greater NY Regional 2009",
+                          "options" : {
+                            "description": "27th place, 4th place in freshman-sophomore teams. Hosted at Hofstra University",
+                          }
+                        },
+                    ]
+                }
+            },
+            
+            {
+                id: "research",
+                title: "Research",
+                theme: "yellow",
+                type: "basic",
+                options: {
+                    items: [
+                        {
+                          "start" : "2010-06-04",
+                          "end" : "2010-08-12",
+                          "point" : {
+                              "lat" : 40.8717, 
+                              "lon" : -72.8697
+                           },
+                          "title" : "Brookhaven National Laborator SULI",
+                          "options" : {
+                            "description": "Worked on Theoretical Modeling of Diffuse Scattering",
+                          }
+                        },
+                        {
+                          "start" : "2011-06-04",
+                          "end" : "2011-07-30",
+                          "point" : {
+                              "lat" : 43.60317, 
+                              "lon" : -116.2024
+                           },
+                          "title" : "Boise State University REU",
+                          "options" : {
+                            "description": "Worked on computational problems in braid groups",
+                          }
+                        },
+                        {
+                          "start" : "2012-05-20",
+                          "end" : "2012-07-14",
+                          "point" : {
+                              "lat" : 34.66952, 
+                              "lon" : -82.83174
+                           },
+                          "title" : "Clemson University REU",
+                          "options" : {
+                            "description": "Doing an REU in Clemson University",
+                          }
+                        },
+            {
+                          "start" : "2013-02-11",
+                          "end" : td,
+                          "point" : {
+                              "lat" : 37.4219, 
+                              "lon" : -122.0839
+                           },
+                          "title" : "Google Mountain View",
+                          "options" : {
+                            "description": "Google Analytics Team",
+                          }
+                        },
+                    ]
+                }
+            },
+            
+            {
+                id: "conferences",
+                title: "Conferences",
+                theme: "green",
+                type: "basic",
+                options: {
+                    items: [
+                        {
+                          "start" : "2012-01-03",
+                          "end" : "2012-01-08",
+                          "point" : {
+                              "lat" : 42.34683, 
+                              "lon" : -71.08291
+                           },
+                          "title" : "Joint Mathematics Meeting 2012",
+                          "options" : {
+                            "description": "Presented at the poster session on the work done during REU in BSU.",
+                          }
+                        },
+                        {
+                          "start" : "2011-11-04",
+                          "end" : "2011-11-05",
+                          "point" : {
+                              "lat" : 40.8213, 
+                              "lon" : -73.9481
+                           },
+                          "title" : "21st Fall Workshop on Computational Geometry",
+                          "options" : {
+                            "description": "Hosted at City College of New York",
+                          }
+                        },
+                        {
+                          "start" : "2010-10-29",
+                          "end" : "2010-10-30",
+                          "point" : {
+                              "lat" : 40.9127,
+                              "lon" : -73.1203
+                           },
+                          "title" : "20st Fall Workshop on Computational Geometry",
+                          "options" : {
+                            "description": "Hosted at Stony Brook University",
+                          }
+                        },
+                        
+                        {
+                          "start" : "2011-04-02",
+                          "point" : {
+                              "lat" : 40.7385, 
+                              "lon" : -74.1787
+                           },
+                          "title" : "8th Annual Garden State Undergraduate Mathematics Conference",
+                          "options" : {
+                            "description": "Hosted at Essex County College",
+                          }
+                        },
+                                                {
+                          "start" : "2010-04-10",
+                          "point" : {
+                              "lat" : 40.5055, 
+                              "lon" : -74.3665
+                           },
+                          "title" : "7th Annual Garden State Undergraduate Mathematics Conference",
+                          "options" : {
+                            "description": "Hosted at Middlesex County College",
+                          }
+                        },
+                        {
+                          "start" : "2013-03-5",
+                          "point" : {
+                              "lat" : 26.37029,
+                              "lon" : -80.10588
+                           },
+                          "title" : "Forty-Fourth Southeastern International Conference on Combinatorics, Graph Theory, and Computing",
+                          "options" : {
+                            "description": "Hosted at Florida Atlantic University",
+                          }
+                        },
+                        {
+                          "start" : "2013-07-1",
+                          "end" : "2010-07-5",
+                          "point" : {
+                              "lat" : 47.501013, 
+                              "lon" : 19.046567
+                           },
+                          "title" : "Erdős Centennial",
+                          "options" : {
+                            "description": "Hosted at Hungarian Academy of Sciences",
+                          }
+                        },
+                    ]
+                }
+            },
+            
+            {
+                id: "vacation",
+                title: "Vacation",
+                theme: "blue",
+                type: "basic",
+                options: {
+                    items: [
+                        {
+                          "start" : "2008-10-25",
+                          "end" : "2008-12-31",
+                          "point" : {
+                              "lat" : 31.831, 
+                              "lon" : 117.224 
+                           },
+                          "title" : "A trip to China",
+                          "options" : {
+                            "description": "",
+                            "theme": "blue"
+                          }
+                        },
+                        {
+                          "start" : "2012-01-09",
+                          "end" : "2012-01-31",
+                          "point" : {
+                              "lat" : 31.831, 
+                              "lon" : 117.224 
+                           },
+                          "title" : "A trip to China",
+                          "options" : {
+                            "description": "",
+                            "theme": "blue"
+                          }
+                        },
+                    ]
+                }
+            },
+            
+        ],
+        bandIntervals: [
+        Timeline.DateTime.MONTH, 
+            Timeline.DateTime.YEAR, 
+        ]
+    });
+    
+
+    // set the map to our custom style
+    var gmap = tm.getNativeMap();
+    gmap.mapTypes.set("white", styledMapType);
+    gmap.setMapTypeId("white");
+});
+    </script>
+    <link href="examples.css" type="text/css" rel="stylesheet"/>
+    <style>
+    div#timelinecontainer{ height: 250px; }
+    div#mapcontainer{ height: 500px; }
+    </style>
+  </head>
+
+  <body>
+    <div id="timemap">
+        <div id="timelinecontainer">
+          <div id="timeline"></div>
+        </div>
+        <div id="mapcontainer">
+          <div id="map"></div>
+        </div>
+    </div>
+  </body>
+</html>

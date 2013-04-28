@@ -15,4 +15,6 @@
 
 ## Notes
 
-Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
+- Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
+- Remember to set cache to amazon s3 . Say `Cache-Control` to `public, max-age=31536000`
+- site44 doesn't support top level domains, you can use [wwwizer](http://wwwizer.com/naked-domain-redirect) to emulate the effect.

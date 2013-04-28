@@ -15,7 +15,7 @@ main = hakyll $ do
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
-    match (fromList ["favicon.ico","redirects.site44.txt"]) $ do
+    match (fromList ["favicon.ico","redirects.site44.txt","timeline.html"]) $ do
         route   idRoute
         compile copyFileCompiler
     match "*.md" $ do

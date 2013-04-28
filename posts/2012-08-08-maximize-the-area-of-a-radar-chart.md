@@ -7,7 +7,7 @@ People use [radar charts](http://en.wikipedia.org/wiki/Radar_chart) to present t
 
 Like all self presentations, it need to make the person "look good". A chart with larger area looks better than the ones with less area. The remaining of the article take about how to find a radar chart with maximum area.
 
-![Two Radar Charts](/files/radarchart.png.png)
+![Two Radar Charts](/files/radarchart.png)
 
 In the image above, the left side has less area than the right. 
 
