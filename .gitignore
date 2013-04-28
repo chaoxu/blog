@@ -1,4 +1,6 @@
+_site/
 _cache/
 *.hi
 *.o
 files/
+.DS_Store

@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'STIXGeneral';
+  src: url('files/fonts/stixgeneral-webfont.eot');
+  src: local('STIXGeneral'),local('STIXGeneral-Regular'), url('files/fonts/stixgeneral-webfont.woff') format('woff'), url('files/fonts/stixgeneral-webfont.ttf') format('truetype'), url('files/fonts/stixgeneral-webfont.svg#webfontZXtFAA5Q') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'STIXGeneral';
+  src: url('files/fonts/stixgeneralitalic-webfont.eot');
+  src: local('STIXGeneralItalic'),local('STIXGeneral-Italic'), url('files/fonts/stixgeneralitalic-webfont.woff') format('woff'), url('files/fonts/stixgeneralitalic-webfont.ttf') format('truetype'), url('files/fonts/stixgeneralitalic-webfont.svg#webfont2oJeLJIt') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'STIXGeneral';
+  src: url('files/fonts/stixgeneralbol-webfont.eot');
+  src: local('STIXGeneralBol'),local('STIXGeneral-Bold'), url('files/fonts/stixgeneralbol-webfont.woff') format('woff'), url('files/fonts/stixgeneralbol-webfont.ttf') format('truetype'), url('files/fonts/stixgeneralbol-webfont.svg#webfontwFpnxWyx') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'STIXGeneral';
+  src: url('files/fonts/stixgeneralbolita-webfont.eot');
+  src: local('STIXGeneralBolIta'),local('STIXGeneral-BoldItalic'), url('files/fonts/stixgeneralbolita-webfont.woff') format('woff'), url('files/fonts/stixgeneralbolita-webfont.ttf') format('truetype'), url('files/fonts/stixgeneralbolita-webfont.svg#webfontSsfHxKRo') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}

@@ -12,18 +12,14 @@ import           Control.Applicative        ((<$>))
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-    match "images/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
-
---    match (fromList ["about.md", "links.md", "index.md"]) $ do
+    match (fromList ["favicon.ico","redirects.site44.txt"]) $ do
+        route   idRoute
+        compile copyFileCompiler
     match "*.md" $ do
         route $ setExtension "html"
-        -- route $ customRoute $ (</> "index.html") . takeBaseName . toFilePath
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
@@ -73,7 +69,6 @@ postCtx =
     dateField "date" "%F" `mappend`
     defaultContext
 
-
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
@@ -81,18 +76,3 @@ postList sortFilter = do
     itemTpl <- loadBody "templates/post-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list
-
----------------------------------
-
--- myPageCompiler :: Compiler Resource (Page String) 
---myPageCompiler = pandocCompiler $ load 
-  -- >>= arr (fmap $ writePandocWith pandocOptions) 
-
-pandocOptions :: WriterOptions 
-pandocOptions = defaultHakyllWriterOptions 
-  { writerHTMLMathMethod = MathJax "" 
-  } 
---pandocOptions :: ReaderOptions 
---pandocOptions = defaultHakyllReaderOptions 
---  { writerHTMLMathMethod = MathJax "" 
---  } 

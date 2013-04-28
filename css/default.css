@@ -216,26 +216,6 @@ body.rtl #navigation ul {
     text-decoration: underline;
 }
 
-body.janus #navigation .secondary p,
-body.janus #theme-info .secondary p {
-    text-align: right;
-}
-
-body .feed {
-    display: block;
-    float: left;
-    padding: 1px 0 1px 20px;
-    min-height: 15px;
-    font-size: 0.8em;
-    background: url('images/icons.png') no-repeat 0 1px;
-}
-
-body.janus .feed, body.rtl .feed {
-    float: right;
-    padding: 1px 20px 1px 0;
-    background-position: 100% 1px;
-}
-
 /* HTML element control
 ----------------------------------------------- */
 p {
@@ -287,7 +267,7 @@ hr {
 }
 
 pre, code, tt {
-    font-family: 'Courier', 'Courier New', monospace;
+    font-family: 'Monaco', 'DejaVu Sans Mono', 'Consolas', 'Courier', 'Courier New', monospace;
     font-size: 1em;
     line-height:1.8;
     color: #4d4d4d;
@@ -372,18 +352,6 @@ body .content li {
     color: #404040;
 }
 
-#tagline {
-    font-family: STIXGeneral, Times, serif;
-    font-size: 1.5em;
-    font-weight: normal;
-    font-style: italic;
-    color: #808080;
-    margin: 0.1em 0 0.3em 0;
-    border: none;
-    padding: 0;
-    line-height: 120%;
-}
-
 h1, body .entry .title {
     font-family: STIXGeneral, Times, serif;
     font-size: 2em;
@@ -437,92 +405,6 @@ h6 {
     padding: 0;
 }
 
-/* Post content
------------------------------------------------ */
-body .articlenav {
-    margin: 0 0 2em 0;
-    border-bottom: 1px solid #e5e5e5;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    background: #fcffff;
-    color: #808080;
-}
-
-body.janus .articlenav {
-    text-align: right;
-}
-
-body.rtl .articlenav {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-body .entry {
-    margin: 0 0 2em 0;
-    clear: both;
-}
-
-body .posts .entry {
-    margin: 0 0 4em 0;
-}
-
-body .entry .meta {
-    margin: 0 0 1em 0;
-}
-
-body .entry .metadata {
-    font-size: 0.8em;
-    color: #808080;
-    margin: 0;
-    padding: 0;
-}
-
-body .entry .meta .metadata {
-    margin: 0;
-    padding: 0.3em 0 0 0;
-}
-
-body .aside {
-    margin: 0 0 4em 0;
-}
-
-body .aside .meta {
-    margin: -0.8em 0 0 0;
-    border-top: 1px dotted #d9d9d9;
-    padding: 0.2em 0 0 0;
-    color: #808080;
-    font-size: 0.8em;
-    text-align: right;
-    clear: both;
-}
-
-body .archive {
-    margin: 0 0 2em 0;
-}
-
-body .archive .meta {
-    margin: 0 0 1em 0;
-}
-
-body .link-pages {
-    font-size: 0.8em;
-    color: #808080;
-    clear: both;
-}
-
-body .pagination {
-    margin: 0;
-    font-family: STIXGeneral, Times, serif;
-    font-size: 1.5em;
-    font-weight: normal;
-    line-height: 120%;
-    color: #808080;
-    clear: both;
-}
-
-.sticky {
-    background-color: inherit;
-}
-
 /* Images
 ----------------------------------------------- */
 a img {
@@ -533,108 +415,13 @@ a:hover img, body .comment a:hover .avatar {
     border: 1px solid #a8001c;
 }
 
-/* Lists
------------------------------------------------ */
-body .navlist {
-    list-style: none;
-    margin: 0 0 1em 0;
-}
-
-body .navlist li {
-    margin: 0.5em 0;
-}
-
-body .navlist ul {
-    list-style: none;
-    margin: 0 0 0 1em;
-}
-
-body .navlist ul li {
-    margin: 0.5em 0;
-}
-
-#wrapper .navlist a:link,
-#wrapper .navlist a:visited,
-#wrapper .navlist a:hover,
-#wrapper .navlist a:active {
-    border-bottom: none;
-}
-
-body .archivelist {
-    list-style: none; 
-    margin: 0.5em 0 1em 0;
-}
-
-body .archivelist li {
-    margin: 0.5em 0;
-}
-
-body .archivelist ul {
-    list-style: none;
-    margin: 0 0 0 1.5em;
-}
-
-body .archivelist ul li {
-    margin: 0.5em 0;
-}
-
-body .postspermonth {
-    list-style: none;
-    margin: 0.5em 0 1em 0;
-}
-
-body .postspermonth li {
-    margin: 0.5em 0;
-}
-
-/* Sidebar
------------------------------------------------ */
-body .bookmarks ul {
-    list-style: none;
-    margin: 0 0 1em 0;
-}
-
-body .bookmarks ul li {
-    margin: 0.5em 0;
-}
-
 /* Footer
 ----------------------------------------------- */
 #footer {
-    margin: 0 20px 0 20px;
+    margin: 0.5em 20px 0 20px;
     border-top: 3px double #ccc;
     padding: 1em 0 0 0;
     font-size: 70%;
-}
-
-.recent-articles ul {
-    list-style: none;
-    margin: 0;
-}
-
-.recent-articles li {
-    margin: 0;
-}
-
-h4.recent-title {
-    margin: 0;
-}
-
-.recent-metadata {
-    font-size: 0.8em;
-    color: #808080;
-    margin: 0 0 0.5em 0;
-}
-
-.recent-excerpt {
-    line-height: 1.4;
-    margin: 0 0 1em 0;
-}
-
-#theme-info {
-    margin: 0.5em 0 0 0;
-    border-top: 3px double #ccc;
-    padding: 1em 0 0.5em 0;
     color: #808080;
 }
 

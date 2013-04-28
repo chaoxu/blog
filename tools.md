@@ -6,7 +6,7 @@ Here are some tools I wrote for some common tasks.
 
 Scripts(bash,python,etc)
 
-- [Simple keystroke counter.](/2013-01-simple-keystroke-counter) (link need fix)
+- [Simple keystroke counter.](/posts/2011-03-05-simple-keystroke-counter.html)
 - [Take screenshot and upload to imageshack.us.](https://gist.github.com/769905)
 - [Time-lapse video from screenshots.](https://gist.github.com/548639)
 - [clear+cat every time the file changes.](https://gist.github.com/378115)
@@ -17,4 +17,4 @@ Scripts(bash,python,etc)
 - [buggy latex 2 html program.](https://gist.github.com/1039506)
 - [Write the latest message in Freetalk to a file, useful with xmobar/dzen.](https://gist.github.com/1059622)
 - [Some tools related to Chinese, include break certain characters into radicals, and a text file of chengyu.](https://github.com/Mgccl/chinese)
-- [Build PCRE to match non-negative integer ranges.](2013-03-21-regular-expression-for-a-interval-of-non-negative-integers.html) (link need check)
+- [Build PCRE to match non-negative integer ranges.](/posts/2013-03-21-regular-expression-for-a-interval-of-non-negative-integers.html)
