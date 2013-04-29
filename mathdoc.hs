@@ -110,32 +110,8 @@ makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart] ++ content ++ 
         end = "</div>"
         rawEnd = RawBlock "html" end
         rawStart = RawBlock "html" divhead
-        content = (getDoc . readDoc) (concat [inittext, nametext," "] ++ xs)
+        content = (getDoc . readDoc) (concat [inittext, nametext,"&nbsp;&nbsp;"] ++ xs)
 
-{- makeTheorem (Header _ (_,_,parm) _) (CodeBlock _ xs) = 
-  (getDoc . readDoc) (concat [divhead,ttext,indextext,nametext," "] ++ xs ++ end)
-  where t = fromJust $ lookup "type" parm
-        name = fromJust $ lookup "name" parm
-        index = fromJust $ lookup "index" parm
-        divhead = concat ["<blockquote class=\"",
-                    t,
-                    "\" id=\"",
-                    t,
-                    "-",
-                    index,
-                    "\">"]
-        ttext = if (null index) 
-                   then "<span class=\"block_type\">" ++ t ++ ".</span>"
-                   else "<span class=\"block_type\">" ++ t ++ "</span>"
-        indextext = if (null name && (not $ null index))
-                     then " <span class=\"block_index\">" ++ index ++ ".</span>"
-                     else " <span class=\"block_index\">" ++ index ++ "</span>"
-        nametext = if null name 
-                     then "" 
-                     else " <span class=\"block_title\">(" ++ name ++ ").</span>"
-        end = if t == "Proof"
-                 then "\n<span style=\"float:right;font-size:80%\">&#9632;</span>\n</blockquote>"
-                 else "\n</blockquote>" -}
 makeTheorem x y = [x,y]
 
 getDoc (Pandoc _ xs) = xs

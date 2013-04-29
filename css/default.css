@@ -36,7 +36,6 @@ body {
     line-height: 120%;
     color: #404040;
     background: #fff;
-    text-align: left;
     margin-right: auto;
     margin-left: auto;
 }
@@ -169,6 +168,8 @@ body.rtl #navigation ul {
 p {
     text-indent: 1.5em;
     margin: 0 0 1em 0;
+    text-align: justify;
+    text-justify: auto;
 }
 
 blockquote {
