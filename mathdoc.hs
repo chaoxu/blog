@@ -29,7 +29,8 @@ incrementBlock = ["Theorem",
                   "Definition",
                   "Example",
                   "Lemma",
-                  "Problem"]
+                  "Problem",
+                  "Proposition"]
 otherBlock = ["Proof","Remark"]
 
 buildOr [x] = x
@@ -43,13 +44,7 @@ matchBlock = matchRegex blocks
 
 buildReplace (t,n,i) = [(concat ["[",t," ",show i,"]"], link2),
                         (concat ["[",t," ",n,"]"], link2)]
-  where link = concat ["<a href=\"#",
-                t ++ "-" ++ show i,
-                "\">",
-                t ++ " " ++ show i,
-                "</a>"
-                ]
-        link2 = "[" ++ t ++ " " ++ show i ++ "]"
+  where link2 = "[" ++ t ++ " " ++ show i ++ "]"
                 ++ "(#" ++ t ++ "-" ++ show i++")"
 
 formatTheorem s = replaceMany replaceTable (formatBlocks s)
@@ -94,14 +89,31 @@ theoremize xs = t xs
          | otherwise   = x:(t (y:xs))
         t x = x
 
--- merger s t = s ++ v
---  where u = (lines s) 
---        v = dropWhile (==[]) (lines t)
-makeTheorem (Header _ (_,_,parm) _) (CodeBlock _ xs) = 
+makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart] ++ content ++ [rawEnd]
+  where t = fromJust $ lookup "type" parm
+        name = fromJust $ lookup "name" parm
+        index = fromJust $ lookup "index" parm
+        divhead = concat ["<div class=\"",
+                    t,
+                    "\" id=\"",
+                    t,
+                    "-",
+                    index,
+                    "\">"]
+        modifier = if t `elem` otherBlock then "_" else "**"
+        inittext = modifier ++ t ++ indextext ++ initDot ++ modifier
+        initDot = if null name then "." else ""
+        indextext = if null index then "" else " " ++ index
+        nametext = if null name 
+                     then "" 
+                     else " (" ++ name ++ ")."
+        end = "</div>"
+        rawEnd = RawBlock "html" end
+        rawStart = RawBlock "html" divhead
+        content = (getDoc . readDoc) (concat [inittext, nametext," "] ++ xs)
+
+{- makeTheorem (Header _ (_,_,parm) _) (CodeBlock _ xs) = 
   (getDoc . readDoc) (concat [divhead,ttext,indextext,nametext," "] ++ xs ++ end)
-  -- [RawInline "html" $ unlines [divhead,ttext,indextext,nametext," "]]
-  -- ++ (getDoc . readDoc) xs ++
-  -- [RawInline "html" end]
   where t = fromJust $ lookup "type" parm
         name = fromJust $ lookup "name" parm
         index = fromJust $ lookup "index" parm
@@ -122,8 +134,8 @@ makeTheorem (Header _ (_,_,parm) _) (CodeBlock _ xs) =
                      then "" 
                      else " <span class=\"block_title\">(" ++ name ++ ").</span>"
         end = if t == "Proof"
-                 then "<span style=\"float:right;font-size:80%\">&#9632;</span></blockquote>"
-                 else "</blockquote>"
+                 then "\n<span style=\"float:right;font-size:80%\">&#9632;</span>\n</blockquote>"
+                 else "\n</blockquote>" -}
 makeTheorem x y = [x,y]
 
 getDoc (Pandoc _ xs) = xs

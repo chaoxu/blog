@@ -8,13 +8,16 @@ Note: This is just some notes I organized after reading the survey on [computati
 ### The Garside Normal Form
 
 {Definition}(The Positive Braid Monoid)
+    
     The positive braid monoid of $n$ strands is denoted as $B_n^+$. Such that $B_n^+\in B_n$ and $B_n^+$ contain only word in the form $\sigma_{a_1}\ldots\sigma_{a_l}$.
 
 {Definition}(The order relation)
+    
     - $a\leq b$ if $ac = b$, where $a,b,c \in B_n^+$. $a$ is called the left divisor of $b$.
     - $\gcd(a,b) = c$, if $cw = a$ and $cv = b$, such that $|c|$ is maximized, where $a,b,c,w,v\in B_n^+$. $c$ is called the greatest common divisor of $a$ and $b$.
 
 {Definition}(The Fundamental Braid)
+    
     The fundamental braid, or half-twist, on $n$ strands 
     \[
     \Delta_n = (\sigma_1\ldots \sigma_{n-1})(\sigma_1\ldots\sigma_{n-2})\ldots(\sigma_1\sigma_2)\sigma_1

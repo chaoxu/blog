@@ -12,24 +12,15 @@ $G$ is a simple graph, then $d(G) = \frac{2e(G)}{|G|}$ be the average degree of 
     Every graph $G$ has a component $H$, such that $d(H)\geq d(G)$.
 
 {Proof}
-    Fact: If $x_i,y_i>0$ and $\frac{x_i}{y_i} < t$ for all $1\leq i\leq k$, then $\frac{\sum_{i=1}^k x_i}{\sum_{i=1}^k y_i} < t$.
-    
-    Now consider the lemma is false, then consider all it's components $H_1,\ldots,H_k$, $d(H_i) = \frac{2e(H_i)}{|H_i|} < d(G)$, then $d(G) = \frac{\sum_{i=1}^k 2e(H_i)}{\sum_{i=1}^k |H_i|} < d(G)$, a contradiction.
+    Fact: If $x_i,y_i>0$ and $\frac{x_i}{y_i} < t$ for all $1\leq i\leq k$, then $\frac{\sum_{i=1}^k x_i}{\sum_{i=1}^k y_i} < t$. Assume the lemma is false, then consider all it's components $H_1,\ldots,H_k$, $d(H_i) = \frac{2e(H_i)}{|H_i|} < d(G)$, then $d(G) = \frac{\sum_{i=1}^k 2e(H_i)}{\sum_{i=1}^k |H_i|} < d(G)$, a contradiction.
  
 {Theorem}
     A simple graph $G$ must contain a path of length at least $d(G)$.
 
 {Proof}
-    Proof by induction. 
-    It is true for graph with 1 vertex. Assume it is true for all graphs with $k$ vertices, $k < n$.
-    
-    Consider graph $G$ of $n$ vertices.  
-    
-    If the graph has more than 1 component, then we use [Lemma 2] and show there exist a subgraph $H$ with strictly smaller number of vertices, such that $d(H)\geq d(G)$, and just apply the induction hypothesis.
-    
-    Otherwise, the graph is connected. If there exist a vertex $v$ with degree at most $\frac{1}{2}d(G)$, we can remove it, and $d(G-v) \geq d(G)$, then by inductive hypothesis, in $d(G-v)$ there will be a path of length at least $d(G)$. 
-    
-    If there is no such vertex. then we must have $\delta(G) > \frac{1}{2} d(G)$. By the [Lemma 1], we have it has a path of length $\min(2 \delta(G) ,|G|-1) \geq \min(\lceil d(G)\rceil ,|G|-1)$, but $d(G)\leq |G|-1$, thus it contain a path of length at least $d(G)$.
+    Proof by induction. It is true for graph with 1 vertex. Assume it is true for all graphs with $k$ vertices, $k < n$. Consider graph $G$ of $n$ vertices. If the graph has more than 1 component, then we use [Lemma 2] and show there exist a subgraph $H$ with strictly smaller number of vertices, such that $d(H)\geq d(G)$, and just apply the induction hypothesis.
+
+    Otherwise, the graph is connected. If there exist a vertex $v$ with degree at most $\frac{1}{2}d(G)$, we can remove it, and $d(G-v) \geq d(G)$, then by inductive hypothesis, in $d(G-v)$ there will be a path of length at least $d(G)$. If there is no such vertex. then we must have $\delta(G) > \frac{1}{2} d(G)$. By the [Lemma 1], we have it has a path of length $\min(2 \delta(G) ,|G|-1) \geq \min(\lceil d(G)\rceil ,|G|-1)$, but $d(G)\leq |G|-1$, thus it contain a path of length at least $d(G)$.
 
 ### Weighted Graph
 Can we generalize this problem to weighted graphs?
