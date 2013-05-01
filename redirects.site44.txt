@@ -1,2 +1,7 @@
 /2012/11/cache-aduni-videos-now-on-google-video /posts/2008-04-06-cache-aduni-videos-now-on-google-video.html
 /files http://s3.amazonaws.com/chaoxu_files/files
+about about.html
+research research.html
+links links.html
+problems problems.html
+cv http://s3.amazonaws.com/chaoxu_files/files/cv.pdf

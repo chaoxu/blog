@@ -12,25 +12,31 @@ import           Control.Applicative        ((<$>))
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+    -- static resources
+    match (fromList idPages) $ do
+        route   idRoute
+        compile copyFileCompiler
+    -- css
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
-    match (fromList ["favicon.ico","redirects.site44.txt","timeline.html"]) $ do
-        route   idRoute
-        compile copyFileCompiler
+    -- pages
     match "*.md" $ do
         route $ setExtension "html"
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
-
+    -- posts
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
-
+    -- raw posts
+    match "posts/*" $ version "raw" $ do
+        route   idRoute
+        compile getResourceBody
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -62,17 +68,21 @@ mathDoc :: Item String -> Compiler (Item String)
 mathDoc = return . fmap mathdoc
 
 mathCompiler = getResourceBody >>= mathDoc
-stuff = loadAndApplyTemplate "templates/default.html" postCtx
+
+idPages = ["favicon.ico",
+           "redirects.site44.txt",
+           "timeline.html",
+           "mathjax_conf.js",
+           "mimetypes.site44.txt"]
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
     dateField "date" "%F" `mappend`
     defaultContext
-
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
-    posts   <- sortFilter =<< loadAll "posts/*"
+    posts   <- sortFilter =<< loadAll ("posts/*" .&&. hasNoVersion)
     itemTpl <- loadBody "templates/post-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list

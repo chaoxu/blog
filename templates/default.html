@@ -10,29 +10,11 @@
         <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
         <link rel="stylesheet" type="text/css" href="/css/default.css" />
           <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
             </script>
-            <script type="text/javascript">
-            MathJax.Hub.Config({
-                  tex2jax: {
-                          inlineMath: [ ['$$','$$'], ['\\(','\\)'] ],
-                          processEscapes: true
-                  },
-                TeX: { 
-                        Macros: { 
-                            R: '{\\mathbb{R}}', 
-                            N: '{\\mathbb{N}}', 
-                            Z: '{\\mathbb{Z}}', 
-                            C: '{\\mathbb{C}}', 
-                            F: '{\\mathbb{F}}', 
-                            mex: '{\\mathop{\\operatorname{mex}}}', 
-                            lcm: '{\\mathop{\\operatorname{lcm}}}', 
-                     } 
-                    }, 
-                });
-                </script>
+        <script type="text/javascript" src="/mathjax_conf.js"></script>
+        <script type="text/javascript" src="/files/hyphenate.js"></script>
         <script type="text/javascript">
-
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-4171915-2']);
           _gaq.push(['_trackPageview']);
@@ -42,7 +24,6 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-          
           </script>
 
     </head>
@@ -67,6 +48,7 @@
             <div id="content">
                 <h1>$title$</h1>
                 $body$
+                <a href="$url$.md">source</a>
             </div>
             <div id="footer">© 2010 - 2013 Chao Xu. Licensed under <a href="http://www.wtfpl.net/txt/copying/">WTFPL v2</a> unless otherwise specified. <a href="/README.html">Blog README</a>.</div>
         </div>

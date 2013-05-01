@@ -34,10 +34,7 @@ body {
     font-family: STIXGeneral, Verdana, Helvetica, Arial, sans-serif;
     font-size: 100%;
     line-height: 120%;
-    color: #404040;
-    background: #fff;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
 
 #wrapper {
@@ -55,23 +52,6 @@ body {
 
 #footer, #theme-info, #footer-include {
     clear: both;
-}
-
-/* Fix floats
------------------------------------------------ */
-.clearfix:before, .clearfix:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    zoom: 1;
 }
 
 /* Positioning
@@ -98,28 +78,6 @@ body.rtl #wrapper {
 
 body.centre #wrapper {
     margin: 0 auto;
-}
-
-/* Header
------------------------------------------------ */
-#header-image {
-    overflow: hidden;
-    margin: 0 0 -20px 0;
-}
-
-#header-image a {
-    text-decoration: none;
-    border: none;
-}
-
-#header-image a img {
-    border: none;
-}
-
-#title {
-    margin: 0 0 -20px;
-    border-bottom: 1px solid #ccc;
-    padding-top: 20px;
 }
 
 #navigation {
@@ -167,10 +125,15 @@ body.rtl #navigation ul {
 ----------------------------------------------- */
 p {
     text-indent: 1.5em;
-    margin: 0 0 1em 0;
+    margin: 0 0 0 0;
     text-align: justify;
     text-justify: auto;
+    line-height: 150%;
 }
+
+p { -ms-word-break: break-all; word-break: break-all; word-break: break-word;
+-o-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto;
+-webkit-hyphens: auto; hyphens: auto; }
 
 blockquote {
     margin: 0 0 1em 0;
@@ -302,8 +265,8 @@ body .content li {
 }
 
 h1, body .entry .title {
-    font-size: 2em;
-    font-weight: normal;
+    font-size: 1.5em;
+    font-weight: bold;
     line-height: 120%;
     margin: 0;
     border-bottom: 1px solid #ccc;
@@ -311,7 +274,7 @@ h1, body .entry .title {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: normal;
     line-height: 120%;
     margin: 0 0 0.5em 0;
@@ -320,11 +283,8 @@ h2 {
 h3 {
     font-size: 1.3em;
     font-weight: normal;
-    color: #6CC644;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
     margin: 0 0 0.8em 0;
-    border-bottom: 1px solid #e5e5e5;
     padding: 0 0 0.4em 0;
 }
 
@@ -375,16 +335,11 @@ a:hover img, body .comment a:hover .avatar {
 ----------------------------------------------- */
 a {
     text-decoration: none;
-}
-
-a:link, a:active {
     color: #4183c4;
 }
-a:visited {
-    color: #006a80;
-}
+
 a:hover {
-    color: #a8001c;
+    text-decoration:underline;
 }
 
 .Lemma, .Theorem, .Corollary, .Definition, .Conjecture, .Proof, .Problem{
@@ -405,7 +360,7 @@ a:hover {
     display: inline-block;
     font-size: 100%;
     position: relative;
-    top: -35px;
+    top: -20px;
     float: right;
 }
 .Proof .block_type {
@@ -424,4 +379,16 @@ a:hover {
 }
 .info {
   color: #808080;
+}
+
+.gist-file {
+  line-height: 1.2;
+  font-size: 75%;
+}
+
+table.postindex{
+  width: 100%;
+}
+table.postindex td.right {
+  text-align: right;
 }
