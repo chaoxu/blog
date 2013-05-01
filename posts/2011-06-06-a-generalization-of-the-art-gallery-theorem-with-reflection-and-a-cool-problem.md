@@ -12,10 +12,10 @@ The definition of guard, visibility, etc. are defined in the wiki for the [art g
 One want to generalize the notion of guarding a polygon. Instead of walls, the edges become mirrors. The light loses intensity every time it get reflected on the mirror. Therefore after $k$ reflections, it become indistinguishable to a guard.
 
 {Definition}($k$-reflection visible)
-    Given polygon $P$. $p,q\in P$. $p$ is called \emph{$k$-reflection visible} to $q$ if and only if there is a ray of light from $p$ to $q$, such that it reflects at most $k$ times on the boundary of the polygon. Each reflection follows the law of reflection. (angle of incidence = angle of reflection.)
+    Given polygon $P$. $p,q\in P$. $p$ is called *$k$-reflection visible* to $q$ if and only if there is a ray of light from $p$ to $q$, such that it reflects at most $k$ times on the boundary of the polygon. Each reflection follows the law of reflection. (angle of incidence = angle of reflection.)
 
 {Definition}($k$-reflection guard)
-    A \emph{$k$-reflection guard} is a guard that can see all the points that are $k$-reflection visible from himself.
+    A *$k$-reflection guard* is a guard that can see all the points that are $k$-reflection visible from himself.
 
 {Theorem}
     If $G_k(n)$ is the minimal number of $k$-reflection guard required to guard any polygon of $n$ vertices. Then $G_k(n)=\lfloor \frac{n}{3} \rfloor$.

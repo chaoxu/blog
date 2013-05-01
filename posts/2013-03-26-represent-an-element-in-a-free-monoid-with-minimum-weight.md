@@ -43,6 +43,6 @@ D(i,j) &= \min(P(i,j)\cup \{ D(i,k)+D(k+1,j)| i\leq k\leq j-1\})
 
 Here $\min$ return any of the expressions that achieves the minimum weight. This allows a $O(n^3)$ algorithm if one uses suffix tree for finding $P(i,j)$. One can naively try all possible $Power(x,k)$ instead, where $k|n$.
 
-Here is an Haskell code for it. It is designed to show the algorithm instead of been efficient. This has real life usage to \href{http://chaoxuprime.com/2013/03/regular-expression-for-a-interval-of-non-negative-integers}{compress regular expressions}.
+Here is an Haskell code for it. It is designed to show the algorithm instead of been efficient. This has real life usage to [compress regular expressions](/posts/2013-03-21-regular-expression-for-a-interval-of-non-negative-integers.html).
  
 <script src="https://gist.github.com/Mgccl/72a82300b9750f9c0374.js"></script>

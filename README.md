@@ -1,5 +1,10 @@
 I choosed to make this blog because I want to use [Haskell](http://www.haskell.org/) and save some hosting money by not hosting a [Drupal](http://drupal.org/) on [A2 Hosting](http://www.a2hosting.com/).
 
+## Tips to users
+
+- Firefox can't render this correctly under Mac, I wonder if this also affect other systems.
+- You can find the source of a post by replace the extension `.html` by `.md`.
+
 ## Technology
 
 1.  The source of the blog is on a [git repository](https://github.com/Mgccl/blog). 
@@ -12,6 +17,7 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 8.  Coded most of the things in [Sublime Text 2](http://www.sublimetext.com/2).
 9.  The theme is [Tarski](http://tarskitheme.com/) with few changes.
 10. The math are shown with [MathJax](http://www.mathjax.org).
+11. The heading themes are similar to [Connections in Combinatorial Optimization](http://www.amazon.com/gp/product/0199205272/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199205272&linkCode=as2&tag=fighterempire-20), and the remaining themes are similar to [Categories for the Working Mathematician](http://www.amazon.com/gp/product/0387984038/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0387984038&linkCode=as2&tag=fighterempire-20). The symbols are of [STIX fonts](http://www.stixfonts.org/). 
 
 ## Todo
 
@@ -23,4 +29,3 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 
 - Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
 - Remember to set cache to amazon s3 . Say, set `Cache-Control` to `public, max-age=31536000`
-- You can find the source of a post by replace the extension `.html` by `.md`.

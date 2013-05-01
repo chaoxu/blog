@@ -12,19 +12,10 @@ License URI: http://www.opensource.org/licenses/gpl-2.0.html
 
 /* Initial cleanup
 ----------------------------------------------- */
-html, body, form, fieldset {
-    /* margin: 0; */
+html, body {
     padding: 0;
     display: table;
     margin: auto;
-}
-
-form label {
-    cursor: pointer;
-}
-
-fieldset {
-    border: none;
 }
 
 /* Main structure
@@ -59,35 +50,14 @@ body {
 body {
     text-align: left;
 }
-
-body.rtl {
-    text-align: right;
-}
-
-body.centre {
-    text-align: center;
-}
-
 body #wrapper {
     margin: 0 auto 0 0;
 }
-
-body.rtl #wrapper {
-    margin: 0 0 0 auto;
-}
-
-body.centre #wrapper {
-    margin: 0 auto;
-}
-
-#navigation {
-    margin: 20px 0 0 0;
-    border-bottom: 1px solid #ccc;
-}
-
 /* Navigation
 ----------------------------------------------- */
 #navigation {
+    margin: 20px 0 0 0;
+    border-bottom: 1px solid #ccc;
     position: relative;
 }
 
@@ -101,39 +71,30 @@ body.centre #wrapper {
     padding: 0;
 }
 
-body.rtl #navigation ul {
-    direction: ltr;
-}
-
 #navigation li {
     display: block;
     margin: 0 15px 0 0;
-    padding: 6px 0 7px 0;
+    padding: 3px 0 3px 0;
     float: left;
     position: relative;
-}
-
-#navigation .menu-item a {
-    display: block;
-}
-
-#navigation .navbar-toggle:hover {
-    text-decoration: underline;
 }
 
 /* HTML element control
 ----------------------------------------------- */
 p {
-    text-indent: 1.5em;
     margin: 0 0 0 0;
     text-align: justify;
     text-justify: auto;
-    line-height: 150%;
+    line-height: 1.5em;
 }
 
 p { -ms-word-break: break-all; word-break: break-all; word-break: break-word;
 -o-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto;
 -webkit-hyphens: auto; hyphens: auto; }
+
+p + p {
+    text-indent: 1.5em;
+}
 
 blockquote {
     margin: 0 0 1em 0;
@@ -149,16 +110,12 @@ em {
     font-style: italic;
 }
 
-acronym, abbr {
-    border-bottom: 1px solid #8fb7bf;
-}
-
 small {
     font-size: 0.8em;
 }
 
 sup, sub {
-    font-size: 75%;
+    font-size: 0.75em;
 }
 
 sup {
@@ -215,36 +172,26 @@ ul, ol {
     margin: 0 0 1em 15px;
     padding: 0;
 }
-
 ul {
     list-style: disc;
 }
 
 li {
-    margin: 0 0 0.25em 0;
+    line-height: 1.5em;
 }
-
-body.rtl ul, body.rtl ol {
-    margin: 0 15px 1em 0; padding: 0;
+ul li {
+    margin: 0 0 0.25em 0.35em;
+}
+ol li {
+    margin: 0 0 0.25em 0.45em;
 }
 
 /* Global content control
 ----------------------------------------------- */
-body .content img {
-    max-width: 500px;
+img {
+    max-width: 800px;
     height: auto;
-}
-
-body .content a img {
-    max-width: 498px;
-}
-
-body .content p {
-    line-height: 1.4;
-}
-
-body .content li {
-    line-height: 1.4;
+    margin: auto;
 }
 
 /* Headers
@@ -259,66 +206,35 @@ body .content li {
     line-height: 200%;
     text-align:center;
 }
-
-#blog-title a {
-    color: #404040;
+/* The headers tries to emulate the format of
+ Oxfod Lecture Series in Mathematics and Its Applications */
+h1 {
+    font-size: 2.0em;
+    line-height: 1.2em;
+    border-bottom: 1px solid #000;
 }
-
-h1, body .entry .title {
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 120%;
-    margin: 0;
-    border-bottom: 1px solid #ccc;
-    padding: 0 0 0.1em 0;
-}
-
 h2 {
-    font-size: 1.4em;
-    font-weight: normal;
-    line-height: 120%;
-    margin: 0 0 0.5em 0;
+    font-size: 1.15em;
+    line-height: 3em;
+    font-weight: bold;
 }
-
 h3 {
-    font-size: 1.3em;
-    font-weight: normal;
-    letter-spacing: 0.1em;
-    margin: 0 0 0.8em 0;
-    padding: 0 0 0.4em 0;
-}
-
-h4 {
     font-size: 1.2em;
+    font-style: italic;
     font-weight: normal;
-    line-height: 120%;
-    margin: 0 0 0.3em 0;
 }
-
+h4 {
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+}
+/* You must be doing it wrong... if you use the following headings
+No one need more than 3 levels in a short article... */
 h5 {
     font-size: 1em;
-    font-weight: bold;
-    line-height: 120%;
-    margin: 0 0 0.3em 0;
-    padding: 0;
 }
-
 h6 {
     font-size: 0.8em;
-    font-weight: bold;
-    line-height: 120%;
-    margin: 0 0 0.3em 0;
-    padding: 0;
-}
-
-/* Images
------------------------------------------------ */
-a img {
-    border: 1px solid #4183c4;
-}
-
-a:hover img, body .comment a:hover .avatar {
-    border: 1px solid #a8001c;
 }
 
 /* Footer
@@ -328,7 +244,7 @@ a:hover img, body .comment a:hover .avatar {
     border-top: 3px double #ccc;
     padding: 1em 0 0 0;
     font-size: 70%;
-    color: #808080;
+    color: #999;
 }
 
 /* Links
@@ -342,19 +258,28 @@ a:hover {
     text-decoration:underline;
 }
 
+#blog-title a {
+    color: #000;
+    text-decoration:none;
+}
+
 .Lemma, .Theorem, .Corollary, .Definition, .Conjecture, .Proof, .Problem{
-  color: #000000;
+  color: #000;
   padding: 0 0;
   margin: 20px 0;
-  font-style: italic
+  font-style: italic;
+  text-indent: 1.5em;
 }
+
 .Problem, .Lemma strong, .Theorem strong, .Corollary strong, .Definition strong, .Conjecture strong {
   font-style: normal;
 }
+
 .Proof {
   padding: 0 0;
   font-style: normal;
 }
+
 .Proof:after {
     content: '∎';
     display: inline-block;
@@ -363,24 +288,6 @@ a:hover {
     top: -20px;
     float: right;
 }
-.Proof .block_type {
-  font-weight: normal;
-  font-style: italic;
-}
-.block_type {
-  font-weight: bold;
-  font-style: normal;
-}
-.block_index {
-  font-weight: bold;
-  font-style: normal;
-}
-.block_title {
-}
-.info {
-  color: #808080;
-}
-
 .gist-file {
   line-height: 1.2;
   font-size: 75%;
@@ -388,6 +295,9 @@ a:hover {
 
 table.postindex{
   width: 100%;
+}
+.info {
+  color: #999;
 }
 table.postindex td.right {
   text-align: right;

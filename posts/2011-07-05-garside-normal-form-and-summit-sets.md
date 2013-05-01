@@ -5,7 +5,7 @@ tags: braid group, BSU REU
 
 Note: This is just some notes I organized after reading the survey on [computational problems in the braid group by Jonathan Boiser](http://campillos.ucmerced.edu/~jboiser/boiserMSThesis.pdf). 
  
-### The Garside Normal Form
+## The Garside Normal Form
 
 {Definition}(The Positive Braid Monoid)
     
@@ -49,7 +49,7 @@ Note $\mathcal{D}$ generates the braid group.
 
 The index of $w$ is also $h-g$, where $h,g$ are the number of positive and negative generators respectively. No matter how $w$ is presented, the index is a constant. This is obvious because all braid relations doesn't change the index.
 
-### The Summit Set
+## The Summit Set
 Let $[w]$ be the conjugacy class of $w$, in other words, $w'\in[w]$ if and only if $w = c^{-1}w'c$ for some $c\in B_n$. One write $w\sim w'$ if $w'\in[w]$
 
 How can one check if $w\sim w'$? This is the conjugacy problem. Note $[w]$ is not finite unless $w=1$. Search through the entire set is impossible. The solution is similar to the word problem, it's also about finding a ``normal form'' for $[w]$. There are special subsets of $[w]$, such that there exist an algorithm with input $w'$. The algorithm output the subset if and only if $w'\in [w]$.
@@ -82,13 +82,13 @@ The theorem implies that every word in the conjugacy class can be reached by rep
 {Theorem}
     For $w,w'\in B_n$, $w\sim w'$ if and only if $SS(w) = SS(w')$
 
-### Complexity
-#### Complexity of the word problem
+## Complexity
+### Complexity of the word problem
 To solve the word problem with Garside normal form, one can always put it in the $\Delta^{-k}p$ form in linear time. Then factor out the $\Delta$ divisors in $p$, and test if the resulting word is 1. 
 
 Factoring out the divisors can be done in quadratic time with respect to the word length by using a refined version of the Garside normal form, Thurston's left greedy normal form.
 
-#### Complexity of the conjugacy problem
+### Complexity of the conjugacy problem
 Given the theorems, one can divise the following algorithm to solve the conjugacy problem:
 
 1. Input $w$ and $w'$, present them in Garside normal form. 

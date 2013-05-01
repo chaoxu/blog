@@ -110,7 +110,7 @@ makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart] ++ content ++ 
         end = "</div>"
         rawEnd = RawBlock "html" end
         rawStart = RawBlock "html" divhead
-        content = (getDoc . readDoc) (concat [inittext, nametext,"&nbsp;&nbsp;"] ++ xs)
+        content = (getDoc . readDoc) (concat [inittext, nametext,"&#8194;&#8194;"] ++ xs)
 
 makeTheorem x y = [x,y]
 

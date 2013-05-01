@@ -21,6 +21,6 @@ It is important to also handle cases where we will have repeated elements
 
 `(12){4}`
 
-This is done by recursively try to compress a free monoid element with the [FreeMonoidCompress](2013-03-26-represent-an-element-in-a-free-monoid-with-minimum-weight) module.
+This is done by recursively try to compress a free monoid element with the [FreeMonoidCompress](/posts/2013-03-26-represent-an-element-in-a-free-monoid-with-minimum-weight.html) module.
 
 <script src="https://gist.github.com/Mgccl/5210853.js"></script>
