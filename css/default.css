@@ -22,12 +22,13 @@ html, body {
 ----------------------------------------------- */
 body {
     min-width: 840px;
-    font-family: STIXGeneral, Verdana, Helvetica, Arial, sans-serif;
+    font-family: MathJax_Main, Verdana, Helvetica, Arial, sans-serif;
     font-size: 100%;
     line-height: 120%;
     margin: auto;
 }
-
+/* mac has built in STIXGeneral font! */
+.mac body {font-family: STIXGeneral, MathJax_Main, Verdana, Helvetica, Arial, sans-serif}
 #wrapper {
     width: 840px;
     background-color: #fff;
@@ -77,8 +78,11 @@ body #wrapper {
     padding: 3px 0 3px 0;
     float: left;
     position: relative;
+    border: 0;
 }
-
+#navigation li a {
+    border: 0;
+}
 /* HTML element control
 ----------------------------------------------- */
 p {
@@ -249,18 +253,18 @@ h6 {
 
 /* Links
 ----------------------------------------------- */
-a {
+a { 
     text-decoration: none;
-    color: #4183c4;
+    border-bottom: 1px black dotted;
+    color: #000;
 }
-
-a:hover {
-    text-decoration:underline;
+a:hover { 
+    border: 0;
 }
-
 #blog-title a {
     color: #000;
     text-decoration:none;
+    border: 0;
 }
 
 .Lemma, .Theorem, .Corollary, .Definition, .Conjecture, .Proof, .Problem{

@@ -3,5 +3,6 @@
 about about.html
 research research.html
 links links.html
+works works.html
 problems problems.html
 cv http://s3.amazonaws.com/chaoxu_files/files/cv.pdf

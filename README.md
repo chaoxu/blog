@@ -17,7 +17,8 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 8.  Coded most of the things in [Sublime Text 2](http://www.sublimetext.com/2).
 9.  The theme is [Tarski](http://tarskitheme.com/) with few changes.
 10. The math are shown with [MathJax](http://www.mathjax.org).
-11. The heading themes are similar to [Connections in Combinatorial Optimization](http://www.amazon.com/gp/product/0199205272/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199205272&linkCode=as2&tag=fighterempire-20), and the remaining themes are similar to [Categories for the Working Mathematician](http://www.amazon.com/gp/product/0387984038/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0387984038&linkCode=as2&tag=fighterempire-20). The symbols are of [STIX fonts](http://www.stixfonts.org/). 
+11. The heading themes are similar to [Connections in Combinatorial Optimization](http://www.amazon.com/gp/product/0199205272/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199205272&linkCode=as2&tag=fighterempire-20), and the remaining themes are similar to [Categories for the Working Mathematician](http://www.amazon.com/gp/product/0387984038/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0387984038&linkCode=as2&tag=fighterempire-20). The symbols are of [STIX fonts](http://www.stixfonts.org/), or mathjax's own.
+12. Uses [CSS Browser Selector](http://rafael.adm.br/css_browser_selector/) for browser specific css.
 
 ## Todo
 
