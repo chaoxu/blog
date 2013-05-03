@@ -15,6 +15,8 @@ Here is my [CV](/files/cv.pdf). (Updated July 2012)
 I want to know more about:
 Category theory, stringology, combinatorics on words, type theory, Haskell, programming languages, metric geometry, rewriting system, and functional data structures. 
 
+Feel free to [donate some money to me](http://www.pledgie.com/campaigns/19986) for whatever reason.
+
 Timeline of some things about me.
 
 <iframe src="/timeline.html" width="800px" height="800px" frameborder="0" scrolling="no" marginwidth="0px" marginheight="0px"></iframe>

@@ -19,14 +19,23 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 10. The math are shown with [MathJax](http://www.mathjax.org).
 11. The heading themes are similar to [Connections in Combinatorial Optimization](http://www.amazon.com/gp/product/0199205272/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199205272&linkCode=as2&tag=fighterempire-20), and the remaining themes are similar to [Categories for the Working Mathematician](http://www.amazon.com/gp/product/0387984038/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0387984038&linkCode=as2&tag=fighterempire-20). The symbols are of [STIX fonts](http://www.stixfonts.org/), or mathjax's own.
 12. Uses [Detect Whether a Font is Installed](http://www.kirupa.com/html5/detect_whether_font_is_installed.htm) to fall back on mathjax webfont if STIX is not installed.
+13. [Hyphenator.js](https://code.google.com/p/hyphenator/) to make the it look even more latex like. 
 
 ## Todo
 
 - Maybe add a CDN? (well... it's not like I get 5 milion views).
 - Tags (man I really don't want to spend so much time on this site...).
 - Compress the HTML. (Not easy, since there are math formats that doesn't allow compression.)
+- Move toward HTML5? `<article> <section> <nav> <header> <footer>` goodness!
+- Better MathDoc. As in produce `<div>` so things like theorems are more semantical.
+- source code view.
+- Syntax highlight.
+- Easier link to gist/wiki/other common links
+- Embedder(embed graphs other things...). Thus a fully functional MathDoc markdown.
 
 ## Notes
 
 - Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
 - Remember to set cache to amazon s3 . Say, set `Cache-Control` to `public, max-age=31536000`
+
+[![Feed Me](http://www.pledgie.com/campaigns/19986.png?skin_name=chrome)](http://www.pledgie.com/campaigns/19986)
