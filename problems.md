@@ -2,7 +2,13 @@
 title: Problems
 ---
 
-### k-wise intersections and (k+1)-wise intersections
+## Radar Charts
+
+1. Find the condition a existance of a convex radar charts.
+2. Optimize for the max area under the condition.
+3. Given two set of data, find the radar chart that maximizes or minimizes $|a-b|$, $a/b$.
+ 
+## k-wise intersections and (k+1)-wise intersections
 
 Let $S$ a finite set of sets. Define $S_k$ and $D_k$.
 \[
@@ -19,14 +25,14 @@ Trivially, $x\in S_{k+1}$, $y\in S_k$, then $x\subset y$.
 {Proof}
     If $x,y\in D_k$ and $x\cap y$ is nonempty and $x\neq y$. Since $x=\bigcap_{i=1}^k x_i$ and $y = \bigcap_{i=1}^k y_i$, $x\cap y = \bigcap_{i=1}^k x_i \cap y_i$, and there are at least some $i,j$, such that $x_i\neq y_j$. This shows $x\cap y \subset \bigcap \mathcal{S}_{k+1}$.
 
-### Maximum number of edges in a Hasse Diagram on a poset of $n$ elements
+## Maximum number of edges in a Hasse Diagram on a poset of $n$ elements
 What's the maximum number of edges in a Hasse Diagram on a poset of $n$ elements?
 
 Equivalently, find an upper bound of the number of edges in the transitive reduction of any graph $G$.
 
 Answer: For even $n$, it's $\frac{n^2}{4}$, for odd $n$, $\frac{n^2-2n}{4}$. Solution comes from the maximal triangle free graph is bipartite, and transitive reductions are triangle free.
 
-### Compute associative operations faster
+## Compute associative operations faster
 **Input:** Let $M$ be some set, such that all elements in $M$ takes $O(1)$ space to store. 
 
 1. List $a_1,\ldots, a_n$, where $a_i\in M$. This is stored as an array and cost no extra memory.
@@ -48,10 +54,10 @@ k = \left| \bigcup_{1 \leq i\leq m} \{s_i,s_i+1,\ldots, t_i -1, t_i\} \right|
 
 I do not know if there exist an algorithm that satisfies all the goals at the same time.
 
-### Distance from closest permutation with one cycle
+## Distance from closest permutation with one cycle
 Let $[n]=\{1,\ldots,n\}$. $f:[n]\to[n]$. Find a permutation $\pi:[n]\to[n]$, such that $\pi$ has only one cycle, and the hamming distance between $f$ and $\pi$ is minimized.  (By Matt Dipple)
 
-### Saving on multiple binary searchs
+## Saving on multiple binary searchs
 
 We have two sorted arrays $A$ with $n$ elements and $B$ with $m$ elements. such that all the elements are unique and every element in $B$ appears in $A$.
 

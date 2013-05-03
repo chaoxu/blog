@@ -1,4 +1,4 @@
-module MathDoc ( mathdoc ) where
+module MathDoc ( mathdoc, mathdocInline) where
 import Text.Pandoc
 import Text.Regex
 import Data.Maybe
@@ -18,12 +18,14 @@ readDoc = readMarkdown mathdocRead
 
 writeDoc :: Pandoc -> String
 writeDoc = writeHtmlString mathdocWrite
---main :: IO ()
---main = interact (compute . formatTheorem)
 
 mathdoc :: String->String
 mathdoc = compute . formatTheorem
 
+mathdocInline :: String->String
+mathdocInline = removeP . writeDoc . readDoc
+  where removeP x = drop 3 (take ((length x) - 4) x) 
+  
 incrementBlock = ["Theorem",
                   "Conjecture",
                   "Definition",
@@ -75,11 +77,9 @@ formatBlock x n
         typeDes = " {type="++ bType ++" index="++ index ++" name=" ++ name' ++ "}"
 
 compute x = (writeDoc $ bottomUp latex $ bottomUp theoremize $ readDoc x) ++ "\n"
---compute2 x = (show $ bottomUp theoremize $ readDoc x) ++ "\n"
---compute3 x = (show $ readDoc x) ++ "\n"
 
 latex :: Block -> Block
-latex (RawBlock "latex" s) = RawBlock "html" s
+latex (RawBlock "latex" s) = RawBlock "html" ("<span class=\"math\">" ++s ++ "</span>")
 latex x = x
 
 theoremize :: [Block] -> [Block]

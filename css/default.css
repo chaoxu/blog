@@ -27,8 +27,9 @@ body {
     line-height: 120%;
     margin: auto;
 }
-/* mac has built in STIXGeneral font! */
-.mac body {font-family: STIXGeneral, MathJax_Main, Verdana, Helvetica, Arial, sans-serif}
+.stix body {
+    font-family: STIXGeneral, MathJax_Main, Verdana, Helvetica, Arial, sans-serif;
+}
 #wrapper {
     width: 840px;
     background-color: #fff;

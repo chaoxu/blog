@@ -9,6 +9,9 @@ import           Text.Pandoc
 import           MathDoc
 import           Control.Monad
 import           Control.Applicative        ((<$>))
+import           Data.Monoid                   (Monoid (..))
+import           Control.Applicative           (Alternative (..), (<$>))
+import           Data.Maybe
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
@@ -36,7 +39,7 @@ main = hakyll $ do
     -- raw posts
     match "posts/*" $ version "raw" $ do
         route   idRoute
-        compile getResourceBody
+        compile copyFileCompiler
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -74,11 +77,23 @@ idPages = ["favicon.ico",
            "timeline.html",
            "mathjax_conf.js",
            "mimetypes.site44.txt"]
+----
+betterTitleField :: Context String
+betterTitleField = Context $ \k i -> do
+    value <- getMetadataField (itemIdentifier i) k
+    maybe empty return (if k == "title" then (Just (mathdocInline $ fromJust value)) else value)
+
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
     dateField "date" "%F" `mappend`
-    defaultContext
+    bodyField     "body"  `mappend`
+    betterTitleField      `mappend`
+    urlField      "url"   `mappend`
+    pathField     "path"  `mappend`
+    titleField    "title" `mappend`
+    constField    "tags"  "" `mappend`
+    missingField
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
