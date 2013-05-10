@@ -4,6 +4,8 @@ title: Geeky Todo
 
 ## Todo
 
+1. Graph Database
+
 ## Think about
 
 1. Traveling salesman... certain probability don't get the required item...

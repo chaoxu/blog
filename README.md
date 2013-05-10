@@ -19,7 +19,7 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 10. The math are shown with [MathJax](http://www.mathjax.org).
 11. The heading themes are similar to [Connections in Combinatorial Optimization](http://www.amazon.com/gp/product/0199205272/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199205272&linkCode=as2&tag=fighterempire-20), and the remaining themes are similar to [Categories for the Working Mathematician](http://www.amazon.com/gp/product/0387984038/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0387984038&linkCode=as2&tag=fighterempire-20). The symbols are of [STIX fonts](http://www.stixfonts.org/), or mathjax's own.
 12. Uses [Detect Whether a Font is Installed](http://www.kirupa.com/html5/detect_whether_font_is_installed.htm) to fall back on mathjax webfont if STIX is not installed.
-13. [Hyphenator.js](https://code.google.com/p/hyphenator/) to make the it look even more latex like. 
+13. [Hyphenator.js](https://code.google.com/p/hyphenator/) to make the it look even more latex like.
 
 ## Todo
 
@@ -32,6 +32,7 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 - Syntax highlight.
 - Easier link to gist/wiki/other common links
 - Embedder(embed graphs other things...). Thus a fully functional MathDoc markdown.
+- H1 heading
 
 ## Notes
 
