@@ -12,7 +12,7 @@ import Data.List (nub)
 mathdocRead = def{readerExtensions = insert Ext_tex_math_double_backslash $ 
                                      insert Ext_tex_math_single_backslash $ 
                                      insert Ext_raw_tex pandocExtensions}
-mathdocWrite = def{writerHTMLMathMethod = MathJax ""}
+mathdocWrite = def{writerHTMLMathMethod = MathJax "", writerHtml5 = True}
 readDoc :: String -> Pandoc
 readDoc = readMarkdown mathdocRead
 

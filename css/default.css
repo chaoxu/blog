@@ -14,24 +14,20 @@ body {
     font-size: 100%;
     line-height: 120%;
     margin: auto;
+    background-color: #fff;
+    width: 840px;
 }
 .stix body {
     font-family: STIXGeneral, MathJax_Main, Verdana, Helvetica, Arial, sans-serif;
 }
-#wrapper {
-    width: 840px;
-    background-color: #fff;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-#header, #content {
+header, article {
     margin-bottom: 2em;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-#footer, #theme-info, #footer-include {
+footer, #theme-info, #footer-include {
     clear: both;
 }
 
@@ -39,29 +35,23 @@ body {
 ----------------------------------------------- */
 body {
     text-align: left;
-}
-body #wrapper {
     margin: 0 auto 0 0;
 }
 /* Navigation
 ----------------------------------------------- */
-#navigation {
+nav {
     margin: 20px 0 0 0;
     border-bottom: 1px solid #ccc;
     position: relative;
 }
 
-#navigation .secondary {
-    padding: 5px 0;
-}
-
-#navigation ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#navigation li {
+nav ul li {
     display: block;
     margin: 0 15px 0 0;
     padding: 3px 0 3px 0;
@@ -69,7 +59,7 @@ body #wrapper {
     position: relative;
     border: 0;
 }
-#navigation li a {
+nav ul li a {
     border: 0;
 }
 /* HTML element control
@@ -80,10 +70,6 @@ p {
     text-justify: auto;
     line-height: 1.5em;
 }
-
-p { -ms-word-break: break-all; word-break: break-all; word-break: break-word;
--o-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto;
--webkit-hyphens: auto; hyphens: auto; }
 
 p + p {
     text-indent: 1.5em;
@@ -232,7 +218,7 @@ h6 {
 
 /* Footer
 ----------------------------------------------- */
-#footer {
+footer {
     margin: 0.5em 20px 0 20px;
     border-top: 3px double #ccc;
     padding: 1em 0 0 0;

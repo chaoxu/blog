@@ -2,7 +2,7 @@
 title: About
 ---
 
-I'm a software engineer at Google, working on Google Analytics.
+I'm [Chao Xu](https://www.facebook.com/chao.xu), a software engineer at Google, working on Google Analytics.
 
 I was student of [Stony Brook University](http://www.stonybrook.edu). Major in mathematics and applied mathematics. Minor in computer science. 
 

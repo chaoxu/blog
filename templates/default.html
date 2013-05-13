@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="utf-8">
+        <meta name="description" content="The Art Gallery Guardian">
+        <meta name="author" content="Chao Xu">
         <title>$title$</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/default.css" />
         <script type="text/javascript">
                   var canvas = document.createElement("canvas");
                   var context = canvas.getContext("2d");
@@ -40,31 +40,31 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
           </script>
-
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
     </head>
     <body class="tex2jax_ignore">
-        <div id="wrapper">
-            <div id="header">
-                <div id="blog-title">
-                    <a href="/">The Art Gallery Guardian</a>
-                </div>
-                <div id="navigation">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/files/cv.pdf">CV</a></li>
-                        <li><a href="/research.html">Projects/Research/Ideas</a></li>
-                        <li><a href="/tools.html">Tools</a></li>
-                        <li><a href="/links.html">Links</a></li>
-                        <li><a href="/archive.html">Archive</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="content">
-                <h1>$title$</h1>
-                $body$
-            </div>
-            <div id="footer">© 2010 - 2013 Chao Xu. Licensed under <a href="http://www.wtfpl.net/txt/copying/">WTFPL v2</a> unless otherwise specified. <a href="/README.html">Blog README</a>.</div>
-        </div>
+      <header>
+          <div id="blog-title">
+              <a href="/">The Art Gallery Guardian</a>
+          </div>
+          <nav>
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about.html">About</a></li>
+                  <li><a href="/files/cv.pdf">CV</a></li>
+                  <li><a href="/research.html">Projects/Research/Ideas</a></li>
+                  <li><a href="tools.html">Tools</a></li>
+                  <li><a href="/links.html">Links</a></li>
+                  <li><a href="/archive.html">Archive</a></li>
+              </ul>
+          </nav>
+      </header>
+      <article>
+          <h1>$title$</h1>
+          $body$
+      </article>
+      <footer>© 2010 - 2013 Chao Xu. Licensed under <a href="http://www.wtfpl.net/txt/copying/">WTFPL v2</a> unless otherwise specified. <a href="/README.html">Blog README</a>.</footer>
     </body>
 </html>
