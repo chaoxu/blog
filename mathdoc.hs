@@ -88,7 +88,7 @@ theoremize xs = t xs
          | isTheorem x = makeTheorem x y ++ (t xs)
          | otherwise   = x:(t (y:xs))
         t x = x
-
+{-
 makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart] ++ content ++ [rawEnd]
   where t = fromJust $ lookup "type" parm
         name = fromJust $ lookup "name" parm
@@ -111,7 +111,32 @@ makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart] ++ content ++ 
         rawEnd = RawBlock "html" end
         rawStart = RawBlock "html" divhead
         content = (getDoc . readDoc) (concat [inittext, nametext,"&#8194;&#8194;"] ++ xs)
-
+-}
+makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart,rawHead] ++ content ++ [rawEnd]
+  where t = fromJust $ lookup "type" parm
+        name = fromJust $ lookup "name" parm
+        index = fromJust $ lookup "index" parm
+        sectionhead = concat ["<section class=\"theorem-environment ",
+                    t,
+                    "\" id=\"",
+                    t,
+                    "-",
+                    index,
+                    "\">"]
+        inittext = "<span class=\"theorem-header\">" ++ typetext ++ indextext ++ nametext ++ "</span>"
+        typetext = "<span class=\"type\">" ++ t ++ "</span>" 
+        indextext = if null index 
+                     then "" 
+                     else "<span class=\"index\">" ++ index ++ "</span>"
+        nametext = if null name 
+                     then "" 
+                     else "<span class=\"name\">" ++ name ++ "</span>"
+        end = "</section>"
+        rawEnd = RawBlock "html" end
+        rawStart = RawBlock "html" sectionhead
+        rawHead = RawBlock "html" inittext
+        content = (getDoc . readDoc) xs
+        
 makeTheorem x y = [x,y]
 
 getDoc (Pandoc _ xs) = xs

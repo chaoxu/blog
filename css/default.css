@@ -247,25 +247,47 @@ a:hover {
   padding: 0 0;
   margin: 20px 0;
   font-style: italic;
-  text-indent: 1.5em;
 }
 
-.Problem, .Lemma strong, .Theorem strong, .Corollary strong, .Definition strong, .Conjecture strong {
+/*.Lemma .type, .Theorem .type, .Corollary .type, .Definition .type, .Conjecture .type, .Problem .type,
+.Lemma .index, .Theorem .index, .Corollary .index, .Definition .index, .Conjecture .index, .Problem .index{
+*/
+
+.theorem-header {
+  font-weight: bold;
   font-style: normal;
 }
-
+.theorem-header .index:before {
+  content: ' ';
+}
+.theorem-header .name:before {
+  content: ' (';
+}
+.theorem-header .name:after {
+  content: ')';
+}
+.theorem-header:after {
+  content: '.\2002\2002';
+}
+.theorem-header + p{
+    display:inline;
+}
+.Proof .type {
+  font-style: italic;
+  font-weight: normal;
+}
 .Proof {
   padding: 0 0;
   font-style: normal;
+  position: relative;
 }
-
 .Proof:after {
     content: '∎';
     display: inline-block;
     font-size: 100%;
-    position: relative;
-    top: -20px;
-    float: right;
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
 }
 .gist-file {
   line-height: 1.2;

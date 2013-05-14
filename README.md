@@ -26,8 +26,6 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 - Maybe add a CDN? (well... it's not like I get 5 milion views).
 - Tags (man I really don't want to spend so much time on this site...).
 - Compress the HTML. (Not easy, since there are math formats that doesn't allow compression.)
-- Move toward HTML5? `<article> <section> <nav> <header> <footer>` goodness!
-- Better MathDoc. As in produce `<div>` so things like theorems are more semantical.
 - source code view.
 - Syntax highlight.
 - Easier link to gist/wiki/other common links
