@@ -88,30 +88,7 @@ theoremize xs = t xs
          | isTheorem x = makeTheorem x y ++ (t xs)
          | otherwise   = x:(t (y:xs))
         t x = x
-{-
-makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart] ++ content ++ [rawEnd]
-  where t = fromJust $ lookup "type" parm
-        name = fromJust $ lookup "name" parm
-        index = fromJust $ lookup "index" parm
-        divhead = concat ["<div class=\"",
-                    t,
-                    "\" id=\"",
-                    t,
-                    "-",
-                    index,
-                    "\">"]
-        modifier = if t `elem` otherBlock then "_" else "**"
-        inittext = modifier ++ t ++ indextext ++ initDot ++ modifier
-        initDot = if null name then "." else ""
-        indextext = if null index then "" else " " ++ index
-        nametext = if null name 
-                     then "" 
-                     else " (" ++ name ++ ")."
-        end = "</div>"
-        rawEnd = RawBlock "html" end
-        rawStart = RawBlock "html" divhead
-        content = (getDoc . readDoc) (concat [inittext, nametext,"&#8194;&#8194;"] ++ xs)
--}
+        
 makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart,rawHead] ++ content ++ [rawEnd]
   where t = fromJust $ lookup "type" parm
         name = fromJust $ lookup "name" parm

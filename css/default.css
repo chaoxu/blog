@@ -9,13 +9,12 @@ html, body {
 /* Main structure
 ----------------------------------------------- */
 body {
-    min-width: 840px;
     font-family: MathJax_Main, Verdana, Helvetica, Arial, sans-serif;
     font-size: 100%;
     line-height: 120%;
     margin: auto;
     background-color: #fff;
-    width: 840px;
+    min-width: 840px;
 }
 .stix body {
     font-family: STIXGeneral, MathJax_Main, Verdana, Helvetica, Arial, sans-serif;
@@ -30,7 +29,9 @@ header, article {
 footer, #theme-info, #footer-include {
     clear: both;
 }
-
+article {
+    width:840px;
+}
 /* Positioning
 ----------------------------------------------- */
 body {
@@ -241,18 +242,12 @@ a:hover {
     text-decoration:none;
     border: 0;
 }
-
-.Lemma, .Theorem, .Corollary, .Definition, .Conjecture, .Proof, .Problem{
+.theorem-environment{
   color: #000;
   padding: 0 0;
   margin: 20px 0;
   font-style: italic;
 }
-
-/*.Lemma .type, .Theorem .type, .Corollary .type, .Definition .type, .Conjecture .type, .Problem .type,
-.Lemma .index, .Theorem .index, .Corollary .index, .Definition .index, .Conjecture .index, .Problem .index{
-*/
-
 .theorem-header {
   font-weight: bold;
   font-style: normal;

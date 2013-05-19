@@ -7,6 +7,7 @@ Consider a rank $k$ free monoid $(M,\cdot)$ with free generators $G$. Sometimes 
 For example, $aababababaaaa = a(ab)^4a^4$.
 
 {Problem}
+
     Find the shortest way to write down an element in a free monoid.
 
 There are problems on how long are the parentheses, exponentials etc. Therefore we generlize it to allow weight to those operations. 
@@ -18,9 +19,12 @@ Formally. For any free monoid $M$ with free generators $G$, we can construct ano
 2. $a\in M^*$, $n\in\N$, then $Power(a,n) \in M^*$. 
 
 {Definition}
+
     Consider a homomorphism $w:M^*\to \N$. Such that for all $n$, it satisfy the following criteria: 
+    
     1. $w(a)\leq w(b) \implies w(Power(a,n))\leq w(Power(b,n))$,
     2. $w(a)\leq w(Power(a,1))$.
+    
     $w$ is a weight function.
 
 Let $f:M^*\to M$, such that
@@ -30,6 +34,7 @@ Let $f:M^*\to M$, such that
 - $f(Power(a,n)) = a^n$.
 
 {Problem}
+
     Given $a\in M$, we want to find $a'\in M^*$, such that $f(a') = a$ and $w(a')$ is minimized.
 
 The input is $a_1\ldots a_n$.

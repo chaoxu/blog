@@ -1,10 +1,5 @@
 I choosed to make this blog because I want to use [Haskell](http://www.haskell.org/) and save some hosting money by not hosting a [Drupal](http://drupal.org/) on [A2 Hosting](http://www.a2hosting.com/).
 
-## Tips to users
-
-- Firefox can't render this correctly under Mac, I wonder if this also affect other systems.
-- You can find the source of a post by replace the extension `.html` by `.md`.
-
 ## Technology
 
 1.  The source of the blog is on a [git repository](https://github.com/Mgccl/blog). 
@@ -26,7 +21,6 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 - Maybe add a CDN? (well... it's not like I get 5 milion views).
 - Tags (man I really don't want to spend so much time on this site...).
 - Compress the HTML. (Not easy, since there are math formats that doesn't allow compression.)
-- source code view.
 - Syntax highlight.
 - Easier link to gist/wiki/other common links
 - Embedder(embed graphs other things...). Thus a fully functional MathDoc markdown.

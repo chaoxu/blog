@@ -27,7 +27,7 @@ main = hakyll $ do
     match "*.md" $ do
         route $ setExtension "html"
         compile $ mathCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
     -- posts
     match "posts/*" $ do
@@ -46,6 +46,7 @@ main = hakyll $ do
             let archiveCtx =
                     field "posts" (\_ -> postList recentFirst) `mappend`
                     constField "title" "Archives"              `mappend`
+                    titleField    "htmltitle"                  `mappend`
                     defaultContext
 
             makeItem ""
@@ -78,14 +79,30 @@ idPages = ["favicon.ico",
            "mathjax_conf.js",
            "mimetypes.site44.txt"]
 ----
+htmlTitleField :: Context String
+htmlTitleField = Context $ \k i -> 
+    if (k /= "htmltitle")
+    then do empty
+    else do value <- getMetadataField (itemIdentifier i) "title"
+            return (if isNothing value then "" else fromJust value)
+                                                                    
 betterTitleField :: Context String
-betterTitleField = Context $ \k i -> do
-    value <- getMetadataField (itemIdentifier i) k
-    maybe empty return (if k == "title" then (Just (mathdocInline $ fromJust value)) else value)
+betterTitleField = Context $ \k i -> 
+    if (k /= "title")
+    then do empty
+    else do value <- getMetadataField (itemIdentifier i) "title"
+            return (mathdocInline $ if isNothing value then "" else fromJust value)
+
+sourceField key = field key $
+    fmap (maybe empty (sourceUrl . toUrl)) . getRoute . itemIdentifier
+
+sourceUrl xs = (take (length xs - 4) xs) ++ "md"
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
+    sourceField "source"  `mappend`
+    htmlTitleField        `mappend`
     dateField "date" "%F" `mappend`
     bodyField     "body"  `mappend`
     betterTitleField      `mappend`
