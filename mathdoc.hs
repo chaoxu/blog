@@ -117,7 +117,7 @@ makeTheorem x y = [x,y]
 
 -- strip <p> and </p> of the beginning to the end of the html.
 stripParagraph html = if take 3 html == "<p>" 
-                        then take (length html - 6) (drop 3 html) 
+                        then take (length html - 8) (drop 3 html)
                         else html
 
 getDoc (Pandoc _ xs) = xs
