@@ -25,7 +25,7 @@ One want to generalize the notion of guarding a polygon. Instead of walls, the e
 
     The lower bound can be proved with a Chvátal's comb with very thin teeth. A Chvátal's comb with 3 teeth is shown below.
 
-    ![Chvátal's comb](/files/chvatals_comb.png}
+    ![Chvátal's comb](/files/chvatals_comb.png)
 
     Since for each teeth, the result is symmetric. We only have to consider one teeth. Suppose we pick $p$ to be the teeth vertex. A ray can behave in 2 cases:
     Case 1: The ray escape the teeth after the first reflection, and bounce between the parallel lines for $k-1$ times. It's easy to see the furthest distance this ray can travel from the teeth is bounded by the angle of the teeth and the distance between the lines. One can always find a polygon, such that the distance between teeth is large enough, such that no visible region from case 1 can overlap.
