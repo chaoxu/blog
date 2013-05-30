@@ -16,8 +16,8 @@ MathJax.Hub.Config({
       processEscapes: true,
       ignoreClass: "tex2jax_ignore",
       processClass: "math",
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']]
+      //inlineMath: [['$','$'], ['\\(','\\)']],
+      //displayMath: [['$$','$$'], ['\\[','\\]']]
     },
   "HTML-CSS": {
     availableFonts: ["STIX","TeX"],
