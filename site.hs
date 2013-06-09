@@ -106,10 +106,8 @@ postCtx =
     dateField "date" "%F" `mappend`
     bodyField     "body"  `mappend`
     betterTitleField      `mappend`
-    urlField      "url"   `mappend`
-    pathField     "path"  `mappend`
-    titleField    "title" `mappend`
-    constField    "tags"  "" `mappend`
+    defaultContext        `mappend`
+    constField "tags"  "" `mappend`
     missingField
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String

@@ -43,3 +43,5 @@ By this definition, all the entries in a totally unimodular matrix must be $-1,0
         3. adding scala multiple of two different rows, note how it doesn't change the determinant of any submatrix except unit matrix. 
      
 The above properties can be useful to prove many simple statements, for example, operations like duplicate a row, column are closed in $TU$.
+
+$TU$ is not closed under matrix multiplication, consider $\begin{bmatrix} 1 & 1 \\ 0 & 1\end{bmatrix}^2 = \begin{bmatrix} 1 & 2 \\ 0 & 1\end{bmatrix}$. 
