@@ -28,7 +28,9 @@ By this definition, all the entries in a totally unimodular matrix must be $-1,0
            \end{bmatrix} \in TU
        \].
     4. If $A$ is a square matrix, then $A^{-1} \in TU$,
-    5. If $A'$ is formed by applying an elementary row operation on $A$ and is a $-1,0,1$ matrix, then $A'\in TU$,
+    5. If $A'$ is formed by row swapping of $A$, then $A'\in TU$.
+    6. Multiply by ${-1,0,1}$ to a row.
+    
     
 {Proof}
 
@@ -36,11 +38,9 @@ By this definition, all the entries in a totally unimodular matrix must be $-1,0
     2. square submatrix of $A'$ is also square submatrix of $A$.
     3. The submatrices that doesn't contain the first row has corresponding submatrix in $A$, ones that does contain the first row has determinant 0.   
     4. see [inverse of a totally unimodular matrix](http://mathoverflow.net/questions/128113/inverse-of-a-totally-unimodular-matrix).
-    5. There are three row operations, 
-       
-        1. row switching. Consider we switched row $i$ and $j$. Consider any submatrix, if it doesn't contain row $i$ or $j$, then it still has determinant $-1,0,1$. If it contain both row $i$ and $j$, then the determinant is just the negation when the rows are switched back. If it only contain one of row $i$ and $j$, wlog let it be $i$, then it has the rows in order $a_1,\ldots,a_k,i,a_{k+1},\ldots,a_l$, then there is a submatrix in $A$ using the rows in sequence $a_1,\ldots,a_j,i,a_{j+1},\ldots,a_l$, and the absolute value of their determinants are equal. 
-        2. multiply by a constant to preserve the $-1,0,1$ properties, then use the argument similar as above, note the determinant of the submatrix can change only by sign.
-        3. adding scala multiple of two different rows, note how it doesn't change the determinant of any submatrix except unit matrix. 
+    5. row switching. Consider we switched row $i$ and $j$. Consider any submatrix, if it doesn't contain row $i$ or $j$, then it still has determinant $-1,0,1$. If it contain both row $i$ and $j$, then the determinant is just the negation when the rows are switched back. If it only contain one of row $i$ and $j$, wlog let it be $i$, then it has the rows in order $a_1,\ldots,a_k,i,a_{k+1},\ldots,a_l$, then there is a submatrix in $A$ using the rows in sequence $a_1,\ldots,a_j,i,a_{j+1},\ldots,a_l$, and the absolute value of their determinants are equal. 
+    6. multiply by a constant to preserve the $-1,0,1$ properties, then use the argument similar as above, note the determinant of the submatrix can change only by sign.
+
      
 The above properties can be useful to prove many simple statements, for example, operations like duplicate a row, column are closed in $TU$.
 

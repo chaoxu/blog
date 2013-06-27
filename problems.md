@@ -1,6 +1,13 @@
 ---
 title: Problems
 ---
+## Swap balls so bins have same color balls
+
+http://cs.stackexchange.com/questions/12560/use-minimum-number-of-swaps-so-each-bin-contains-balls-of-the-same-color
+
+## Minimum moves to fill up the bins
+
+http://cs.stackexchange.com/questions/12441/is-it-np-hard-to-fill-up-bins-with-minimum-moves
 
 ## Radar Charts
 
@@ -53,6 +60,8 @@ k = \left| \bigcup_{1 \leq i\leq m} \{s_i,s_i+1,\ldots, t_i -1, t_i\} \right|
 3. The algorithm uses little time. A lower bound is $\Omega(m+k)$.
 
 I do not know if there exist an algorithm that satisfies all the goals at the same time.
+
+http://cs.stackexchange.com/questions/11091/find-interval-sums-with-minimum-number-of-operation
 
 ## Distance from closest permutation with one cycle
 Let $[n]=\{1,\ldots,n\}$. $f:[n]\to[n]$. Find a permutation $\pi:[n]\to[n]$, such that $\pi$ has only one cycle, and the hamming distance between $f$ and $\pi$ is minimized.  (By Matt Dipple)
