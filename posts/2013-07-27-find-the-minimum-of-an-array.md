@@ -8,7 +8,7 @@ Consider an array $a$ of $n$ entries from a totally ordered set. There exist a i
 
 How fast can we find such $j$? The worst time is $O(n)$. When all the elements are equal, you must transverse the entire array to figure that out.
 
-If $m$ is the maximum time an element occurs in the array, then we can find an algorithm that solves this problem in $O(m + \log n)$ time.
+If $m$ is the maximum time an element occurs in the array, then we can find an algorithm that solves this problem in $O(m + \log \frac{n}{m})$ time.
 
 ## Algorithm
 
@@ -33,7 +33,7 @@ Here is the code in Go:
 
 <script src="https://gist.github.com/Mgccl/6094392.js"></script>
 
-## Complexity:
+## Complexity
 
 $T(m,n)$ is the time to run the algorithm on an array of length $n$ with $m$ repeats.
 
@@ -44,4 +44,11 @@ T(m,n)  = \begin{cases}
          \frac{1}{3}T(m,n) + O(1) & \text{otherwise}
          \end{cases}       
 \]
-For $n$ larger than $\frac{m}{6}$, the algorithm will have around $O(\log n)$ recursive calls, each one cost $O(1)$ time. Once it reaches small $n$, it will spend $O(n)=O(m)$ time on a linear search. The algorithm spends a total of $O(m+\log n)$ time.
+For $n$ larger than $\frac{m}{6}$, the algorithm will have $O(\log \frac{n}{m})$ recursive calls, each one cost $O(1)$ time. Once it reaches small $n$, it will spend $O(n)=O(m)$ time on a linear search. The algorithm spends a total of $O(m+ \log \frac{n}{m})$ time.
+
+## Notes
+
+[Brosef Stalin](https://www.facebook.com/BrosefStylin) offered an alternative logic that offers cleaner code.
+<script src="http://pastebin.com/embed_js.php?i=107WhrsU"></script> 
+
+Can we generalize this to first increase then decrease then increase arrays? One can show $O(n)$ is best possible by considering an array with $a[i]=i$ for all $i\neq j$, and $a[j]=-1$. There is no way to find $j$ with out looking over every position.

@@ -78,4 +78,4 @@ If $m = O(\frac{n}{\log n})$. We can do $m$ binary searches, and find all the po
 
 What about when $m = \Omega(\frac{n}{\log n})$?
 
-Answer: It can be done in $O(m \log \frac{n}{m})$ time \href{http://cstheory.stackexchange.com/questions/10407/merging-two-binary-search-trees}{according to this}.
+Answer: It can be done in $O(m \log \frac{n}{m})$ time [according to this](http://cstheory.stackexchange.com/questions/10407/merging-two-binary-search-trees).
