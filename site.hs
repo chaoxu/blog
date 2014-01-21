@@ -84,14 +84,14 @@ htmlTitleField = Context $ \k i ->
     if (k /= "htmltitle")
     then do empty
     else do value <- getMetadataField (itemIdentifier i) "title"
-            return (if isNothing value then "" else fromJust value)
+            return $ StringField (if isNothing value then "" else fromJust value)
                                                                     
 betterTitleField :: Context String
 betterTitleField = Context $ \k i -> 
     if (k /= "title")
     then do empty
     else do value <- getMetadataField (itemIdentifier i) "title"
-            return (mathdocInline $ if isNothing value then "" else fromJust value)
+            return $ StringField (mathdocInline $ if isNothing value then "" else fromJust value)
 
 sourceField key = field key $
     fmap (maybe empty (sourceUrl . toUrl)) . getRoute . itemIdentifier

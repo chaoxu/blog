@@ -79,7 +79,7 @@ formatBlock x n
 compute x = (writeDoc $ bottomUp latex $ bottomUp theoremize $ readDoc x) ++ "\n"
 
 latex :: Block -> Block
-latex (RawBlock "latex" s) = RawBlock "html" ("<span class=\"math\">" ++s ++ "</span>")
+latex (RawBlock (Format "latex") s) = RawBlock (Format "html") ("<span class=\"math\">" ++s ++ "</span>")
 latex x = x
 
 theoremize :: [Block] -> [Block]
@@ -109,9 +109,9 @@ makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart,rawHead] ++ con
                      then "" 
                      else "<span class=\"name\">" ++ (stripParagraph $ mathdoc name) ++ "</span>"
         end = "</section>"
-        rawEnd = RawBlock "html" end
-        rawStart = RawBlock "html" sectionhead
-        rawHead = RawBlock "html" inittext
+        rawEnd = RawBlock (Format "html") end
+        rawStart = RawBlock (Format "html") sectionhead
+        rawHead = RawBlock (Format "html") inittext
         content = (getDoc . readDoc) xs
 makeTheorem x y = [x,y]
 
