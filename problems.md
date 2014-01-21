@@ -39,30 +39,6 @@ Equivalently, find an upper bound of the number of edges in the transitive reduc
 
 Answer: For even $n$, it's $\frac{n^2}{4}$, for odd $n$, $\frac{n^2-2n}{4}$. Solution comes from the maximal triangle free graph is bipartite, and transitive reductions are triangle free.
 
-## Compute associative operations faster
-**Input:** Let $M$ be some set, such that all elements in $M$ takes $O(1)$ space to store. 
-
-1. List $a_1,\ldots, a_n$, where $a_i\in M$. This is stored as an array and cost no extra memory.
-2. Sequence of pairs $(s_1, t_1),\ldots, (s_m,t_m)$ such that $s_i,t_i\in \{1,\ldots,n\}$ and $s_i\leq t_i$. They represent "intervals".
-3. $\oplus$, such that $\oplus$ is an associative operation on $M$. Compute $a \oplus b$ takes $O(1)$ time for all elements $a,b\in M$.
-
-**Output:**
-Let $f(i,j) = a_i\oplus a_{i+1} \oplus \ldots \oplus a_j$. It is a sum over the interval. We want to compute $f(s_1,t_1), \ldots, f(s_m,t_m)$. 
-
-**Goals:**
-Let 
-\[
-k = \left| \bigcup_{1 \leq i\leq m} \{s_i,s_i+1,\ldots, t_i -1, t_i\} \right|
-\].
-
-1. The number of times the algorithm uses $\oplus$ is minimized, or if it's too hard, a constant factor away from it.
-2. The algorithm uses little extra memory. A lower bound is $\Omega(m+k)$.
-3. The algorithm uses little time. A lower bound is $\Omega(m+k)$.
-
-I do not know if there exist an algorithm that satisfies all the goals at the same time.
-
-http://cs.stackexchange.com/questions/11091/find-interval-sums-with-minimum-number-of-operation
-
 ## Distance from closest permutation with one cycle
 Let $[n]=\{1,\ldots,n\}$. $f:[n]\to[n]$. Find a permutation $\pi:[n]\to[n]$, such that $\pi$ has only one cycle, and the hamming distance between $f$ and $\pi$ is minimized.  (By Matt Dipple)
 
