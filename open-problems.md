@@ -4,6 +4,14 @@ title: Open Problems
 
 Here are some problems that are either open to the best of my knowledge, or asked by me but unable to answer. If you know a solution, or can offer me more reference on the material, please comment. I appreciate it greatly. :)
 
+{Problem}
+
+    There are $n$ people sitting on a circle of $n$ seats. Out of the $n$ people, there are $k$ couples($2k$ people). You can swap any two people. Find an algorithm that swap the least amount of times such that all the couples are sitting with his/her partner.
+
+{Problem}
+
+    Given a graph $G$ with max degree $3$ and it's hamiltonian cycle $C$, there is a matching $M$ of size $k$. Find a matching $N$ of $C$, such that each component in $M\cup N$ have same number of edges from $M$ and $N$, and the number of cycles in $M\cup N$ is maximized. (we consider a component of a single edge a cycle).
+
 ## Combinatorics and Algorithms
 
 {Problem}

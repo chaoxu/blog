@@ -8,9 +8,9 @@ I'm mainly interested in theoretical computer science, mathematics and problem s
 
 I was student of [Stony Brook University](http://www.stonybrook.edu). Major in mathematics and applied mathematics. Minor in computer science. 
  
-Email: mgcclx [at] gmail [dot] com
+Email: chaoxu3 [at] illinois [dot] edu
 
-Here is my [CV](/files/cv.pdf). (Updated July 2012)
+Here is my [CV](/files/cv.pdf) and my [resume](/files/resume.pdf).
 
 I seek the following opptunities, you are free to contact me about it:
 
@@ -20,7 +20,7 @@ I seek the following opptunities, you are free to contact me about it:
 I want to know more about:
 Category theory, stringology, combinatorics on words, type theory, Haskell, programming languages, metric geometry, rewriting system, and functional data structures. 
 
-Here is [my girlfriend's blog](http://codesandmaze.tumblr.com/), and [her resume](http://codesandmaze.tumblr.com/resume). She is looking for a job right now.
+Here is [my girlfriend's blog](http://codesandmaze.tumblr.com/), and [her resume](https://www.dropbox.com/s/zwqwmnlfjw0h46i/Resume_of_Vanessa_Li_01032014.pdf). She is looking for a job right now.
 
 Feel free to [donate some money to me](http://www.pledgie.com/campaigns/19986) for whatever reason.
 
