@@ -27,8 +27,9 @@ Here is a theorem.
     The countably infinite group $G$ such that $g^2 = 1$ for all $g\in G$ is $(\mathbb{N}_0, \oplus)$ up to isomorphism.
 
 {Proof}
+    
     Note that abelian is unnecessary, since $g^2 = 1$ implies abelian. 
-
+    
     The presentation of $G$ is $\langle S \mid W\cup R\rangle$, where $S=\{a_1,a_2,\ldots\}$ is the infinite generating set with no redundant generator(i.e. $a_i$ can't be generated from $S-\{a_i\}$). $W=\{w^2=1|w\in G\}$, $R$ is any other identity relation that can't be derived from $w^2=1$.
     The presentation of $(\mathbb{N}_0, \oplus)$ is $\langle S' \mid W'\rangle$, where $S' = \{2^n|n\in \mathbb{N}\}$ and $W' = \{n\oplus n=1| n\in \mathbb{N}_0\}$. 
     It's easy to see that the presentation of $(\mathbb{N}_0, \oplus)$ is structurally the same as $\langle S \mid W \rangle$.

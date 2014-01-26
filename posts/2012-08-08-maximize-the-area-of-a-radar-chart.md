@@ -57,6 +57,8 @@ Once we can maximize $\sum_{i=1}^n a_{\pi(i)} a_{\pi(i+1)}$, we are done.
     Clearly $a_n$ need to be placed in a position that maximizes its contribution. If we can insert it between $a_{n-1}$ and $a_{n-2}$, then
     we get a contribution of $a_{n-1}a_n+a_{n-2}a_n-a_{n-1}a_{n-2}$. By the lemma, it will give us the maximum contribution.
     
-    If we can get the maximum contribution to a maximum configuration for $a_1$ to $a_{n-1}$, then we are done. The inductive hypothesis show the maximum configuration have adjacent $a_{n-1}$ and $a_{n-2}$, therefore this shows the maximum configuration is where we insert $a_n$ in between $a_{n-1}$ and $a_{n-2}$ in the previous maximum configuration.
+    If we can get the maximum contribution (over all possible configurations) to a maximum configuration for $a_1$ to $a_{n-1}$, then we are done. The inductive hypothesis show the maximum configuration have adjacent $a_{n-1}$ and $a_{n-2}$, therefore this shows the maximum configuration is where we insert $a_n$ in between $a_{n-1}$ and $a_{n-2}$ in the previous maximum configuration.
 
 This implies a simple $O(n \log n)$ algorithm. Find the permutation that sort the input sequence by value, then composes it with permutation $\pi$.
+
+Actually this problem is a special case of the TSP problem on a product matrix. A matrix is called a product matrix if $M_{i,j} = a_ib_j$ for vectors $(a_1,\ldots,a_n)$ and $(b_1,\ldots,b_n)$. It is solvable in polynomial time if $M$ is a symmetric matrix.
