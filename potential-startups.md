@@ -40,3 +40,4 @@ All start ups I want to create have at least one of the three properties.
 - cool dashboards
 - [NSFW] Replicate reddit's r/tipofmypenis. The idea is to make it automatic, where people give photos of porn stars/links to videos, and the algorithm suggest who the actor might be.  
 - Pseudocode that type checks.
+- A easy to use interface for maintaining a directed graph.
