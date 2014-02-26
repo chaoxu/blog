@@ -2,7 +2,7 @@
 title: A relation between $L_\infty$ metric and $L_1$ metric in $\R^2$
 tags: math
 ---
-While solving the [Meeting Point](https://www.interviewstreet.com/challenges/dashboard/#problem/4e14b2cc47f78) problem from interviewstreet, I have stumbled upon a relation between $L_\infty$ metric and $L_1$ metric in $\R^2$.
+While solving the [Meeting Point](https://www.hackerrank.com/challenges/meeting-point) problem from interviewstreet, I have stumbled upon a relation between $L_\infty$ metric and $L_1$ metric in $\R^2$.
 
 {Theorem}
     Let $x=(x_1,x_2)$, consider the map $f:\R^2\to \R^2$,

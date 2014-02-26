@@ -69,3 +69,9 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
 
 {Problem}
     Find the minimum length regular expression that describes a regular language.
+
+{Problem}
+    Given $a_1,\ldots,a_n$, $b_1,\ldots,b_n$ and $\lambda$ in $\R^+$. Does there exist a permutation such that
+    \[ 
+    \sum_{i=1}^n a_{\pi(i)}a_{\pi(i+1)} - \lambda b_{\pi(i)}b_{\pi(i+1)} < 0
+    \], where we define $\pi(n+1)=\pi(1)$.

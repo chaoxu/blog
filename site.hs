@@ -30,7 +30,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
     -- posts
-    match "posts/*" $ do
+    match "posts/*.md" $ do
         route $ setExtension "html"
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
@@ -72,6 +72,7 @@ mathDoc :: Item String -> Compiler (Item String)
 mathDoc = return . fmap mathdoc
 
 mathCompiler = getResourceBody >>= mathDoc
+--mathCompiler = getResourceString >>= mathDoc
 
 idPages = ["favicon.ico",
            "redirects.site44.txt",

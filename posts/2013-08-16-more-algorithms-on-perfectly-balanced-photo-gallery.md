@@ -176,7 +176,7 @@ Our $w$ in consideration has strict bottleneck Monge property. Because all the n
 
     If $w$ has the strict bottleneck Monge property, then $M^d$ is a $n\times n$ totally monotone matrix.
     
-There seems to be a direct proof by analyze 12 different cases, but I got too bored after the second case. One can read [1] for the proof. It doesn't contain the exact theorem, but a result that implies this one. The proof is quite involved. Their idea is to construct a new matrix with a new operation over sorted sequences of numbers instead of just numbers. Prove this matrix is strictly compatible and has the algebraic Monge property, and show this can always be done if the original matrix has the strict bottleneck Monge property. 
+There seems to be a direct proof by analyze 12 different cases, but I got too bored after the second case. One can read [@Bein2005455] for the proof. It doesn't contain the exact theorem, but a result that implies this one. The proof is quite involved. Their idea is to construct a new matrix with a new operation over sorted sequences of numbers instead of just numbers. Prove this matrix is strictly compatible and has the algebraic Monge property, and show this can always be done if the original matrix has the strict bottleneck Monge property. 
  
 The final punchline.
     
@@ -197,8 +197,6 @@ Can we do better? Yes, by considering a different kind of reduction(thank god we
     Let $a_1,\ldots,a_n$ be a sequence of positive reals, and a number $\mu = W/H$. We want to partition it into consecutive subsequences, such that the maximum difference between the sum of each consecutive sequence and the $\mu$ is minimized. 
     Formally, find a $k$ and a sequence of $k+1$ numbers $b_1=1,b_2,\ldots,b_{k},b_{k+1}=n$, such that $\max_{i=1}^{k} |\sum_{j=b_i}^{b_{i+1}} a_j - \mu|$ is minimized.
 
-This is the exact same problem described on section 5 of [1]. It can be solve in $O(n)$ time. 
+This is the exact same problem described on section 5 of [@Bein2005455]. It can be solve in $O(n)$ time. 
 
 ## References
-
-[1] Bein, W., Brucker, P., Larmore, L.L., Park, J.K., 2005. "[The algebraic Monge property and path problems](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.106.1673)". *Discrete Applied Mathematics* 145, 455-464.

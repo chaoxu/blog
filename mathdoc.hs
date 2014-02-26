@@ -7,23 +7,34 @@ import Data.String.Utils
 import Data.Set (insert)
 import System.Environment (getArgs)
 import Data.List (nub)
+import Text.CSL.Pandoc
+import System.IO.Unsafe
+import qualified Data.Map as M
+
+setMeta key val (Pandoc (Meta ms) bs) = Pandoc (Meta $ M.insert key val ms) bs
 
 -- On mac, please do `export LANG=C` before using this thing
 mathdocRead = def{readerExtensions = insert Ext_tex_math_double_backslash $ 
                                      insert Ext_tex_math_single_backslash $ 
                                      insert Ext_raw_tex pandocExtensions}
 mathdocWrite = def{writerHTMLMathMethod = MathJax "", writerHtml5 = True}
+
 readDoc :: String -> Pandoc
 readDoc = readMarkdown mathdocRead
 
 writeDoc :: Pandoc -> String
-writeDoc = writeHtmlString mathdocWrite
+writeDoc x = writeHtmlString mathdocWrite (unsafePerformIO $ processCites' complete)
+  where complete = setMeta "csl" (MetaInlines [Str "bib_style.csl"])
+                   $ setMeta "bibliography" (MetaInlines [Str "reference.bib"]) x
+
+writeDocT :: Pandoc -> String
+writeDocT = writeHtmlString mathdocWrite
 
 mathdoc :: String->String
 mathdoc = compute . formatTheorem
 
 mathdocInline :: String->String
-mathdocInline = removeP . writeDoc . readDoc
+mathdocInline = removeP . writeDocT . readDoc
   where removeP x = drop 3 (take ((length x) - 4) x) 
   
 incrementBlock = ["Theorem",
