@@ -118,7 +118,7 @@ makeTheorem (Header _ (_,_,parm) _) (CodeBlock o xs) = [rawStart,rawHead] ++ con
                      else "<span class=\"index\">" ++ index ++ "</span>"
         nametext = if null name 
                      then "" 
-                     else "<span class=\"name\">" ++ (stripParagraph $ mathdoc name) ++ "</span>"
+                     else "<span class=\"name\">" ++ (stripParagraph $ mathdocInline name) ++ "</span>"
         end = "</section>"
         rawEnd = RawBlock (Format "html") end
         rawStart = RawBlock (Format "html") sectionhead
