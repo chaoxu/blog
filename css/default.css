@@ -76,6 +76,10 @@ p + p {
     text-indent: 1.5em;
 }
 
+.references p + p {
+    text-indent: 0em;
+}
+
 blockquote {
     margin: 0 0 1em 0;
     padding: 0 30px;

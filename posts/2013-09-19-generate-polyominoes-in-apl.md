@@ -2,7 +2,7 @@
 title: Generate Polyominoes in APL
 ---
 
-I have won the 3rd Place on [2013 APL Problem Solving Competition](http://www.dyalog.com/contest_2013/index.html) by solving one problem, the mathematical one. The judges decided that 
+I have won the 3rd Place on [2013 APL Problem Solving Competition](http://www.dyalog.com/news.htm#december-13) by solving one problem, the mathematical one. The judges decided that 
     
     Chao used Dfns to produce clean, compact, and efficient code.  His solution for PolyGen was more than twice as fast as the next closest entry.
 

@@ -43,7 +43,8 @@ incrementBlock = ["Theorem",
                   "Example",
                   "Lemma",
                   "Problem",
-                  "Proposition"]
+                  "Proposition",
+                  "Corollary"]
 otherBlock = ["Proof","Remark"]
 
 buildOr [x] = x

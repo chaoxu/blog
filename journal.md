@@ -30,9 +30,33 @@ title: Life Journal
 
 1. Check out 4-strands braid groups. *
 2. Is swapping rows of TUM still TUM? Yes.
-3. Nearly TUM stuff *
+3. Nearly TUM stuff
 
 ## 03/04/2014
 
 1. Improved subset sum algorithm to $O((C\log C)^\frac{3}{2})$ time.
 2. Element connectivity has a divide and conquer reduction approach. 
+
+## 03/08/2014
+
+1. Actually completed the Nearly TUM stuff.
+2. Can finger tree replace [segment tree](http://letuskode.blogspot.com/2013/01/segtrees.html)? *
+3. Global maximum min-cut can be found by modify Stoer-Wagner algorithm slightly.
+4. For a simple graph $G=(V,E)$, $\max_{u,v \in V} \lambda(u,v) \geq 3$ then $\max_{u,v \in V}  \kappa(u,v)\geq 3$? $\lambda$ and $\kappa$ are the local edge/vertex connectivity.
+
+## 03/15/2014
+
+1. Understood Dinic's algorithm.
+2. Algebraic algorithm for string reconstruction. 
+3. Understood partially, the $O(nm)$ randomized algorithm for GH Tree
+4. TDI and matching.
+5. Vertex Connectivity takes $O(n^4)$ time to compute, but there are algorithm that runs in $O(n^{15/4})$ time for undirected graph.
+
+## 03/16/2014
+
+1. Complement of proper circular arc graph is a graph with circular one adjancency matrix.
+2. A complete understanding of the nearly totally unimodular matrix paper by Gijswigt.
+
+## 03/18/2013
+
+1. Randomized algorithms are hard.

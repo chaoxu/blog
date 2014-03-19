@@ -10,7 +10,7 @@ A [multiset](http://en.wikipedia.org/wiki/Multiset) $(X,\chi_X)$ is a set $X$ as
     
     Given a multiset $X$ of positive integers and a target sum $k$. Find if there is a multisubset of $Y\subset X$ such that $\sum_{y\in Y} = k$ in $O(n+f(k))$ time. 
 
-We want $f(k)$ to be as small as possible. This was a paraphrase of the 7th problem on [UIUC theory qualify exam 2003 Spring](http://sarielhp.org/research/algorithms/quals/03/03_spring.pdf). After hours of literature search, I can't find anything better than $f(k)=k^2$, so I'm writing up a solution where $f(k) = (k\log k)^{\frac{3}{2}} $.
+We want $f(k)$ to be as small as possible. This was a paraphrase of the 7th problem on [UIUC theory qualify exam 2003 Spring](http://sarielhp.org/research/algorithms/quals/03/03_spring.pdf). After hours of literature search, I can't find anything better than $f(k)=k^2$, so I'm writing up a solution where $f(k) = (k\log k)^{\frac{3}{2}}$.
 
 Through out the article, we assume $k$ is fixed. 
 
@@ -64,14 +64,24 @@ When $|X|=\Omega(k)$, the naive dynamic programming algorithm is an $O(k^2)$ tim
 
 ### An output sensitive algorithm for computing $S(X)$
 
-Let's consider what is exactly happening at each step of the dynamic programming solution. Once we move on to the next element in the set, we can either add into existing set or don't do anything. $S(A\cup \{i\}) = S(A) \cup \{t+i |t\in S(A)\}$. We can do this operation proportional to the number of elements in $S(A)$ by iterate through $S(A)$ and insert two elements into the representation of $S(A\cup \{i\})$. This implies we can compute the next row of the table in $O(|S(A)|)$ time by using some standard techniques. 
+Let's consider what is exactly happening at each step of the dynamic programming solution. Once we move on to the next element in the set, we can either add into existing set or don't do anything. $S(A\cup \{i\}) = S(A) \cup \{t+i |t\in S(A)\}$. If we represent $S(A)$ as a sorted linked list, finding $S(A\cup \{i\})$ can be done easily through merging two sorted lists(while removing duplicates) in linear time. Thus we can compute $S(A\cup \{i\})$ in time $O(|S(A)|)$.
 
-Since $|S(A)| \leq |S(X)|$ for $A\subset X$, we can bound the number of operations to compute $S(X)$ by $|X||S(X)|$.
+Since $|S(A)| \leq |S(X)|$ for $A\subset X$, we can bound the number of operations to compute $S(X)$ by $|X||S(X)|$. 
+
+Simple Haskell code that demonstrates this fact:
+
+```haskell
+import Data.List
+import Data.List.Utils
+
+allSubsetSum n = foldl' addNext [0]
+  where addNext l x = takeWhile (<=n) $ (map head . group) $ merge l (map (+x) l)
+```
 
 {Theorem}
-    There exist an algorithm that finds $S(X)$ in time $O(|X||S(X)| + k)$.
+    There exist an algorithm that finds $S(X)$ in time $O(|X||S(X)|)$.
 
-In the worst case, $S(X)$ is dense($\Omega(k)$). This is still a $O(k^2)$ time algorithm.
+In the worst case, $S(X)$ is dense($\Omega(k)$). This is still a $O(k^2)$ time algorithm. We will have an additional term of $k$ if we want to turn $S(X)$ into an bit-array representation, which is required for FFT.
 
 ## The Algorithm that Exploits the Sparsity
 
@@ -133,4 +143,4 @@ m k \log k&= m k^2 (k^\frac{1}{m}-1)^2\\
 \end{align*}
 The last step comes from $\lim_{x\to 0} \frac{x}{\log(x+1)} = 1$.
 
-This concludes the algorithm takes $O\left((k\log k)^{\frac{3}{2}}\right)$.
+This concludes the algorithm takes $O\left((k\log k)^{\frac{3}{2}}\right)$ time.

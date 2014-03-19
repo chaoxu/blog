@@ -75,3 +75,6 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
     \[ 
     \sum_{i=1}^n a_{\pi(i)}a_{\pi(i+1)} - \lambda b_{\pi(i)}b_{\pi(i+1)} < 0
     \], where we define $\pi(n+1)=\pi(1)$.
+
+{Problem}
+    Can finger tree replace [segment trees](letuskode.blogspot.com/2013/01/segtrees.html)?
