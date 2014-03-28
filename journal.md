@@ -57,6 +57,15 @@ title: Life Journal
 1. Complement of proper circular arc graph is a graph with circular one adjancency matrix.
 2. A complete understanding of the nearly totally unimodular matrix paper by Gijswigt.
 
-## 03/18/2013
+## 03/18/2014
 
 1. Randomized algorithms are hard.
+
+## 03/24/2014
+
+1. Understood Hao-Orlin algorithm (kinda).
+2. Figures the current polytime algorithm for 4-strand braid group conjugacy problem is just the common algorithm with a new quadratic bounds on the super summit set.
+
+## 03/25/2014
+
+1. Reduces [Higman's lemma](http://en.wikipedia.org/wiki/Higman's_lemma) (the string version) to Robertson–Seymour Theorem.

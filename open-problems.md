@@ -78,3 +78,6 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
 
 {Problem}
     Can finger tree replace [segment trees](letuskode.blogspot.com/2013/01/segtrees.html)?
+
+{Problem}
+    How fast can we [improve the pseudo-polytime algorithm for subset sum](http://cstheory.stackexchange.com/questions/21533/faster-pseudo-polynomial-time-algorithm-for-subset-sum)? 

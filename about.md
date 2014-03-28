@@ -29,3 +29,9 @@ Timeline of some things about me.
 <iframe src="/timeline.html" width="800px" height="800px" frameborder="0" scrolling="no" marginwidth="0px" marginheight="0px"></iframe>
 
 [public key](/files/id_rsa.pub).
+
+Grand Goals in life(subjects to change):
+
+1. Complete [this website](http://problems.site44.com/), the goal is to turn it into an wikipedia of algorithmic problems, and find relation between the problems.
+
+2. Create an abstract algorithms library for Haskell that handles all the common algorithmic problems. In particular this requires one to find ways to think about all the algorithms in a functional way.
