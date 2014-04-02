@@ -20,9 +20,7 @@ I seek the following opptunities, you are free to contact me about it:
 I want to know more about:
 Category theory, stringology, combinatorics on words, type theory, Haskell, programming languages, metric geometry, rewriting system, and functional data structures. 
 
-Here is [my girlfriend's blog](http://codesandmaze.tumblr.com/), and [her resume](https://www.dropbox.com/s/zwqwmnlfjw0h46i/Resume_of_Vanessa_Li_01032014.pdf). She is looking for a job right now.
-
-Feel free to [donate some money to me](http://www.pledgie.com/campaigns/19986) for whatever reason.
+Here is [my girlfriend's website](http://vanessa.li).
 
 Timeline of some things about me.
 

@@ -7,7 +7,7 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 3.  Using site44's rewrite system to direct all `/files` request to [amazon s3](http://aws.amazon.com/s3/), see [`/redirects.site44.txt`](/redirects.site44.txt). Also the mimetypes texts are useful. See [`/mimetypes.site44.txt`](/mimetypes.site44.txt)
 4.  The blog source is compiled by [hakyll](http://jaspervdj.be/hakyll/).
 5.  The content is written use my variation of [Pandoc's Markdown](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown), I call it [Xu's MathDoc](https://github.com/Mgccl/blog/blob/master/mathdoc.hs).
-6.  A simple rsync to sync compiled data to the blog. Something like `rsync -r ~/web/_site/ ~/Dropbox/Apps/site44/www.chaoxuprime.com/ --checksum`
+6.  A simple rsync to sync compiled data to the blog. Something like `rsync -r ~/blog/_site/ ~/Dropbox/Apps/site44/www.chaoxuprime.com/ --checksum`
 7.  site44 doesn't support top level domains. Use [wwwizer](http://wwwizer.com/naked-domain-redirect) to emulate the effect.
 8.  Coded most of the things in [Sublime Text 2](http://www.sublimetext.com/2).
 9.  The theme is [Tarski](http://tarskitheme.com/) with few changes.
