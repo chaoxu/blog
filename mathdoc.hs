@@ -17,7 +17,7 @@ setMeta key val (Pandoc (Meta ms) bs) = Pandoc (Meta $ M.insert key val ms) bs
 mathdocRead = def{readerExtensions = insert Ext_tex_math_double_backslash $ 
                                      insert Ext_tex_math_single_backslash $ 
                                      insert Ext_raw_tex pandocExtensions}
-mathdocWrite = def{writerHTMLMathMethod = MathJax "", writerHtml5 = True}
+mathdocWrite = def{writerHTMLMathMethod = MathJax "", writerHtml5 = True,writerHighlight = True}
 
 readDoc :: String -> Pandoc
 readDoc = readMarkdown mathdocRead

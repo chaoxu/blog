@@ -69,3 +69,20 @@ title: Life Journal
 ## 03/25/2014
 
 1. Reduces [Higman's lemma](http://en.wikipedia.org/wiki/Higman's_lemma) (the string version) to Robertson–Seymour Theorem.
+
+## 04/09/2014
+
+1. Understood KMP
+
+## 04/11/2014
+1. Implemented KMP algorithm in Haskell
+
+## 04/24/2014
+1. Gained a little knowledge about max flow approximation through electric flows
+
+## 04/25/2014
+1. Implemented selection algorithm in a sorted matrix
+2. Implemented AC automata algorithm
+
+## 04/27/2014
+1. Considered the algorithm for uniquely decodable code recognition.
