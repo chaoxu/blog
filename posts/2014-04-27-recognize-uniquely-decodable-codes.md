@@ -10,7 +10,7 @@ A set of strings $C$ is called a uniquely decodable code, if $C^*$ has a unique 
 
 In general, the infinite version of the problem is undecidable. It is however decidable if [$C$ is a regular language](http://cs.stackexchange.com/questions/6114/represent-string-as-concatenations).
 
-We shall describe another formulation of Sardinas–Patterson algorithm, which combines the description of [@jewelsofstringology] and [@rodeh]. 
+We shall describe another formulation of [Sardinas–Patterson algorithm](http://en.wikipedia.org/wiki/Sardinas%E2%80%93Patterson_algorithm), which combines the description of [@jewelsofstringology] and [@rodeh]. 
 In the entire article, we assume the alphabet size is fixed. 
 For variable sized alphabet, let $\sigma$ be the number of distinct alphabet appeared in $C$. There is an extra factor of $\sigma$ or $\log \sigma$ depending on if there exist a comparator for the alphabet.
 

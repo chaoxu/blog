@@ -86,3 +86,6 @@ title: Life Journal
 
 ## 04/27/2014
 1. Considered the algorithm for uniquely decodable code recognition.
+
+## 04/28/2014
+1. Thinking about algorithms on comparability/cocomparability graphs.
