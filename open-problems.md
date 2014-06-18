@@ -63,6 +63,7 @@ These are some problems released as [project for CSE 549 Fall 2010 in Stony Broo
     Let the set $C$ be a set of homotopy classes of simple closed curves on an orientable surface $S$ of genus $g$, such that if $a,b\in C$, then their minimal intersection number is at most 1. Let $X_g$ be the set of all the sets with the above property. Find bounds on $f(g) = \sup_{C\in X_g}|C|$.
 
 [Collections of Simple Closed Curves Intersecting at Most Once](http://www.math.uchicago.edu/~may/VIGRE/VIGRE2007/REUPapers/FINALFULL/Constantin.pdf) The paper by Sarah Constantin proves an exponential upper bound and a quadratic lower bound. 
+[Arcs intersecting at most once](http://arxiv.org/abs/1402.1570). This preprint by Piotr Przytycki gives a cubic upper bound, and in fact, a polynomial upper bound for any fixed number of intersections.
 
 ### Others
 http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-and-possible-cancelations
@@ -81,3 +82,6 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
 
 {Problem}
     How fast can we [improve the pseudo-polytime algorithm for subset sum](http://cstheory.stackexchange.com/questions/21533/faster-pseudo-polynomial-time-algorithm-for-subset-sum)? 
+
+{Problem}
+    Let $T$ be a rooted, ordered, labeled tree. For each vertex, find the maximum common subtree in all the subtree rooted at it's children. 

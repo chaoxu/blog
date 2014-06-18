@@ -12,7 +12,7 @@ This was a homework problem for CSE 548. I decide to work on it after hearing a 
 
     1. Pick any piece that was never considered, so we have a filled rectangle(square) of $1\times 1$. 
     2. Find another piece that can form a larger filled rectangle from the previous rectangle.(so Manhattan distance of at most $2$ from the rectangle). This means one only regard the checkers in the rectangle and the new piece, and do the transformation until nothing more can be done. It must be form a new rectangle. If the previous rectangle is a $a\times b$ rectangle, the new rectangle is among one of the following sizes: $a\times b$(the new piece is inside the rectangle), $a\times (b+1), a\times (b+2), (a+1)\times (b+1)$ or $(a+2)\times b$. Note if the new rectangle is a $c\times d$ rectangle, $c+d\leq a+b+2$. Let the new rectangle be the one we are considering.
-    \item If there is no other piece fit the description in step 2. Go to step 1.
+    3. If there is no other piece fit the description in step 2. Go to step 1.
 
     The process will in the end form $k$ rectangles, such that the sum of the perimeter is at most $4(n-1)$, because each time step $2$ is run, we increase the perimeter of one of the rectangle by at most 4, each time step $1$ is run, we create a rectangle of perimeter 4. We can run those step at most $n-1$ times because there are only $n-1$ checkers. 
 

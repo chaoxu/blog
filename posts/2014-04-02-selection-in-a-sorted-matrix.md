@@ -96,4 +96,4 @@ frontier (f,n,m) b = step 0 (m-1)
         | otherwise        = step i (j-1)
 ```
 
-## References
+# References

@@ -2,7 +2,7 @@
 title: Faster Pseudo-polynomial Time Algorithm for Subset Sums
 ---
 
-## Introduction
+# Introduction
 
 A [multiset](http://en.wikipedia.org/wiki/Multiset) $(X,\chi_X)$ is a set $X$ associated with a function $\chi_X$, where $\chi_X:X\to \N$, and $\chi_X(i)$ is the number of times $i$ appears in $(X,\chi_X)$. For simplicity, we will abuse the notation and use $X$ in place of $(X,\chi_X)$. For more definitions, read the wikipedia page.
 
@@ -20,7 +20,7 @@ Through out the article, we assume $k$ is fixed.
 
 Check if $k\in S(X)$ solves [Problem 1].
 
-## Reduce the **Multisubset Target Sum** to **Subset Sums**
+# Reduce the **Multisubset Target Sum** to **Subset Sums**
 
 {Problem}(Subset Sums)
     
@@ -46,9 +46,9 @@ It's easy to partition the resulting multiset $X$ into $A,B$ such that $\chi_A\l
 
 [^1]: This folklore algorithm comes from solving Exercise 3 in [Jeff's notes on Fast Fourier Transforms](http://www.cs.uiuc.edu/~jeffe/teaching/algorithms/notes/02-fft.pdf).
 
-## $O(k^2)$ dynamic programming algorithms for subset sum
+# $O(k^2)$ dynamic programming algorithms for subset sum
 
-### The naive dynamic programming algorithm
+## The naive dynamic programming algorithm
 
 In most algorithm class, there are discussion of a [simple algorithm to solve subset sum](http://www.cs.cmu.edu/~ckingsf/class/02713-s13/lectures/lec15-subsetsum.pdf).
 
@@ -62,7 +62,7 @@ In most algorithm class, there are discussion of a [simple algorithm to solve su
 
 When $|X|=\Omega(k)$, the naive dynamic programming algorithm is an $O(k^2)$ time algorithm. Notice this algorithm can be improved to account for the size of $S(X)$.
 
-### An output sensitive algorithm for computing $S(X)$
+## An output sensitive algorithm for computing $S(X)$
 
 Let's consider what is exactly happening at each step of the dynamic programming solution. Once we move on to the next element in the set, we can either add into existing set or don't do anything. $S(A\cup \{i\}) = S(A) \cup \{t+i |t\in S(A)\}$. If we represent $S(A)$ as a sorted linked list, finding $S(A\cup \{i\})$ can be done easily through merging two sorted lists(while removing duplicates) in linear time. Thus we can compute $S(A\cup \{i\})$ in time $O(|S(A)|)$.
 
@@ -83,7 +83,7 @@ allSubsetSum n = foldl' addNext [0]
 
 In the worst case, $S(X)$ is dense($\Omega(k)$). This is still a $O(k^2)$ time algorithm. We will have an additional term of $k$ if we want to turn $S(X)$ into an bit-array representation, which is required for FFT.
 
-## The Algorithm that Exploits the Sparsity
+# The Algorithm that Exploits the Sparsity
 
 Consider a sequence of numbers $1=a_0,a_1,\ldots,a_m=k$.
 
@@ -94,16 +94,16 @@ Consider a sequence of numbers $1=a_0,a_1,\ldots,a_m=k$.
 3. Combine all $S(X_i)$'s to form $S(X)$ in $O(m k\log k)$ time.
 
 $|S(X_i)|$ will be bounded by some crude combinatorial estimates. If $t > \frac{k}{a_{i-1}}$, then no subset of size $t$ contained in $X_i$ contributes to the size of $|S(X_i)|$, because the sum would be at least $ta_{i-1}> \frac{k}{a_{i-1}} k = k$. 
-The sums of a size $t$ subset lies in the interval $[a_{i-1}t, a_{i-1}t + (a_i-a_{i-1})t]$, thus sums of subsets of size $t$ contributes at most $(a_i-a_{i-1})t$ points to $S(X_i)$. The punchline:
+The sums of a size $t$ subset lies in the interval $[a_{i-1}t, a_{i-1}t + (a_i-a_{i-1})t]$, thus sums of subsets of size $t$ contributes at most $(a_i-a_{i-1})t$ points to $S(X_i)$. Also, there is no subset with size greater than $a_i-a_{i-1}$. The punchline:
 
 \[
-|S(X_i)|\leq (a_i-a_{i-1})t\frac{k}{a_{i-1}}
+|S(X_i)|\leq (a_i-a_{i-1})t^2
 \]
-where $t=\min(\frac{k}{a_{i-1}},a_i-a_{i-1})$
+where $t=\min(\frac{k}{a_{i-1}},a_i-a_{i-1})$. This gives us the choice to mix and match which one of the two we going to use.
 
-### Uniformly distributed partitions
+## Uniformly distributed partitions
 
-Assume $a_i$'s are evenly distributed, namely $a_i=i\frac{k}{m}$, and $|S(X_i)|\leq \left( \frac{k}{m} \right)^2 \frac{k}{i\frac{k}{m}}$.
+Assume $a_i$'s are evenly distributed, namely $a_i=i\frac{k}{m}$, and $|S(X_i)|\leq  \frac{k}{m} t^2\leq \left(\frac{k}{m} \right)^2 \frac{k}{i\frac{k}{m}}$.
 
 \begin{align*}
 m k\log k + (\sum_{i=1}^{m} |X_i||S(X_i)| + k) 
@@ -115,14 +115,14 @@ m k\log k + (\sum_{i=1}^{m} |X_i||S(X_i)| + k)
 
 Solve $m k\log k = \frac{k^3}{m^2} \log m$ for $m$ and we get $m=k^\frac{2}{3}$, so we find a $O(k^\frac{5}{3} \log k)$ algorithm.
 
-### Geometrically distributed partitions
+## Geometrically distributed partitions
 
 Let's return to the analysis of the running time for the sparse subset sum tables.
 
 \begin{align*}
 \sum_{i=1}^{m} |X_i||S(X_i)|
-&= \sum_{i=0}^{m} (a_i-a_{i-1}) (a_i-a_{i-1})(\frac{k}{a_{i-1}})^2 \\
-&= k^2\sum_{i=0}^{t} (\frac{a_i}{a_{i-1}}-1)^2 \\
+&\leq \sum_{i=1}^{m} (a_i-a_{i-1}) (a_i-a_{i-1})(\frac{k}{a_{i-1}})^2 \\
+&= k^2\sum_{i=1}^{m} (\frac{a_i}{a_{i-1}}-1)^2 \\
 \end{align*}
 
 This suggest to minimize the running time, we want $a_i =a_0 r^i$ for some constant $r$. Since $a_0=1,a_m=k$, $r=k^\frac{1}{m}$.
@@ -144,3 +144,11 @@ m k \log k&= m k^2 (k^\frac{1}{m}-1)^2\\
 The last step comes from $\lim_{x\to 0} \frac{x}{\log(x+1)} = 1$.
 
 This concludes the algorithm takes $O\left((k\log k)^{\frac{3}{2}}\right)$ time.
+
+# Can we do better?
+
+Note in our general framework, the size of the set $X$ was not considered. It make no sense to use this algorithm when $n=O(\sqrt{k})$, a $O(nk)$ algorithm is much better.
+
+Take the last geometric distribution, but consider a tighter analysis. It's not hard to show we can improve the algorithm to $O(k^{3/2}\log k \sqrt{\log n})$. Are there any possibility to beat $O(nk)$ for $n=o(\sqrt{k})$? 
+
+Not much is possible with this approach. Our approach saves time by having a bound on $\frac{k}{a_i}$ and $|X_i|$. Now, let's consider $n=\Theta(\sqrt{k})$ and every element in $X$ is smaller than $\sqrt{k}$ and distributed randomly. This bound is not useful, as almost every interval before $\sqrt{k}$ is going to be full, and no sum can jump outside the range we care about. Any partition will sum up to a $\Omega(k^\frac{3}{2})$ bound.

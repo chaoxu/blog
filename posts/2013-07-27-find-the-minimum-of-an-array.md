@@ -2,7 +2,7 @@
 title: Find the minimum of an array with a non-increasing and a non-decreasing part
 tags: Algorithm
 ---
-## Problem
+# Problem
 
 Consider an array $a$ of $n$ entries from a totally ordered set. There exist a index $j$, such that $a[i]\geq a[i+1]$ for all $i < j$, and $a[i]\leq a[i+1]$ for all $i\geq j$.
 
@@ -10,7 +10,7 @@ How fast can we find such $j$? The worst time is $O(n)$. When all the elements a
 
 If $m$ is the maximum time an element occurs in the array, then we can find an algorithm that solves this problem in $O(m + \log \frac{n}{m})$ time.
 
-## Algorithm
+# Algorithm
 
 The idea is to use ternary search, which works well when all values are distinct, and go for linear search once we figure there are a lot of repeated elements. 
 
@@ -33,7 +33,7 @@ Here is the code in Go:
 
 <script src="https://gist.github.com/Mgccl/6094392.js"></script>
 
-## Complexity
+# Complexity
 
 $T(m,n)$ is the time to run the algorithm on an array of length $n$ with $m$ repeats.
 
@@ -46,7 +46,7 @@ T(m,n)  = \begin{cases}
 \]
 For $n$ larger than $\frac{m}{6}$, the algorithm will have $O(\log \frac{n}{m})$ recursive calls, each one cost $O(1)$ time. Once it reaches small $n$, it will spend $O(n)=O(m)$ time on a linear search. The algorithm spends a total of $O(m+ \log \frac{n}{m})$ time.
 
-## Notes
+# Notes
 
 [Brosef Stalin](https://www.facebook.com/BrosefStylin) offered an alternative logic that offers cleaner code.
 <script src="http://pastebin.com/embed_js.php?i=107WhrsU"></script> 

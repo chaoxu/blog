@@ -2,7 +2,7 @@
 title: There exist a path of length $\lceil d(G)\rceil$ for every graph $G$
 tags: graph theory
 ---
-## Unweighted Graph
+# Unweighted Graph
 $G$ is a simple graph, then $d(G) = \frac{2e(G)}{|G|}$ be the average degree of a simple graph.
 
 {Lemma}
@@ -27,7 +27,7 @@ $G$ is a simple graph, then $d(G) = \frac{2e(G)}{|G|}$ be the average degree of 
 
     Otherwise, the graph is connected. If there exist a vertex $v$ with degree at most $\frac{1}{2}d(G)$, we can remove it, and $d(G-v) \geq d(G)$, then by inductive hypothesis, in $d(G-v)$ there will be a path of length at least $d(G)$. If there is no such vertex. then we must have $\delta(G) > \frac{1}{2} d(G)$. By [Lemma 1], we have it has a path of length $\min(2 \delta(G) ,|G|-1)$. $2\delta(G) \geq d(G)$ and $d(G)\leq |G|-1$, thus it contain a path of length at least $d(G)$.
 
-## Weighted Graph
+# Weighted Graph
 Can we generalize this problem to weighted graphs?
 $G=(V,E)$, $(G,w)$ is a weighted graph, where $w: E\to \mathbb{R}$. Define the average weighted degree of graph $G$ to be 
 \[

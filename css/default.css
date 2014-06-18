@@ -193,31 +193,32 @@ img {
 /* The headers tries to emulate the format of
  Oxfod Lecture Series in Mathematics and Its Applications */
 h1 {
-    font-size: 2.0em;
-    line-height: 1.2em;
-    border-bottom: 1px solid #000;
-}
-h2 {
     font-size: 1.15em;
     line-height: 3em;
     font-weight: bold;
 }
-h3 {
+#article-title {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    border-bottom: 1px solid #000;
+    margin-bottom: 0px;
+}
+h2 {
     font-size: 1.2em;
     font-style: italic;
     font-weight: normal;
 }
-h4 {
+h3 {
     font-size: 1.1em;
     font-style: italic;
     font-weight: bold;
 }
 /* You must be doing it wrong... if you use the following headings
 No one need more than 3 levels in a short article... */
-h5 {
+h4 {
     font-size: 1em;
 }
-h6 {
+h5 {
     font-size: 0.8em;
 }
 

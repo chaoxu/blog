@@ -3,7 +3,7 @@ title: Word problem for symmetric group is linear on RAM
 tags: BSU REU, computational complexity, group theory
 ---
 
-## Linear time algorithm for symmetric group
+# Linear time algorithm for symmetric group
 
 {Problem}(The word problem for symmetric groups)
 
@@ -48,7 +48,7 @@ This proves every symmetric group is automatic. For any fixed $S_n$, the Turing 
     Automatic is a property of a group, not a set of groups. That's why $n$ is ignored in the $O(ln!)$, because it's fixed for each $S_n$. I was confused for a while before I read a concrete definition. 
 
  
-## Algorithms on reduce the word to normal form
+# Algorithms on reduce the word to normal form
 The normal form of a word $w\in S_n$ is $w = u_1u_2\ldots u_n$, such that $u_i\in U_i$, and $U_i = \{1, x_n, x_nx_{n-1}, \ldots, x_n\ldots x_1\}$.
 
 One can construct a purely symbolic algorithm that apply only the group relations. We measure the time by the amount of group relations used.
