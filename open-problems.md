@@ -35,24 +35,11 @@ These are some problems released as [project for CSE 549 Fall 2010 in Stony Broo
 
 {Problem}(Finding the Most Frequent Subsequence)
     Given a string S, which string S' occurs most often as a scattered subsequence of S? Note that the number of candidates and possible occurrences are exponential. Can you prove this is NP-complete, and maybe give an approximation algorithm?
-    Can you use dynamic programming to count the number of occurences of a candidate S'?
 
 {Problem}
-    Fix string $x$ with length $|x|$, let $f(y,x)$ be the number of different ways $y$ can be a subsequence of $x$. $m(x) = \max_{y} f(y,s)$, where $y$ range through all strings. Let $\phi(x)$ be the number of distinct subsequences of $x$. 
+    Fix string $x$ with length $|x|$, let $f(y,x)$ be the number of different ways $y$ can be a subsequence of $x$. $m(x) = \max_{y} f(y,x)$, where $y$ range through subsequences of $x$. Let $\phi(x)$ be the number of distinct subsequences of $x$. 
 
     What are the relations between these parameters? Trivially $m(x)\geq \frac{|x|}{\phi(x)}$.
-
-### Algebra
-
-{Problem}
-    How fast can one solve the word problem on the following presentation $G = \langle x_1,x_2,\ldots,x_n \mid  x_iw = wx_i, R=1 \rangle$?
-    Where $R$ is a permutation of the word $x_1\ldots x_nx_1^{-1}\ldots x_n^{-1}$, and $w\in G$.
-
-{Problem}
-    Characterize automatic group with star free language.
-
-{Problem}
-    Can the word problem for $B_4$ be done in subquadratic time? $B_4$ is the braid group on 4 strands. 
 
 ### Discrete Geometry
 {Problem}
@@ -76,6 +63,7 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
     \[ 
     \sum_{i=1}^n a_{\pi(i)}a_{\pi(i+1)} - \lambda b_{\pi(i)}b_{\pi(i+1)} < 0
     \], where we define $\pi(n+1)=\pi(1)$.
+    Is this problem NP-hard?
 
 {Problem}
     Can finger tree replace [segment trees](letuskode.blogspot.com/2013/01/segtrees.html)?
@@ -84,4 +72,7 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
     How fast can we [improve the pseudo-polytime algorithm for subset sum](http://cstheory.stackexchange.com/questions/21533/faster-pseudo-polynomial-time-algorithm-for-subset-sum)? 
 
 {Problem}
-    Let $T$ be a rooted, ordered, labeled tree. For each vertex, find the maximum common subtree in all the subtree rooted at it's children. 
+    Let $T$ be a rooted, ordered, labeled tree. For each vertex, find the maximum common subtree in all the subtree rooted at it's children. Anything better than the trivial algorithm here?
+
+{Problem}
+    Given a simple unit edge capacity undirected graph $G=(V,E)$ with a subset of vertices $T$ with unit capacity, and remaining vertices with infinite capacity. Can one find a $st$-maximum flow in $O(n^{2.5})$ time?

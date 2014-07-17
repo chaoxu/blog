@@ -1,5 +1,5 @@
 ---
-title: Lexicographic Bottleneck Path in Undirected Graphs
+title: Lexicographic Bottleneck Shortest Path in Undirected Graphs
 tags: algorithm
 ---
 
