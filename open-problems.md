@@ -75,4 +75,4 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
     Let $T$ be a rooted, ordered, labeled tree. For each vertex, find the maximum common subtree in all the subtree rooted at it's children. Anything better than the trivial algorithm here?
 
 {Problem}
-    Given a simple unit edge capacity undirected graph $G=(V,E)$ with a subset of vertices $T$ with unit capacity, and remaining vertices with infinite capacity. Can one find a $st$-maximum flow in $O(n^{2.5})$ time?
+    Given a simple unit edge capacity undirected graph $G=(V,E)$ with a subset of vertices $T$ with unit capacity, and remaining vertices with infinite capacity. Can one find a $st$-maximum flow in deterministic $O(n^{2.5})$ time?
