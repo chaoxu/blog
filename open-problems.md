@@ -59,11 +59,13 @@ http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-
     Find the minimum length regular expression that describes a regular language.
 
 {Problem}
-    Given $a_1,\ldots,a_n$, $b_1,\ldots,b_n$ and $\lambda$ in $\R^+$. Does there exist a permutation such that
+    Given $a_1,\ldots,a_n$ and $b_1,\ldots,b_n$. Does there exist a permutation such that
     \[ 
-    \sum_{i=1}^n a_{\pi(i)}a_{\pi(i+1)} - \lambda b_{\pi(i)}b_{\pi(i+1)} < 0
+    \sum_{i=1}^n a_{\pi(i)}a_{\pi(i+1)} - b_{\pi(i)}b_{\pi(i+1)} < 0
     \], where we define $\pi(n+1)=\pi(1)$.
     Is this problem NP-hard?
+
+Note this is basically traveling salesman problem such that the distance between two vertices is the difference of two symmetric product matrix, where a matrix $M$ is a product matrix of vector $x$ and $y$ if $M_{ij}=x_iy_j$.
 
 {Problem}
     Can finger tree replace [segment trees](letuskode.blogspot.com/2013/01/segtrees.html)?
