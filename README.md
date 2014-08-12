@@ -15,6 +15,7 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 11. The heading themes are similar to [Connections in Combinatorial Optimization](http://www.amazon.com/gp/product/0199205272/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199205272&linkCode=as2&tag=fighterempire-20), and the remaining themes are similar to [Categories for the Working Mathematician](http://www.amazon.com/gp/product/0387984038/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0387984038&linkCode=as2&tag=fighterempire-20). The symbols are of [STIX fonts](http://www.stixfonts.org/), or mathjax's own.
 12. Uses [Detect Whether a Font is Installed](http://www.kirupa.com/html5/detect_whether_font_is_installed.htm) to fall back on mathjax webfont if STIX is not installed.
 13. [Hyphenator.js](https://code.google.com/p/hyphenator/) to make the it look even more latex like.
+14. To compile just MathDoc, you need pandoc, pandoc-citeproc, missingh. To compile the site, additionally you need hakyll.
 
 ## Todo
 
