@@ -40,6 +40,8 @@ main = hakyll $ do
     match "posts/*" $ version "raw" $ do
         route   idRoute
         compile copyFileCompiler
+    
+    {-
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -53,13 +55,13 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
-
+    -}
     -- Index
     match "index.html" $ do
         route idRoute
         compile $ do
             let indexCtx = field "posts" $ \_ ->
-                                postList $ fmap (take 10) . recentFirst
+                                postList recentFirst
 
             getResourceBody
                 >>= applyAsTemplate indexCtx

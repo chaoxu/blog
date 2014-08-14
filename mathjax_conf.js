@@ -31,6 +31,8 @@ MathJax.Hub.Config({
         Z: '{\\mathbb{Z}}', 
         C: '{\\mathbb{C}}', 
         F: '{\\mathbb{F}}', 
+        argmin: '{\\mathop{\\operatorname*{arg\\,min}}}',
+        argmax: '{\\mathop{\\operatorname*{arg\\,max}}}',
         mex: '{\\mathop{\\operatorname{mex}}}', 
         lcm: '{\\mathop{\\operatorname{lcm}}}'
      } 
