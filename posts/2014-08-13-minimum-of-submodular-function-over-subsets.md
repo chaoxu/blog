@@ -4,7 +4,7 @@ tags: submodular
 ---
 
 {Theorem}
-	Let $f:2^V\to \R$ be a submodular function and $P:2^T\to 2^{2^V}$ is a function with the property that $P(A)\cup P(B)\subset P(A\cup B)$ and $P(A)\cap P(B)\subset P(A\cap B)$. $f_P:2^T\to \R$ defined as 
+	Let $f:2^V\to \R$ be a submodular function and $P:2^T\to 2^{2^V}$ is a function with the property that if $X\in P(A)$ and $Y\in P(B)$, then $X\cup Y\in P(A\cup B)$ and $X\cap Y\in P(A\cap B)$. $f_P:2^T\to \R$ defined as 
 	\[
 		f_P(X) = \min_{Y\in P(X)} f(Y)\\
 	\]

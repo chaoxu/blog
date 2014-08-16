@@ -12,20 +12,19 @@ Let $f,g:V\to R$, $w:V\to \mathbb{N}$ and $Z\subset \mathbb{N}$. It is common th
 
 Examples:
 
-1. If $w(x)=1$ for all $x$, and $f(x)$ be the probability that event $x$ occurs, $g=1-f$, we find the probability that the number of event occurs $t$ times, where $t\in Z$. In probability, this is computing the Poisson distribution.
+  1. If $w(x)=1$ for all $x$, and $f(x)$ be the probability that event $x$ occurs, $g=1-f$, we find the probability that the number of event occurs $t$ times, where $t\in Z$. In probability, this is computing the Poisson distribution.
 
-2. If $(R,+,\cdot) = (\N,+,+)$, $f=1$, $g=0$ for all $x$ and $w(x)=x$ and $V\subset \N$ and $Z=\{t\}$, then we find the number of subsets that have element sum $t$.
+  2. If $(R,+,\cdot) = (\N,+,+)$, $f=1$, $g=0$ for all $x$ and $w(x)=x$ and $V\subset \N$ and $Z=\{t\}$, then we find the number of subsets that have element sum $t$.
 
-3. If $(R,+,\cdot) = (\N,\max,+)$, $V\subset \N$, $g=0$ and $Z=\{0,\ldots,W\}$, then this solves the knapsack problem with knapsack size $W$, value $f$ and cost $w$.
+  3. If $(R,+,\cdot) = (\N,\max,+)$, $V\subset \N$, $g=0$ and $Z=\{0,\ldots,W\}$, then this solves the knapsack problem with knapsack size $W$, value $f$ and cost $w$.
 
-4. An actual application inspired this post: An automated test suite that runs $n$ subtests, and it is allowed to rerun a subtest if it fails the first time. A subtest passes if first run passes or the rerun passes. The test is successful if all the subtests passes and the number of total reruns is at most $k$. Assume probability of passing is independent for each subtest. One want to estimate the probability of a successful test given the probability a run passes for a specific subtest.
+  4. An actual application inspired this post: An automated test suite that runs $n$ subtests, and it is allowed to rerun a subtest if it fails the first time. A subtest passes if first run passes or the rerun passes. The test is successful if all the subtests passes and the number of total reruns is at most $k$. Assume probability of passing is independent for each subtest. One want to estimate the probability of a successful test given the probability a run passes for a specific subtest.
 
 Let $\max Z = k$ and $|V| = n$. The naive algorithm runs in $O(2^n)$ time (assuming semiring operation takes $O(1)$ time). There is a common transformation that turns this problem that sum over all subsets to a problem that sums over $Z$. So it runs in $O(nk)$ time.
 
-
 Let $V=\{v_1,\ldots,v_n\}$ and $V_j = \{v_1,\ldots,v_j\}$. Define 
-	\[
-		D(i,j) = \sum_{S\subset V_j, \sum_{x\in S} w(x) = i} \prod_{x\in S} f(x) \prod_{x\in V\backslash S} g(x)
+ 	\[
+ 		D(i,j) = \sum_{S\subset V_j, \sum_{x\in S} w(x) = i} \prod_{x\in S} f(x) \prod_{x\in V\backslash S} g(x)
 	\].
 
 Certainly, 
@@ -36,9 +35,10 @@ Certainly,
 We only incure a $O(k)$ number of semiring operations once we compute all $D(i,n)$ for $0\leq i\leq k$.
 
 Let $[P]$ be the [Iverson bracket notation](http://en.wikipedia.org/wiki/Iverson_bracket), namely
+
 \[
-    [P] = \begin{cases} \mathbb{1} & \text{if } P \text{ is true;}\\
-                        \mathbb{0} & \text{otherwise.} \end{cases}
+[P] = \begin{cases} \mathbb{1} & \text{if } P \text{ is true;}\\
+      \mathbb{0} & \text{otherwise.} \end{cases}
 \]
 
 {Theorem}
