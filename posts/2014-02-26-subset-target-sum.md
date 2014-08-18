@@ -10,7 +10,7 @@ A [multiset](http://en.wikipedia.org/wiki/Multiset) $(X,\chi_X)$ is a set $X$ as
     
     Given a multiset $X$ of positive integers and a target sum $k$. Find if there is a multisubset of $Y\subset X$ such that $\sum_{y\in Y} = k$ in $O(n+f(k))$ time. 
 
-We want $f(k)$ to be as small as possible. This was a paraphrase of the 7th problem on [UIUC theory qualify exam 2003 Spring](http://sarielhp.org/research/algorithms/quals/03/03_spring.pdf). After hours of literature search, I can't find anything better than $f(k)=k^2$, so I'm writing up a solution where $f(k) = (k\log k)^{\frac{3}{2}}$.
+We want $f(k)$ to be as small as possible. This was a paraphrase of the 7th problem on [UIUC theory qualify exam 2003 Spring](http://sarielhp.org/research/algorithms/quals/03/03_spring.pdf). After hours of literature search, I can't find anything better than $f(k)=k^2$, so I'm writing up a solution where $f(k) = (k\log k)^{\frac{3}{2}}$. Notice there is a related result. Pisinger has an algorithm that runs in $O(nc)$ time where the input multiset contain numbers of size at most $c$.[@Pisinger19991] This is strictly better when $k$ is much worse than $c$, but our algorithm would still be faster for the lot of other cases. 
 
 Through out the article, we assume $k$ is fixed. 
 
@@ -29,6 +29,7 @@ Check if $k\in S(X)$ solves [Problem 1].
 There exist a $O(n+k\log k)$ time algorithm to reduce the **Multisubset Target Sum** problem to two calls of **Subset Sums** problem. The algorithm starts by reading the elements in $X$ and build a new multiset $Y$, it is defined so $\chi_Y(t) = \min(\chi_X(t),\lfloor k/t\rfloor)$. The new multiset has size $O(k\log k)$. Clearly $S(Y)=S(X)$. We will further decrease the size of $Y$ by applying the following theorem.
 
 {Theorem}
+
     If $\chi_X(t)\geq 3$, and $X'$ is a multiset such that
 
     1. $\chi_{X'}(x) = \chi_{X}(x)$ for all $x\not \in \{t,2t\}$.
@@ -97,8 +98,9 @@ $|S(X_i)|$ will be bounded by some crude combinatorial estimates. If $t > \frac{
 The sums of a size $t$ subset lies in the interval $[a_{i-1}t, a_{i-1}t + (a_i-a_{i-1})t]$, thus sums of subsets of size $t$ contributes at most $(a_i-a_{i-1})t$ points to $S(X_i)$. Also, there is no subset with size greater than $a_i-a_{i-1}$. The punchline:
 
 \[
-|S(X_i)|\leq (a_i-a_{i-1})t^2
+|S(X_i)| \leq (a_i-a_{i-1})t^2
 \]
+
 where $t=\min(\frac{k}{a_{i-1}},a_i-a_{i-1})$. This gives us the choice to mix and match which one of the two we going to use.
 
 ## Uniformly distributed partitions
@@ -152,3 +154,5 @@ Note in our general framework, the size of the set $X$ was not considered. It ma
 Take the last geometric distribution, but consider a tighter analysis. It's not hard to show we can improve the algorithm to $O(k^{3/2}\log k \sqrt{\log n})$. Are there any possibility to beat $O(nk)$ for $n=o(\sqrt{k})$? 
 
 Not much is possible with this approach. Our approach saves time by having a bound on $\frac{k}{a_i}$ and $|X_i|$. Now, let's consider $n=\Theta(\sqrt{k})$ and every element in $X$ is smaller than $\sqrt{k}$ and distributed randomly. This bound is not useful, as almost every interval before $\sqrt{k}$ is going to be full, and no sum can jump outside the range we care about. Any partition will sum up to a $\Omega(k^\frac{3}{2})$ bound.
+
+# References
