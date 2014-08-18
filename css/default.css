@@ -303,6 +303,12 @@ table.postindex td.right {
   text-align: right;
 }
 
+.header-section-number {
+    margin-right: 10px;
+}
+.header-section-number:after {
+    content: '.';
+}
 /* code highlight */
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
