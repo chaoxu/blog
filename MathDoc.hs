@@ -1,14 +1,17 @@
 module MathDoc ( mathdoc, mathdocInline) where
 import Text.Pandoc
-import Text.Regex
+import Text.Regex (mkRegex, matchRegex)
 import Data.Maybe
 import Text.Pandoc.Writers.HTML
-import Data.String.Utils
+--import Data.String.Utils
 import Data.Set (insert)
 import System.Environment (getArgs)
-import Data.List (nub)
+import Data.List (nub, intercalate, isPrefixOf)
 import Text.CSL.Pandoc
 import System.IO.Unsafe
+import Data.Array((!))
+import Data.Bits((.|.))
+
 import qualified Data.Map as M
 
 setMeta key val (Pandoc (Meta ms) bs) = Pandoc (Meta $ M.insert key val ms) bs
@@ -141,3 +144,29 @@ isTheorem (Header 6 (_, [], param) _) =
       else False
   where t = lookup "type" param
 isTheorem x = False
+
+
+-- copied missingh's replace implementation, because missingh runs into dependency hell...
+-- remove this and uncomment import Data.String.Utils if you can solve this problem somehow
+replace :: Eq a => [a] -> [a] -> [a] -> [a]
+replace old new l = intercalate new . split old $ l
+
+spanList :: ([a] -> Bool) -> [a] -> ([a], [a])
+spanList _ [] = ([],[])
+spanList func list@(x:xs) =
+    if func list
+       then (x:ys,zs)
+       else ([],list)
+    where (ys,zs) = spanList func xs
+
+split :: Eq a => [a] -> [a] -> [[a]]
+split _ [] = []
+split delim str =
+    let (firstline, remainder) = spanList (not . isPrefixOf delim) str
+        in 
+        firstline : case remainder of
+                                   [] -> []
+                                   x -> if x == delim
+                                        then [[]]
+                                        else split delim 
+                                                 (drop (length delim) x)
