@@ -1,3 +1,7 @@
+---
+title: README
+---
+
 I choosed to make this blog because I want to use [Haskell](http://www.haskell.org/) and save some hosting money by not hosting a [Drupal](http://drupal.org/) on [A2 Hosting](http://www.a2hosting.com/).
 
 ## Technology
@@ -19,13 +23,8 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 
 ## Todo
 
-- Maybe add a CDN? (well... it's not like I get 5 milion views).
-- Tags (man I really don't want to spend so much time on this site...).
-- Compress the HTML. (Not easy, since there are math formats that doesn't allow compression.)
-- Syntax highlight.
-- Easier link to gist/wiki/other common links
-- Embedder(embed graphs other things...). Thus a fully functional MathDoc markdown.
-- H1 heading
+- Able to simulate `label` and `\ref`.
+- Syntax highlight. Likely not important as one can embed gist codes.
 
 ## Notes
 
