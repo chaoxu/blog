@@ -30,5 +30,3 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 - Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
 - Remember to set cache to amazon s3 . Say, set `Cache-Control` to `public, max-age=31536000`
 - I made an [syntax highlighting file](https://gist.github.com/Mgccl/195ce33124f384a2f4e4) for sublime 3, so in Markdown it can also highlight latex codes.
-
-[![Feed Me](http://www.pledgie.com/campaigns/19986.png?skin_name=chrome)](http://www.pledgie.com/campaigns/19986)

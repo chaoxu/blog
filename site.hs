@@ -36,6 +36,13 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
+    -- drafts
+    match "drafts/*.md" $ do
+        route $ setExtension "html"
+        compile $ mathCompiler
+            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
     -- raw posts
     match "posts/*" $ version "raw" $ do
         route   idRoute
