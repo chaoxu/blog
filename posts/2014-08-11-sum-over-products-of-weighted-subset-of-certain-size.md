@@ -14,13 +14,13 @@ Examples:
 
   1. If $w(x)=1$ for all $x$, and $f(x)$ be the probability that event $x$ occurs, $g=1-f$, we find the probability that the number of event occurs $t$ times, where $t\in Z$. In probability, this is computing the Poisson distribution.
 
-  2. If $(R,+,\cdot) = (\N,+,+)$, $f=1$, $g=0$ for all $x$ and $w(x)=x$ and $V\subset \N$ and $Z=\{t\}$, then we find the number of subsets that have element sum $t$.
+  2. If $(R,+,\cdot) = (\N,+,\cdot)$, $f=g=1$, for all $x$ and $w(x)=x$ and $V\subset \N$ and $Z=\{t\}$, then we find the number of subsets that have element sum $t$.
 
   3. If $(R,+,\cdot) = (\N,\max,+)$, $V\subset \N$, $g=0$ and $Z=\{0,\ldots,W\}$, then this solves the knapsack problem with knapsack size $W$, value $f$ and cost $w$.
 
   4. An actual application inspired this post: An automated test suite that runs $n$ subtests, and it is allowed to rerun a subtest if it fails the first time. A subtest passes if first run passes or the rerun passes. The test is successful if all the subtests passes and the number of total reruns is at most $k$. Assume probability of passing is independent for each subtest. One want to estimate the probability of a successful test given the probability a run passes for a specific subtest.
 
-Let $\max Z = k$ and $|V| = n$. The naive algorithm runs in $O(2^n)$ time (assuming semiring operation takes $O(1)$ time). There is a common transformation that turns this problem that sum over all subsets to a problem that sums over $Z$. So it runs in $O(nk)$ time.
+Let $\max Z = k$ and $|V| = n$. The naive algorithm runs in $O(n2^n)$ time (assuming semiring operation takes $O(1)$ time). There is a common transformation that turns this problem that sum over all subsets to a problem that sums over $Z$. So it runs in $O(nk)$ time.
 
 Let $V=\{v_1,\ldots,v_n\}$ and $V_j = \{v_1,\ldots,v_j\}$. Define 
  	\[

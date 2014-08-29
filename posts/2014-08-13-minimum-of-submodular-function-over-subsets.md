@@ -4,7 +4,7 @@ tags: submodular
 ---
 
 {Theorem}
-	Let $f:2^V\to \R$ be a submodular function and $P:2^T\to 2^{2^V}$ is a function with the property that if $X\in P(A)$ and $Y\in P(B)$, then $X\cup Y\in P(A\cup B)$ and $X\cap Y\in P(A\cap B)$. $f_P:2^T\to \R$ defined as 
+	Let $L$ and $L'$ are two lattices. If $f:L \to \R$ is a submodular function and $P:L'\to 2^{L}$ is a function with the property that if $X\in P(A)$ and $Y\in P(B)$, then $X\wedge Y\in P(A\wedge B)$ and $X\vee Y\in P(A\vee B)$. $f_P:L'\to \R$ defined as 
 	\[
 		f_P(X) = \min_{Y\in P(X)} f(Y)\\
 	\]
@@ -12,12 +12,12 @@ tags: submodular
 
 {Proof}
 	Let $X^* = \argmin_{Y\in P(X)} f(Y)$,
-	note since $X^*\in P(X)$ and $Y^*\in P(Y)$, we have $X^*\cup Y^* \in P(X\cup Y)$ and $X^*\cap Y^* \in P(X\cap Y)$.
+	note since $X^*\in P(X)$ and $Y^*\in P(Y)$, we have $X^*\vee Y^* \in P(X\vee Y)$ and $X^*\vee Y^* \in P(X\wedge Y)$.
 	\begin{align*}
 	f_P(X) + f_P(Y) &= f(X^*) + f(Y^*)\\
-	                &\geq f(X^* \cup Y^*) + f(X^*\cap Y^*)\\
-	                &\geq f((X\cup Y)^*) + f((X\cap Y)^*)\\
-	                &= f_P(X\cup Y) + f_P(X\cap Y)
+	                &\geq f(X^* \vee Y^*) + f(X^*\wedge Y^*)\\
+	                &\geq f((X\vee Y)^*) + f((X\wedge Y)^*)\\
+	                &= f_P(X\vee Y) + f_P(X\wedge Y)
 	\end{align*}
 
 This is quite useful, for starters, it proves that we can create a monotone submodular function from any submodular function.

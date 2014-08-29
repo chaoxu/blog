@@ -4,7 +4,7 @@ title: README
 
 I choosed to make this blog because I want to use [Haskell](http://www.haskell.org/) and save some hosting money by not hosting a [Drupal](http://drupal.org/) on [A2 Hosting](http://www.a2hosting.com/).
 
-## Technology
+# Technology
 
 1.  The source of the blog is on a [git repository](https://github.com/Mgccl/blog). 
 2.  html files are hosted on [site44](http://http://www.site44.com/). 
@@ -21,11 +21,11 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 13. [Hyphenator.js](https://code.google.com/p/hyphenator/) to make the it look even more latex like.
 14. To compile just `MathDoc.hs`, you need `pandoc` and `pandoc-citeproc`. To compile the `site.hs`, additionally you need `hakyll`(obviously...).
 
-## Todo
+# Todo
 
-- Able to simulate `label` and `\ref`.
+- Able to simulate `\label` and `\ref`.
 
-## Notes
+# Notes
 
 - Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
 - Remember to set cache to amazon s3 . Say, set `Cache-Control` to `public, max-age=31536000`
