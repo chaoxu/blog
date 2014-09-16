@@ -2,69 +2,112 @@
 title: Puzzles
 ---
 
-Let $x=p/q$ be an rational number, where $p$ and $q$ are integers. There is a function $f_x$, such that $f_x(y)$ tells you if $x < y$, $x > y$ or $x=y$. What is the maximum number of queries of $f_x$ needed to find $x$?
+ - Let $x=p/q$ be an rational number, where $p$ and $q$ are integers. There is a function $f_x$, such that $f_x(y)$ tells you if $x < y$, $x > y$ or $x=y$. What is the maximum number of queries of $f_x$ needed to find $x$? http://stackoverflow.com/questions/5440688/the-guess-the-number-game-for-arbitrary-rational-numbers
 
-http://stackoverflow.com/questions/5440688/the-guess-the-number-game-for-arbitrary-rational-numbers
+ - You have a data stream of a permutation of $\{1,\ldots,n\}$. However you know $k$ of the elements will be missing because the communication channel has fault. How can you detect which numbers are missing?  http://stackoverflow.com/questions/3492302/easy-interview-question-got-harder-given-numbers-1-100-find-the-missing-numbe
 
+ - Data structure for loaded dice? http://stackoverflow.com/questions/5027757/data-structure-for-loaded-dice
 
-You have a data stream of a permutation of $\{1,\ldots,n\}$. However you know $k$ of the elements will be missing because the communication channel has fault. How can you detect which numbers are missing? 
+ - http://stackoverflow.com/questions/5739024/finding-duplicates-in-on-time-and-o1-space
 
-http://stackoverflow.com/questions/3492302/easy-interview-question-got-harder-given-numbers-1-100-find-the-missing-numbe
+ - When does the greedy algorithm work for the coin change problem http://graal.ens-lyon.fr/~abenoit/algo09/coins2.pdf
 
+ - How many distinct substrings/subsequences can there be for a string of length n over alphabet of size m.
 
-Data structure for loaded dice?
-http://stackoverflow.com/questions/5027757/data-structure-for-loaded-dice
+ - In a tournament, sum of the square of number of wins are sum of square of number of loses.
 
-http://stackoverflow.com/questions/5739024/finding-duplicates-in-on-time-and-o1-space
+ - How to test if a point is inside a polygon? What if it's a convex polygon?
 
-When does the greedy algorithm work for the coin change problem
-http://graal.ens-lyon.fr/~abenoit/algo09/coins2.pdf
+ - Can one put a $a\times b\times c$ box inside a $d \times e\times f$ box, if $d+e+f < a+b+c$ ?
 
-How many distinct substrings/subsequences can there be for a string of length n over alphabet of size m.
+ - Show that the distributive law cannot distribute things for ever.
 
-In a tournament, sum of the square of number of wins are sum of square of number of loses.
+ - Randomly pick a set of $n$ elements that sum to $m$.
 
-How to test if a point is inside a polygon? What if it's a convex polygon?
+ - Given a inorder and postorder traversal of a Binary Tree, construct the tree using these two traversals.
 
-Can one put a $a\times b\times c$ box inside a $d \times e\times f$ box, if $d+e+f < a+b+c$ ?
+ - Longest Palindromic Substring
 
-Show that the distributive law cannot distribute things for ever.
+ - There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 
-Randomly pick a set of $n$ elements that sum to $m$.
+ - Given two sorted arrays A, B of size m and n respectively. Find the k-th smallest element in the union of A and B. You can assume that there are no duplicate elements.
 
+ - Input: A long array A[], and a window width w
+   Output: An array B[], B[i] is the maximum value of from A[i] to A[i+w-1]
 
+ - There are n coins in a line. (Assume n is even). Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins.
 
-Given a inorder and postorder traversal of a Binary Tree, construct the tree using these two traversals.
+ - Given a set T of characters and a string S, find the minimum window in S which will contain all the characters in T in complexity O(n).
 
-Longest Palindromic Substring
+ - Detecting a Loop in a Singly Linked List
 
-There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ - Test power of 2: x && !(x & (x-1));
 
-Given two sorted arrays A, B of size m and n respectively. Find the k-th smallest element in the union of A and B. You can assume that there are no duplicate elements.
+ - Searching an Element in a Rotated Sorted Array
 
-Input: A long array A[], and a window width w
-Output: An array B[], B[i] is the maximum value of from A[i] to A[i+w-1]
+ - Rotate an array in place
 
-There are n coins in a line. (Assume n is even). Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins.
+ - Find the k smallest elements from the set of n numbers in O(n) time complexity
 
-Given a set T of characters and a string S, find the minimum window in S which will contain all the characters in T in complexity O(n).
+ - Consider an array A such that each number appears twice. How many swaps are required such that A[2i] = A[2i+1] for all i?
 
-Detecting a Loop in a Singly Linked List
+ - 2D array, O(1) time find the closest element with linear big memory.
 
-Test power of 2: x && !(x & (x-1));
+ - Putnam B3. Tournament, 2n-1 days, can one pick a winning team such that no team is picked twice?
 
-Searching an Element in a Rotated Sorted Array
+ - A vertex is a celebrity if it has only incoming edges and no outgoing edges. Find the celebrity in a graph.
 
-Rotate an array in place
+ - Pipes, horizontal must go, n balls drop. 1 to 1. 
 
-Find the k smallest elements from the set of n numbers in O(n) time complexity
+ - Helly property on trees.
 
-Consider an array A such that each number appears twice. How many swaps are required such that A[2i] = A[2i+1] for all i?
+ - Given $k$-edge-disjoint path between $u$ and $v$ and $v$ and $w$, total of $m$ edges. Find $k$-edge-disjoint path between $u$ and $w$ in $O(m)$ time.
 
-2D array, O(1) time find the closest element with linear big memory.
+ - Prove that there exist a $k$-edge-disjoint path in a simple graph with total length $O(\sqrt{k}n)$.
 
-Putnam B3. Tournament, 2n-1 days, can one pick a winning team such that no team is picked twice?
+ - Given a tree, in linear time preprocess the tree, such that we can answer the following query given pointers to vertices $u,v$ and $w$: "Is the vertex $v$ on the unique path between $u$ and $w$?"
 
-A vertex is a celebrity if it has only incoming edges and no outgoing edges. Find the celebrity in a graph.
+ - Least common ancestor of a tree
 
-Pipes, horizontal must go, n balls drop. 1 to 1. 
+ - level ancestor of a tree
+
+ - rmq
+
+ - find center of a tree
+
+ - diameter of a tree
+
+ - all kind of tree/subtree isomorphisms
+
+ - find the most common subtree (rooted ordered and rooted labeled ordered) [See this](/posts/2014-06-05-pattern-in-labeled-ordered-rooted-trees.html)
+
+ - [Lexicographic bottleneck shortest path in undirected graph](/posts/2014-05-10-lexicographical-bottleneck-path.html)
+
+ -  Consider a commutative semiring $(R,+,\cdot)$. $\mathbb{0}$ is the identity for $(R,+)$, and $\mathbb{1}$ is the identity for $(R,\cdot)$. Let $f,g:V\to R$, $w:V\to \mathbb{N}$ and $Z\subset \mathbb{N}$. It is common that we are interested in computing expressions of the following form. 
+ \[
+ \sum_{S\subset V, \sum_{x\in S} w(x) \in Z} \prod_{x\in S} f(x) \prod_{x\in V\backslash S} g(x)
+ \]
+
+ - [bisect a circle with same number of points](/posts/2014-03-27-bisect-circle-even-point-set.html)
+
+ - Given a weighted tree(weights are small, say at most up to 1000) and $k$, find the number of vertices with distance at most $k$ from another. http://poj.org/problem?id=1741
+
+ - Given a weighted forest. Connect the forests with edges of weight $L$ to get a spanning tree such that the diameter of the spanning tree is minimized. (Dreaming, IOI 2013)
+
+ - static partial sum in $O(\alpha(n))$ query and $O(n)$ space/preprocessing. Yao's result.
+
+ - For any graph of $m$ edges, we want to create a data structure, so we can test if there exist edge $uv$ in $O(m/n)$ time. (the idea is we cannot number/hash the vertices, the only way to check if two vertices are the same is to call a special oracle on the pointers.)
+
+ - Bottleneck shortest path in $O(m)$ time if given an list that orders the edges.
+
+ - Stable matching bipartite multigraph with incomplete preference list.
+
+ - Reservoir sampling with weights
+
+ - You are given $k$ stacks $S_1,\ldots,S_k$. You know everything about the stacks(you can inspect all elements in the stacks without poping them). Assume the stacks have a total of $n$ elements. You want to pop all the elements from the stacks in such a way such that $S_1.peek()\leq S_2.peek()\leq \ldots \leq S_k.peek()$ is always true. Note that we define $S_i.peek()=\infty$ if $S_i$ is empty. Come up with an algorithm to decide if this is possible.
+
+ - given n chords on the circle(no two chords share the same points on the boundary of the circle). Each chrod is assigned a value of either 1 or -1. A value of a intersection of two chords is the product of the values of the chords containing it. Compute the sum of the value of the intersections.
+
+ - Given $n$ arrays $\{A_1,\ldots,A_n\}$ each of size $O(n)$, assume we can compute $r(x,A_i)$ for each $i$ in constant time for all $x$, where $r(x,A_i)$ is the number of elements less or equal to $x$. Let $A = sort(concat_{i=1}^k A_i)$. Find $A[k]$ in $O(n)$ time.
+
+ - Given $a_1\leq \ldots \leq a_k$, partition a set of $n$ numbers into $k$ sets, such that each set contains numbers of the rank between $a_i$ and $a_{i+1}$.

@@ -81,3 +81,9 @@ Note this is basically traveling salesman problem such that the distance between
 
 {Problem}
     Let $G$ be a directed graph with a source vertex $s$, how fast can one find $\min_{t\in T} \lambda(s,t)$? 
+
+{Problem}
+    How hard is it to sample from the distribution where $i$th event has probability $p_i/q_i$ to happen? 
+
+{Problem}
+    Is there a sparsifier for a (simple) mixed graph with element connectivity? Namely, $k$ spanning forests over the undirected edges, such that the element connectivity between any two vertices is preserved up to $k$?

@@ -50,7 +50,7 @@ However we can do it better, because we can easily check graphs without a diamon
 The second step is computationally easy. Do a DFS, whenever we find a cycle, check if the cycle is even, delete all those edges, and keep going. The number of steps we take is at most $O(n+m)$ time. In fact, we don't really need to delete the edges once we find a cycle, as we know they will never get used by another cycle.
 
 # A much simpler algorithm
-Our above algorithm is pretty general and uses some heavy machinary. That's the kind of solution I would give during a qualify exam due to time constraints(well, always use the most powerful technique possible). 
+Our algorithm above is pretty general and uses some heavy machinary. That's the kind of solution I would give during a qualify exam due to time constraints(well, always use the most powerful technique possible). 
 
 The theorems we proved implies one nice corollary
 
@@ -63,7 +63,7 @@ This kind of graph has a name, a [cactus graph](http://en.wikipedia.org/wiki/Cac
 This implies a extremely simple algorithm
 
 1. Run a DFS to build a DFS tree. Let $d(v)$ be the depth of a vertex $v$ in the tree.
-2. For every vertex $v$, check if it has 2 back edges. If so, return true.
+2. Assume there is a back edge between $x$ and $y$, check if there is any back edge end at some node in the unique path from $x$ to $y$.
 3. For every vertex $v$, if it has a back edge to some vertex $u$, then check if $d(v)-d(u)$ is odd. If it is, return true.
 4. Return false.
 

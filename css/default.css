@@ -320,3 +320,12 @@ code > span.dt { text-decoration: underline; }
 code > span.co { font-style: italic; }
 code > span.al { font-weight: bold; }
 code > span.er { font-weight: bold; }
+
+  dt {
+    font-weight: normal;
+    font-style: italic;
+  }
+  dd {
+    margin: 0;
+    padding: 0 0 0.5em 0;
+  }
