@@ -12,7 +12,7 @@ Here are some problems that are either open to the best of my knowledge, or aske
 
     Given a graph $G$ with max degree $3$ and it's hamiltonian cycle $C$, there is a matching $M$ of size $k$. Find a matching $N$ of $C$, such that each component in $M\cup N$ have same number of edges from $M$ and $N$, and the number of cycles in $M\cup N$ is maximized. (we consider a component of a single edge a cycle).
 
-## Combinatorics and Algorithms
+# Combinatorics
 
 {Problem}
     Are there any sorting algorithms such that every element is compared $O(\log n)$ time, and does not depend on the AKS sorting network?
@@ -41,20 +41,14 @@ These are some problems released as [project for CSE 549 Fall 2010 in Stony Broo
 
     What are the relations between these parameters? Trivially $m(x)\geq \frac{|x|}{\phi(x)}$.
 
-### Discrete Geometry
+{Problem}
+    $X$ is a family of subsets of $V$. $X$ is called a Laminar family on $V$ if for all $A,B\in X$, either $A\cap B=\emptyset$, $A\subset B$ or $B\subset A$. A graph $G=(V,E)$ has induced diameter $k$ with respect to $X$ if for every $A\in X$, $G[A]$ has diameter at most $k$. $G[A]$ is the induced subgraph of $G$ on $A$. Define $f_k(n)$ as the minimum number of edges such that for any Laminar family $X$ on $n$ vertices, there is a graph with induced diameter $k$ with respect to $X$. Bound $f_k(n)$.
+
+# Discrete Geometry
 {Problem}
     There are a set $S$ of points on the plane, such that the distance between any two is at least $d$. What is the smallest $d$, such that no matter how large $|S|$ is, one can always cover $S$ with $|S|$ disjoint unit disks? 
 
-### Topology
-{Problem}
-    Let the set $C$ be a set of homotopy classes of simple closed curves on an orientable surface $S$ of genus $g$, such that if $a,b\in C$, then their minimal intersection number is at most 1. Let $X_g$ be the set of all the sets with the above property. Find bounds on $f(g) = \sup_{C\in X_g}|C|$.
-
-[Collections of Simple Closed Curves Intersecting at Most Once](http://www.math.uchicago.edu/~may/VIGRE/VIGRE2007/REUPapers/FINALFULL/Constantin.pdf) The paper by Sarah Constantin proves an exponential upper bound and a quadratic lower bound. 
-[Arcs intersecting at most once](http://arxiv.org/abs/1402.1570). This preprint by Piotr Przytycki gives a cubic upper bound, and in fact, a polynomial upper bound for any fixed number of intersections.
-
-### Others
-http://cstheory.stackexchange.com/questions/16682/scheduling-with-rsvp-deadline-and-possible-cancelations
-
+# Algorithms
 {Problem}
     Find the minimum length regular expression that describes a regular language.
 
@@ -83,7 +77,13 @@ Note this is basically traveling salesman problem such that the distance between
     Let $G$ be a directed graph with a source vertex $s$, how fast can one find $\min_{t\in T} \lambda(s,t)$? 
 
 {Problem}
-    How hard is it to sample from the distribution where $i$th event has probability $p_i/q_i$ to happen? 
+    How hard(bit complexity) is it to sample from the distribution where $i$th event has probability $p_i/q_i$ to happen?
 
 {Problem}
     Is there a sparsifier for a (simple) mixed graph with element connectivity? Namely, $k$ spanning forests over the undirected edges, such that the element connectivity between any two vertices is preserved up to $k$?
+
+{Problem}
+    [Fill up bins with minimum moves](http://cs.stackexchange.com/questions/12441/is-it-np-hard-to-fill-up-bins-with-minimum-moves)
+
+{Problem}
+    [Maximum local edge connectivity](http://cstheory.stackexchange.com/questions/25531/maximum-local-edge-connectivity)
