@@ -72,10 +72,13 @@ Again, for this graph, we can add at most $n$ edges and force diameter to be at 
 
 	**Query Output**: The sum of weights of any walk from $x$ to $y$ that lies strictly inside the subtree rooted at $x$.
 
-
-Finally, here is a conjecture. Instead of using tree, we use Laminar family to simplify the wording of the conjecture.
+Finally, here is a conjecture. Instead of using tree, we use Laminar family to simplify the wording of the conjecture. 
 
 {Conjecture}
-	There exist a constant $k$, such that for any Laminar family $X$ over ground set $V$ of $n$ vertices, there exist a graph $G=(V,E)$ such that $G[A]$ has diameter at most $k$ for all $A\in X$ and $|E|=O(n)$.
+	For every constant $k$, there exist a Laminar family $X$ over ground set $V$ of $n$ vertices, such that for any graph $G=(V,E)$ such that $G[A]$ has diameter at most $k$ for all $A\in X$, then $|E|=\Omega(n\lambda_k(n))$.
+
+If diameter is $3$, then we can show there is a $\Omega(n\log \log n)$ lower bound by consider the Laminar family such that a set of size $n$ gets partitioned into $\sqrt{n}$ children each with $\sqrt{n}$ vertices, and it is applied recursively.
+
+The idea is at any level, say has $n$ elements and $\sqrt{n}$ subsets. A vertex is called interior if it does not connect to any vertex outside the subset, and exterior otherwise. A subset is shy if it contains a interior vertex. We show there is at least $1/5 n$ edges in between the subsets. If there are at least $1/2n$ exterior vertices, then we are done. Otherwise, there are at lease $1/2n$ interior vertices. We call the subsets with at least one interior vertex shy. At least $\sqrt{n}/2$ of those subsets are shy. Consider any two distinct shy subset and pick a interior vertex from each. In order to have a distance 3 path between two interior vertices, the path has to contain two exterior vertex, one in each shy subset. But this shows if we contract all the shy subsets to one vertex, we get a clique. This means there has to be at least $(\sqrt{n}/2-1)^2>1/5n$ edges in between the subsets (for large enough $n$). 
 
 # References

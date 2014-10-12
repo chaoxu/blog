@@ -32,7 +32,7 @@ Timeline of some things about me.
 
 <iframe src="/timeline.html" width="800px" height="800px" frameborder="0" scrolling="no" marginwidth="0px" marginheight="0px"></iframe>
 
-The exchange rate for my time is $100 dollar per hour(after tax). This is the rate for me to do something that I hold no disdain of and won't be doing otherwise.
+The exchange rate for my time is $100 dollar per hour. This is the rate for me to do something that I hold no disdain of and won't be doing otherwise.
 <!--- [public key](/files/id_rsa.pub). 
 
 Grand Goals in life(subjects to change):

@@ -87,3 +87,6 @@ Note this is basically traveling salesman problem such that the distance between
 
 {Problem}
     [Maximum local edge connectivity](http://cstheory.stackexchange.com/questions/25531/maximum-local-edge-connectivity)
+
+{Problem}
+    For every constant $k$, there exist a Laminar family $X$ over ground set $V$ of $n$ vertices, such that for any graph $G=(V,E)$ such that $G[A]$ has diameter at most $k$ for all $A\in X$, then $|E|=\Omega(n\lambda_k(n))$. Find the best $\lambda_k(n)$ possible. See [this](http://www.chaoxuprime.com/posts/2014-09-21-augment-induced-subtree-constant-diameter.html).
