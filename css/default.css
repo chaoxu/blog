@@ -297,7 +297,13 @@ table.postindex{
   width: 100%;
 }
 .info {
+  margin-top: 20px;
   color: #999;
+}
+.info a {
+    text-decoration: none;
+    border-bottom: 1px #999 dotted;
+    color: #999;
 }
 table.postindex td.right {
   text-align: right;
@@ -329,3 +335,8 @@ code > span.er { font-weight: bold; }
     margin: 0;
     padding: 0 0 0.5em 0;
   }
+
+/* printing hide lame things*/
+@media print {
+    .hide-on-print { display: none !important; }
+}

@@ -1,6 +1,7 @@
 ---
 title: Puzzles
 ---
+This collection has some hard problems with optimal solutions.
 
  - Let $x=p/q$ be an rational number, where $p$ and $q$ are integers. There is a function $f_x$, such that $f_x(y)$ tells you if $x < y$, $x > y$ or $x=y$. What is the maximum number of queries of $f_x$ needed to find $x$? http://stackoverflow.com/questions/5440688/the-guess-the-number-game-for-arbitrary-rational-numbers
 
@@ -111,3 +112,5 @@ title: Puzzles
  - Given $n$ arrays $\{A_1,\ldots,A_n\}$ each of size $O(n)$, assume we can compute $r(x,A_i)$ for each $i$ in constant time for all $x$, where $r(x,A_i)$ is the number of elements less or equal to $x$. Let $A = sort(concat_{i=1}^k A_i)$. Find $A[k]$ in $O(n)$ time.
 
  - Given $a_1\leq \ldots \leq a_k$, partition a set of $n$ numbers into $k$ sets, such that each set contains numbers of the rank between $a_i$ and $a_{i+1}$.
+
+ - Find the maximum k cover. namly disjoint k intervals that sums to the max value. http://arxiv.org/abs/1410.2847 (with $O(n)$ time preprocessing, you can do it in $O(k)$ time each!)
