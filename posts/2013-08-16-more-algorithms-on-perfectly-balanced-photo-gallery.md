@@ -50,7 +50,7 @@ If we set $w(j,i)=\infty$ if $j>i$, then we have a better representation.
 C(d,i) = \min_{1\leq j\leq n} {C(d-1,j) + w(j,i)}
 \]
 
-There are $kn$ entires in the DP table for $C$, and $C(d,i)$ requires $O(n)$ time to compute. This means the algorithm will take $O(kn^2)$ time. 
+There are $kn$ entries in the DP table for $C$, and $C(d,i)$ requires $O(n)$ time to compute. This means the algorithm will take $O(kn^2)$ time. 
 
 # 3. Improve the time complexity
 There is a standard technique on totally monotone matrices that can reduce the complexity of the problem to $O(kn)$. 

@@ -4,7 +4,7 @@ title: Faster Pseudo-polynomial Time Algorithm for Subset Sums
 
 # Introduction
 
-A [multiset](http://en.wikipedia.org/wiki/Multiset) $(X,\chi_X)$ is a set $X$ associated with a function $\chi_X$, where $\chi_X:X\to \N$, and $\chi_X(i)$ is the number of times $i$ appears in $(X,\chi_X)$. For simplicity, we will abuse the notation and use $X$ in place of $(X,\chi_X)$. For more definitions, read the wikipedia page.
+A [multiset](http://en.wikipedia.org/wiki/Multiset) $(X,\chi_X)$ is a set $X$ associated with a function $\chi_X$, where $\chi_X:X\to \N$, and $\chi_X(i)$ is the number of times $i$ appears in $(X,\chi_X)$. For simplicity, we will abuse the notation and use $X$ in place of $(X,\chi_X)$. For more definitions, read the Wikipedia page.
 
 {Problem}(Multisubset Target Sum)
     
@@ -43,7 +43,7 @@ There exist a $O(n+k\log k)$ time algorithm to reduce the **Multisubset Target S
 
 Apply the the process of pick any element $t$ where $\chi_Y(t)\geq 3$, and create $Y'$. Notice the size of $Y$ is greater than the size of $Y'$, therefore the size of $|Y|$ is an upper bound on the number of time we repeat the process. Each operation can be done in $O(1)$ time, and we have a $O(k\log k)$ reduction to a multiset $X$(yes, I'm reusing variables) with $\chi_X \leq 2$.
 
-It's easy to partition the resulting multiset $X$ into $A,B$ such that $\chi_A\leq \chi_B\leq 1$. In other words, $A$ and $B$ are actual sets. An operation $*$ that satisfies $S(A)*S(B) = S(A\cup B)$ reduces the computation to one application of $*$ and two subset sums computation. In fact, $*$ can be taken as the convolution over the characteristic function, an $O(k\log k)$ operation[^1]. 
+It's easy to partition the resulting multiset $X$ into $A,B$ such that $\chi_A\leq \chi_B\leq 1$. In other words, $A$ and $B$ are actual sets. An operation $*$ that satisfies $S(A)*S(B) = S(A\cup B)$ reduces the computation to one application of $*$ and two subset sums computation. In fact, $*$ can be taken as the convolution over the characteristic function, an $O(k\log k)$ operation [^1]. 
 
 [^1]: This folklore algorithm comes from solving Exercise 3 in [Jeff's notes on Fast Fourier Transforms](http://www.cs.uiuc.edu/~jeffe/teaching/algorithms/notes/02-fft.pdf).
 

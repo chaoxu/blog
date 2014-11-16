@@ -18,7 +18,7 @@ Here is my [CV](/cv) and my [resume](/files/resume.pdf).
 </a>
 </div>
 
-I seek the following opptunities, you are free to contact me about it:
+I seek the following opportunities, you are free to contact me about it:
 
 - Internships where I get to use an APL style language.
 - Internships where I get to use Haskell.
@@ -32,12 +32,12 @@ Timeline of some things about me.
 
 <iframe src="/timeline.html" width="800px" height="800px" frameborder="0" scrolling="no" marginwidth="0px" marginheight="0px"></iframe>
 
-The exchange rate for my time is $100 dollar per hour. This is the rate for me to do something that I hold no disdain of and won't be doing otherwise.
+The exchange rate for my time is \$100 dollar per hour. This is the rate for me to do something that I don't hate and won't be doing otherwise.
 <!--- [public key](/files/id_rsa.pub). 
 
 Grand Goals in life(subjects to change):
 
-1. Complete [this website](http://problems.site44.com/), the goal is to turn it into an wikipedia of algorithmic problems, and find relation between the problems.
+1. Complete [this website](http://problems.site44.com/), the goal is to turn it into an Wikipedia of algorithmic problems, and find relation between the problems.
 
 2. Create an abstract algorithms library for Haskell that handles all the common algorithmic problems. In particular this requires one to find ways to think about all the algorithms in a functional way.
 -->

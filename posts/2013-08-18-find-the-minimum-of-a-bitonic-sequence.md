@@ -9,7 +9,7 @@ Find an algorithm that can find the minimum value in the sequence in $O(m+\log\f
 
 A trick about circular shift of an sequence is to consider the sequence as a periodic sequence. Create sequence $b$ such that $b_i = a_i$ for $i < n$ and $b_{i+n} = b_i$ for all $i\geq n$. We only have to find one local minima in any consecutive subsequence of length $n$. This time we partition a interval into 4 pieces.
 
-We define a valley to be 3 points $x < y < z$ such that $b_x \geq b_y$, $b_y \leq b_z$, but not $b_x=b_y=b_z$. The valley can't be too large ($|z-x|\leq n$). If we have such an valley and this valley contains a local minima, then it is easy to create a smaller(3/4 of the original size) valley that also contain the local minima. 
+We define a valley to be 3 points $x < y < z$ such that $b_x \geq b_y$, $b_y \leq b_z$, but not $b_x=b_y=b_z$. The valley can't be too large ($|z-x|\leq n$). If we have such an valley and this valley contains a local minima, then it is easy to create a smaller (3/4 of the original size) valley that also contain the local minima. 
 
 If $|y-x|\geq |z-y|$, pick the midpoint $w$ between $x$ and $y$, and consider the relations.
 $w < y$, then we have an valley $(x,w,y)$. $w>y$, then we have an valley $(w,y,z)$, if $b_w=b_y$, consider the midpoint of $w$ and $y$ to be $u$. If $b_w=b_u=b_y$, we know at least $1/8$ of the values are the same, and do a linear search between $x$ and $z$. Otherwise, we must have $b_w > b_u < b_y$(draw it and see why) and this is a new valley!

@@ -3,7 +3,7 @@ title: Partial order under contraction
 ---
 
 # Real Life Problem
-I want to make a program that allow users to maintain some information that has some inherent partial order structure. Each information can be represented by a node, and there are edges going between nodes. One of the operations is grouping multiple nodes and mark them as equivalent. Equivalent nodes can be shrink into one supernode, and only expand it when the user want to inspect the inside. However, we still want a partial order in the global view. It would be nice to characterize when it is possible.
+I want to make a program that allow users to maintain some information that has some inherent partial order structure. Each information can be represented by a node, and there are edges going between nodes. One of the operations is grouping multiple nodes and mark them as equivalent. Equivalent nodes can be shrink into one super node, and only expand it when the user want to inspect the inside. However, we still want a partial order in the global view. It would be nice to characterize when it is possible.
 
 # Formal Formulation
 $(P,\leq)$ be a partial order. Define $U(X) = \{ p| x\leq p, x\in X, p\in P\}\backslash X$, $D(X) = \{ p| p\leq x, x\in X, p\in P\}\backslash X$.

@@ -92,17 +92,17 @@ title: Life Journal
 
 # 05/10/2014
 1. What is the complexity to compute bottleneck linear programs?
-2. How to find a s-t-path that is lexicographically the smallest? The edges are ordered, and each path is represented by the sorted list of the edges.
-3. Can we generalize the above to find the lexicoraphically smallest flow?
+2. How to find a s-t-path that is lexicographic the smallest? The edges are ordered, and each path is represented by the sorted list of the edges.
+3. Can we generalize the above to find the lexicographic smallest flow?
 
 # 05/11/2014
-1. Figureoud out how to find a st-path that is lexicographic smallest on undirected graphs with one maximum spanning tree computation.
+1. Figured out how to find a st-path that is lexicographic smallest on undirected graphs with one maximum spanning tree computation.
 2. Can lexicographic flow modeled by dynamic flow?
 3. Min-cost flow on directed, unit length, unit capacity graph can be solved in $O(\min(m^{1/2},n^{2/3})m\log n)$.
 4. Maybe I can improve things in the applied fields? say search "a polynomial time algorithm" on IEEE Xplorer.
 
 # 05/12/2014
-1. Review randomized algorithm. Oh my, so many gems.
+1. Review randomized algorithm.
 
 # 05/13/2014
 1. $co-NEXP \subset NEXP/(n+1)$.

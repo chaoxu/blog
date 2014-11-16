@@ -3,7 +3,7 @@ title: How long do you expect to live?
 tags: probability
 ---
 
-While  discussing conditional probability, someone said the following: 
+While discussing conditional probability, someone said the following: 
 
 {Problem}
     The expected life expectancy of some country is 70, and there exist people who die at every age before 70. What is the expected life expectancy for a 60 year old?

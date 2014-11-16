@@ -106,7 +106,7 @@ The Levenshtein distance between two circular strings of length $n$ and $m$ is t
 
 While looking at the Levenshtein distance problem that support one of the string to be updated on both end, a natural question arises: can we make it work if both string update?
 
-If we know how to compute $L(X_1X_2,Y_1Y_2)$ by first compute the Levenshtein distance tables by computing $L(X_1,Y_1)$, $L(X_1,Y_2)$, $L(X_2,Y_1)$, $L(X_2,Y_2)$ (and all possible reverses), then we just need some function to combine them in reasonable amount of time. However, this seems to be much harder. 
+If we know how to compute $L(X_1X_2,Y_1Y_2)$ by first compute the Levenshtein distance tables by computing $L(X_1,Y_1)$, $L(X_1,Y_2)$, $L(X_2,Y_1)$, $L(X_2,Y_2)$ (and all possible reverse), then we just need some function to combine them in reasonable amount of time. However, this seems to be much harder. 
 
 This idea would generalize to higher dimension tables. Assume there is a way to "grow" the table only in the positive directions, but we are interested in "grow" the table in all possible directions. All we need is a way to combine the grown solutions. I intentionally being vague as I don't think any formalization is that helpful for the intuition. It is still interesting if someone manages to formalize this notion.
 
