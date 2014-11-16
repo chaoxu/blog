@@ -15,7 +15,7 @@ Nevertheless, in real applications, the exact definition doesn't matter that muc
 
 {Problem}
     
-    Let $a_1,\ldots,a_n$ be a sequence of positive reals. We want to partition it into $k$ consective subsequences, such that the maximum sum over each subsequence is minimized. 
+    Let $a_1,\ldots,a_n$ be a sequence of positive reals. We want to partition it into $k$ consecutive subsequences, such that the maximum sum over each subsequence is minimized. 
     Formally, find $k+1$ positions $b_1=1,b_2,\ldots,b_{k},b_{k+1}=n$, such that $\max_{i=1}^{k} \sum_{j=b_i}^{b_{i+1}} a_j$ is minimized.
 
 $a_i = W_i/H_i$ is the aspect ratio. This article will explore the techniques to solve the problem in $O(kn)$ time. It is only a high level overview, and leaves the details unfilled. 
@@ -103,9 +103,9 @@ In other words, $C(d,i)$ is the $i$th column's minima of $M^d$.
 
     If $w$ is Monge, then $M^d$ is a $n\times n$ totally monotone matrix.
 
-Using the [SMAWK algorithmm](http://en.wikipedia.org/wiki/SMAWK_algorithm), all column minimas can be found in $O(n)$. Finding $C(d,i)$ takes only $O(1)$ time on average!
+Using the [SMAWK algorithm](http://en.wikipedia.org/wiki/SMAWK_algorithm), all column minimas can be found in $O(n)$. Finding $C(d,i)$ takes only $O(1)$ time on average!
 
-Here is the very simple code to show how this can be done easily if we have a [Haskell implementation of the SMAWK algorithmm](http://dailyhaskellexercise.tumblr.com/post/57781874558/column-minima-in-a-totally-monotone-matrix). The indexing is a bit different from the description in the article.
+Here is the very simple code to show how this can be done easily if we have a [Haskell implementation of the SMAWK algorithm](http://dailyhaskellexercise.tumblr.com/post/57781874558/column-minima-in-a-totally-monotone-matrix). The indexing is a bit different from the description in the article.
 
     import Data.Array
     import SMAWK

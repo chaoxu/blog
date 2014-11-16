@@ -90,3 +90,11 @@ Note this is basically traveling salesman problem such that the distance between
 
 {Problem}
     For every constant $k$, there exist a Laminar family $X$ over ground set $V$ of $n$ vertices, such that for any graph $G=(V,E)$ such that $G[A]$ has diameter at most $k$ for all $A\in X$, then $|E|=\Omega(n\lambda_k(n))$. Find the best $\lambda_k(n)$ possible. See [this](http://www.chaoxuprime.com/posts/2014-09-21-augment-induced-subtree-constant-diameter.html).
+
+{Problem}
+    Let $T$ be a tree with vertex weights. Find $k$ disjoint subtrees, such that the sum of the weights of the vertices covered is maximized.
+
+{Problem}
+    Given $a_1,\ldots,a_n$ with weight $w(a_i)$ and label $l(a_i)$, and a integer $k$. You want to partition the list into $k$ lists, say $L_1,\ldots,L_k$. Now for each list $L_i$, you have a label $l(L_i)$. The weight of the list $L$ is $\sum_{e\in L,l(e)\neq l(L)} w(e)$. Find a partition with minimum total weight. 
+
+Note this is called the homogeneous string segmentation problem.  http://link.springer.com/article/10.1007%2Fs00453-008-9225-8 We can also consider this problem on trees. 

@@ -10,7 +10,7 @@ For example, $aababababaaaa = a(ab)^4a^4$.
 
     Find the shortest way to write down an element in a free monoid.
 
-There are problems on how long are the parentheses, exponentials etc. Therefore we generlize it to allow weight to those operations. 
+There are problems on how long are the parentheses, exponentials etc. Therefore we generalize it to allow weight to those operations. 
 
 Formally. For any free monoid $M$ with free generators $G$, we can construct another free monoid $(M^*,\cdot)$,
 

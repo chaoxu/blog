@@ -8,7 +8,7 @@ A common interview problem asks for the $k$th smallest number in a sorted matrix
 
 There is a $O(k)$ time solution. In fact, $O(\min(k, m))$ if it's a $n\times m$ matrix and $n\leq m$.
 
-I'm fustrated that there isn't a good description of such an algorithm. The most common reference people provide is [@Mirzaian198513]. However there are a few downsides of that paper. It only works when $n=m$ and it is still a bit complicated. So here I will give a short description to a modified version of the algorithm.
+I'm frustrated that there isn't a good description of such an algorithm. The most common reference people provide is [@Mirzaian198513]. However there are a few downsides of that paper. It only works when $n=m$ and it is still a bit complicated. So here I will give a short description to a modified version of the algorithm.
 
 One can see the idea closely resemble what happens in fractional cascading, we basically squeeze the unknown values between known values, so we don't have to look at most of the unknown values.
 

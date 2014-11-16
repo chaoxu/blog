@@ -16,7 +16,7 @@ The KMP string matching algorithm solves the following problem.
     Given a string $pat$ of length $m$, return if it exist in $text$ of length $n$ in $O(n)$ time.
 
 Half of the KMP algorithm implementations are actually [the MP algorithm](http://www-igm.univ-mlv.fr/~lecroq/string/node8.html).
-[Twan van Laarhoven's implementation](http://twanvl.nl/blog/haskell/Knuth-Morris-Pratt-in-Haskell), the earlier verion of the [KMP](http://hackage.haskell.org/package/KMP-0.1.0.2) package and even [Wikipedia's page](http://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm). 
+[Twan van Laarhoven's implementation](http://twanvl.nl/blog/haskell/Knuth-Morris-Pratt-in-Haskell), the earlier version of the [KMP](http://hackage.haskell.org/package/KMP-0.1.0.2) package and even [Wikipedia's page](http://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm). 
 Although both KMP and MP runs in $O(n)$ time, KMP uses at most $O(\log m)$ time to advance to match the next element in the list when MP could take $O(m)$ comparisons. More concretely, KMP could output the sequence $m_0,\ldots,m_{n-1}$ in $O(n)$ time, where $m_i=1$ iff $pat$ is a suffix of $text[0..i]$, and the time between output is $O(\log m)$.  
 This added benefit comes at a cost.
 In the MP algorithm, the failure table has only one $-1$. The failure table for KMP, there is no $-1$, and everything just goes to $0$ instead.

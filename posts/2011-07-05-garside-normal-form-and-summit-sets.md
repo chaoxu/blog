@@ -89,7 +89,7 @@ To solve the word problem with Garside normal form, one can always put it in the
 Factoring out the divisors can be done in quadratic time with respect to the word length by using a refined version of the Garside normal form, Thurston's left greedy normal form.
 
 ## Complexity of the conjugacy problem
-Given the theorems, one can divise the following algorithm to solve the conjugacy problem:
+Given the theorems, one can devise the following algorithm to solve the conjugacy problem:
 
 1. Input $w$ and $w'$, present them in Garside normal form. 
 2. Find $SS(w)$ and $SS(w')$. 

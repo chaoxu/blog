@@ -17,7 +17,7 @@ We can generalize it and put it in terms of modules, as $\Z$ is only a ring but 
 {Proof}
     $\Rightarrow$
     If $\det(M)=0$, then $v_1,\ldots,v_n$ are not linearly independent.
-    If $|\det(M)|\geq 2$, then the parallelepiped formed by $v_1,\ldots,v_n$ has volume $\geq 2$. If there is any integer point not on the corners of the parallelepiped, then that point can't be written as linear combination of $v_1,\ldots,v_n$. Notice that it must contain some lattice points not on the corners of the parallelepiped. One can see why by consider a large box that contain volume of $m$ such parallelpiped, but contain at least $2m$ lattice points. 
+    If $|\det(M)|\geq 2$, then the parallelepiped formed by $v_1,\ldots,v_n$ has volume $\geq 2$. If there is any integer point not on the corners of the parallelepiped, then that point can't be written as linear combination of $v_1,\ldots,v_n$. Notice that it must contain some lattice points not on the corners of the parallelepiped. One can see why by consider a large box that contain volume of $m$ such parallelepiped, but contain at least $2m$ lattice points. 
     
     This shows if $M$ is not unimodular, then $v_1,\ldots,v_n$ can't be a basis. 
     

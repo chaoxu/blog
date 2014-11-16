@@ -27,5 +27,5 @@ Now, once one write an algorithm for this problem, it can be used for many seque
 - [Global alignment](http://rosalind.info/problems/glob/): $b_s=e_s=g_s$, $b_t=e_t=g_t$.
 - [Overlap alignment](http://rosalind.info/problems/oap/): $b_s=e_t=0$, $b_t=g_t$, $e_s=g_s$.
 - [Fitting alignment](http://rosalind.info/problems/sims/): $b_s=e_s=0$, $b_t=e_t=g_t$.
-- [Semiglobal alginment](http://rosalind.info/problems/smgb/): $b_s=e_s=b_t=e_t=0$.
+- [Semiglobal alignment](http://rosalind.info/problems/smgb/): $b_s=e_s=b_t=e_t=0$.
 - Substring Matching: $b_s=e_s=0$, $g_s,g_t,b_t,e_t=-\infty$.

@@ -32,7 +32,7 @@ normal form.
 
 {Proof}
     Let $A=\{\Delta,\Delta^{-1},\sigma_1,\sigma_2\}$, then $A$ generates $G$.
-    The Garside normal form is a regular lanuage over $A$ because they exist 
+    The Garside normal form is a regular language over $A$ because they exist 
     an explicit regular expression $R$ that matches it.
 
     $R = (\Delta^*\cup(\Delta^{-1*}))(X\cup X')$

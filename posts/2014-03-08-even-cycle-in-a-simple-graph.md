@@ -45,12 +45,12 @@ We want to find a global maximum min-cut in the resulting graph. Either $s-t$-mi
 
 Another approach is to show the graph cannot contain a [diamond graph](http://en.wikipedia.org/wiki/Diamond_graph) as a minor and use any general graph minor recognition algorithm. The fastest I know is the $O(n^3)$ one from the original Robertson–Seymour paper. There are some [discussion on cstheory](http://cstheory.stackexchange.com/questions/7928/the-complexity-of-determining-if-a-fixed-graph-is-a-minor-of-another) on what is know about this algorithm.
 
-However we can do it better, because we can easily check graphs without a diamond as a minor has treewidth two. So we can first check if the graph have a fixed treewidth in linear time[@fixedparametertreewidth]. Next, we can then apply a linear time minor testing algorithm on graphs with bounded branchwidth(which is implied by bounded treewidth)[@fixedsurfaceminor]. 
+However we can do it better, because we can easily check graphs without a diamond as a minor has treewidth two. So we can first check if the graph have a fixed treewidth in linear time[@fixedparametertreewidth]. Next, we can then apply a linear time minor testing algorithm on graphs with bounded branch width(which is implied by bounded treewidth)[@fixedsurfaceminor]. 
 
 The second step is computationally easy. Do a DFS, whenever we find a cycle, check if the cycle is even, delete all those edges, and keep going. The number of steps we take is at most $O(n+m)$ time. In fact, we don't really need to delete the edges once we find a cycle, as we know they will never get used by another cycle.
 
 # A much simpler algorithm
-Our algorithm above is pretty general and uses some heavy machinary. That's the kind of solution I would give during a qualify exam due to time constraints(well, always use the most powerful technique possible). 
+Our algorithm above is pretty general and uses some heavy machinery. That's the kind of solution I would give during a qualify exam due to time constraints(well, always use the most powerful technique possible). 
 
 The theorems we proved implies one nice corollary
 

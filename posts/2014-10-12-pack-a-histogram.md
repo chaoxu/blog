@@ -16,7 +16,7 @@ Formally, we are seeking an algorithm for the following problem:
 	\sum_{s\in S} \sum_{(x,i)\in s} x = v_i.
 	\]
 
-Here is an algorithm that make sure this can be done in linear time. The idea is to seperate the numbers into two bins. $(v_i,i)$ is in the large bin if $v_i > 1$, and it is in the small bin otherwise. 
+Here is an algorithm that make sure this can be done in linear time. The idea is to separate the numbers into two bins. $(v_i,i)$ is in the large bin if $v_i > 1$, and it is in the small bin otherwise. 
 The idea is always pick two elements, one in large bin one in small bin, say $(x,i)$ and $(y,j)$, where $x\leq 1< y$. Now we create a set $\{(x,i),(1-x,j)\}$, and put $(y-(1-x),j)$ back into the bins. 
 
 If we can always prove that there is an element in the small bin during the execution of the algorithm, then we find an linear time algorithm for this problem. This is clear by simple induction.

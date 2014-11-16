@@ -34,7 +34,9 @@ MathJax.Hub.Config({
         argmin: '{\\mathop{\\operatorname*{arg\\,min}}}',
         argmax: '{\\mathop{\\operatorname*{arg\\,max}}}',
         mex: '{\\mathop{\\operatorname{mex}}}', 
-        lcm: '{\\mathop{\\operatorname{lcm}}}'
+        lcm: '{\\mathop{\\operatorname{lcm}}}',
+        bigtriangleright: '{\\mathop{\\Large \\triangleright}}',
+        bigtriangleleft: '{\\mathop{\\Large \\triangleleft}}',
      } 
     }
 });

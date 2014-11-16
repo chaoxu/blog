@@ -32,7 +32,7 @@ Certainly,
 		\sum_{S\subset V, \sum_{x\in S} w(x) \in Z} \prod_{x\in S} f(x) \prod_{x\in V\backslash S} g(x) = \sum_{i\in Z} D(i,n)
 	\]
 
-We only incure a $O(k)$ number of semiring operations once we compute all $D(i,n)$ for $0\leq i\leq k$.
+We only incur a $O(k)$ number of semiring operations once we compute all $D(i,n)$ for $0\leq i\leq k$.
 
 Let $[P]$ be the [Iverson bracket notation](http://en.wikipedia.org/wiki/Iverson_bracket), namely
 

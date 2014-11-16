@@ -42,4 +42,4 @@ There is a cute characterization of when $(Q,\preccurlyeq)$ is also a partial or
         
         - By symmetry, it take care of the remaining cases.
 
-Again, if we interpert this in a graph therotical sense, a contraction of a set of vertices $X$ doesn't introduce directed cycles if and only if the set of vertices reachable from $X$ and can reach $X$ are a subset of $X$. 
+Again, if we interpret this in a graph theoretical sense, a contraction of a set of vertices $X$ doesn't introduce directed cycles if and only if the set of vertices reachable from $X$ and can reach $X$ are a subset of $X$. 

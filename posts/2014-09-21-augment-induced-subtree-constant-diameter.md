@@ -18,7 +18,7 @@ Let $G_T^k$ to be the graph in $\mathbb{G}_T^k$ with minimum number of edges(bre
 
 	The distance between any two vertex is at most $2$ in $G[V(T_v))]=G_v$ for all $v$, because any two vertex is connected by a golden vertex in the induced subgraph.
 
-	The number of edges is at most $O(n\log n)$. Label $v$ with $|T_v|$. The number of edges added at the step to build $G_v$ is $|T_v|-|T_u|$, where $G_u$ contains the golden vertex, and it also have the most number of vertices among all $G_c$ where $c$ is a child of $v$ in $T$. Sum of all labels over the tree $T$ except the heavist child is $O(n\log n)$ using analysis akin to heavy-light decomposition. 
+	The number of edges is at most $O(n\log n)$. Label $v$ with $|T_v|$. The number of edges added at the step to build $G_v$ is $|T_v|-|T_u|$, where $G_u$ contains the golden vertex, and it also have the most number of vertices among all $G_c$ where $c$ is a child of $v$ in $T$. Sum of all labels over the tree $T$ except the heaviest child is $O(n\log n)$ using analysis akin to heavy-light decomposition. 
 
 This bound is in fact best possible by considering a complete binary tree and the following lemma:
 

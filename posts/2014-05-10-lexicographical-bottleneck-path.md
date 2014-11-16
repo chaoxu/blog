@@ -45,13 +45,13 @@ The theorem intuitively tells us how to partition a set into smaller sets.
 
 # Lexicographic Bottleneck Path
 
-Given a undirectd graph $G=(V,E)$, and an ordering of the edges $e_1,\ldots,e_m$. Let $w(e_i)=i$.
+Given a undirected graph $G=(V,E)$, and an ordering of the edges $e_1,\ldots,e_m$. Let $w(e_i)=i$.
 
 {Problem}(Bottleneck Shortest Path)
     
     Find a $st$-path that maximizes the minimum edge weight on the path. 
 
-Any $st$-path that maximizes the minimum edge weight over all $st$-paths is a $st$-bottleneck shortest path(BSP). We are interested in a more general versoin of this problem. Find a path from $s$ to $t$ that is maximum with respect to the lexicographic bottleneck ordering $\preccurlyeq$ of the path. 
+Any $st$-path that maximizes the minimum edge weight over all $st$-paths is a $st$-bottleneck shortest path(BSP). We are interested in a more general version of this problem. Find a path from $s$ to $t$ that is maximum with respect to the lexicographic bottleneck ordering $\preccurlyeq$ of the path. 
 
 {Problem}(Lexicographic Bottleneck Shortest Path)
 
@@ -83,7 +83,7 @@ Before proving the theorem, we consider a useful lemma.
 
     If it reaches $y$ before $x$, then the subpath from $s$ to $y$ then from $y$ to $t$ using the $yt$-LBSP would imply $xy$ is not in $st$-LBSP, a contradiction.
 
-    Thus, we must have the $st$-LBSP is a concatination of $3$ pahts, a $sx$-path $P_{sx}$, edge $xy$ and a $yt$-path $P_{ty}$. Using [Theorem 3], we notice $P$ is a LBSP.
+    Thus, we must have the $st$-LBSP is a concatenation of $3$ paths, a $sx$-path $P_{sx}$, edge $xy$ and a $yt$-path $P_{ty}$. Using [Theorem 3], we notice $P$ is a LBSP.
 
 {Proof}([Theorem 7])
     

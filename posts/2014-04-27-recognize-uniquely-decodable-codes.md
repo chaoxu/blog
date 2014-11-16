@@ -53,7 +53,7 @@ If $u\in S(C)$, then $c=uv$ where $v\in S(C)$. It will add an arc $uv$.
 We use $O(|c|)$ time to find all the arcs can be formed by answering the "Is $u$ a prefix of $c$".
 In total, we can answer question 1 in $O(n)$ time.
 
-For the second question, we can also use the same suffix tree. Transverse the suffix tree with a code string $c$. Find all the leaves in the subtree when the string $c$ ends. Those corrspond to all strings $u\in S(C)$ such that $c$ is a prefix. Namely $u=cv$ where $v\in S(C)$. The algorithm add an arc $uv$. Note there might be many $u$ with this property, worst case $O(n)$. This step might run in $O(nk)$ time.
+For the second question, we can also use the same suffix tree. Transverse the suffix tree with a code string $c$. Find all the leaves in the subtree when the string $c$ ends. Those correspond to all strings $u\in S(C)$ such that $c$ is a prefix. Namely $u=cv$ where $v\in S(C)$. The algorithm add an arc $uv$. Note there might be many $u$ with this property, worst case $O(n)$. This step might run in $O(nk)$ time.
 
 It's not clear we can construct arcs between the vertices in constant time.
 The main difficulty lies in two suffix of two different code word might correspond to the same vertex in the graph.

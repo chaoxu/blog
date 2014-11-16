@@ -2,7 +2,7 @@
 title: About
 ---
 
-I'm [Chao Xu](https://www.facebook.com/chao.xu), a PhD student at [UIUC](http://illinois.edu/) under the advisory of [Jeff Erickson](http://web.engr.illinois.edu/~jeffe/). Previously a software engineer at Google.
+I'm [Chao Xu](https://www.facebook.com/chao.xu), a PhD student at [UIUC](http://illinois.edu/) under the advisory of [Jeff Erickson](http://web.engr.illinois.edu/~jeffe/). I was a software engineer at Google.
 
 I'm mainly interested in theoretical computer science, mathematics and problem solving. Algorithms, computational geometry and discrete mathematics are my favorite topics.
 

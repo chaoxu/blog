@@ -5,7 +5,7 @@ tags: classical, algorithm
 
 A common problem, the [maximum subarray problem](http://en.wikipedia.org/wiki/Maximum_subarray_problem) asks the subarray with the maximum sum. 
 
-There are many generalizations, for example into higher dimensions. In 2D, a $n\times n$ matrix, a common solution takes $O(n^3)$ time. Also, it can be generalized to trees, where node has weights. It can be generalized even futher, to maximum weight connected subgraph(which is NP-hard even for planar graphs).
+There are many generalizations, for example into higher dimensions. In 2D, a $n\times n$ matrix, a common solution takes $O(n^3)$ time. Also, it can be generalized to trees, where node has weights. It can be generalized even further, to maximum weight connected subgraph(which is NP-hard even for planar graphs).
 
 We consider a similar problem where instead of consider $k$ disjoint subarrays, such that the sum together is maximized.
 
@@ -21,12 +21,12 @@ It is in fact possible to get $O(n\log n)$ with some care.
 wlog, let's assume the array is alternating, where all odd index are positive and all even index are negative. 
 If we have the solution for the $k$ case, we can get a solution for $k-1$ case by either discard one of the arrays or "merge" two adjacent arrays by taking a negative piece in the middle. 
 
-This shows that once we have the solution for the $k$ case, we can just "contract" a entire subarray into one single value. Csűrös showed that we can just use one merge operation[@Csuros04]. It find a array element with minimum absolute value, say it's $A[i]$, then it is repaced by $A[i-1]+A[i]+A[i+1]$, and then we remove $A[i-1]$ and $A[i+1]$ from the array. (For boundary cases, assume $A[0]=A[n+1]=0$).
+This shows that once we have the solution for the $k$ case, we can just "contract" a entire subarray into one single value. Csűrös showed that we can just use one merge operation[@Csuros04]. It find a array element with minimum absolute value, say it's $A[i]$, then it is replaced by $A[i-1]+A[i]+A[i+1]$, and then we remove $A[i-1]$ and $A[i+1]$ from the array. (For boundary cases, assume $A[0]=A[n+1]=0$).
 The idea is a merge can "discard" a value, and a merge is also adding a negative piece and then do contraction. This operation is done until there are exactly $k$ positive numbers, which in that case, the best solution is to just take all $k$ of them.
 
 Thus this implies a $O(n\log n)$ algorithm, by keep merging and keep track of min absolute value item using a heap. 
 
-One can see the smallest absolute value does not derease throughout the algorithm, so instead of just keep finding and merging the item with smallest absolute value, what if one just keep merge merge item with absolute value smaller than $t$? There are three possibilities: we picked $t$ so nicely that after all the merges, we get exactly $k$ positive elements left. We picked $t$ too large, we get less than $k$ positive elements. We picked $t$ too small, and we get more than $k$ positive elements.
+One can see the smallest absolute value does not decrease throughout the algorithm, so instead of just keep finding and merging the item with smallest absolute value, what if one just keep merge merge item with absolute value smaller than $t$? There are three possibilities: we picked $t$ so nicely that after all the merges, we get exactly $k$ positive elements left. We picked $t$ too large, we get less than $k$ positive elements. We picked $t$ too small, and we get more than $k$ positive elements.
 
 Bengtsson and Chen uses this idea[@Bengtsson06]. They showed they can guess $t$ in a way such that the some measure of the problem size get's smaller by at least $2/3$, and also shows how to keep track of the merges so it takes $O(n\alpha(n))$ time. Later on, they removed the need of the union-find data structure improved the time bound to $O(n)$ time[@Bengtsson07].  
 

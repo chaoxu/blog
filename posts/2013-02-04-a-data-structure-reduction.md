@@ -15,7 +15,7 @@ We have the following data structure:
 
 Such data structure exist, say a finger tree. $T$ is the time required for an monoid operation.
 
-Can we use this data structure as a blackbox, such that we can solve the following problem in $O(\log n)$ time per operation?
+Can we use this data structure as a black box, such that we can solve the following problem in $O(\log n)$ time per operation?
 
 We maintain a collection of intervals, there are 3 operations.
 

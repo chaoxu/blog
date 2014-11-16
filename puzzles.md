@@ -114,3 +114,5 @@ This collection has some hard problems with optimal solutions.
  - Given $a_1\leq \ldots \leq a_k$, partition a set of $n$ numbers into $k$ sets, such that each set contains numbers of the rank between $a_i$ and $a_{i+1}$.
 
  - Find the maximum k cover. namly disjoint k intervals that sums to the max value. http://arxiv.org/abs/1410.2847 (with $O(n)$ time preprocessing, you can do it in $O(k)$ time each!)
+
+ - Find the shortest subarray such that the sum is at least $k$.

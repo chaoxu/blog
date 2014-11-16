@@ -20,7 +20,7 @@ We want to know something about $k\oplus [a..b]$.
     A contradiction. Therefore $x-y \leq x\oplus y$.
     
 {Remark}
-    $\oplus$, binary addition without carries, and binary substraction without borrows are the same operation. The lemma is trivial by notice that equivalence. 
+    $\oplus$, binary addition without carries, and binary subtraction without borrows are the same operation. The lemma is trivial by notice that equivalence. 
 
 {Theorem}
     If $f:\mathbb{N}\to \mathbb{N}$ a surjection such that $x-n\leq f(x)\leq x+m$, then

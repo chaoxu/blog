@@ -7,7 +7,7 @@ tags: math
 
 One common way to prove a number is a integer is to show it has a integer factorization. Thus one try to demonstrate that ${n \choose k}$ has such factorization.
 
-Let's start by figure out what is the factorization of $n!$. Consider any prime $p$. Certainly all numbers from $1$ to $n$ that is divisible by $p$ contribute to the exponent by $1$, numbers that divisibe by $p^2$ contribute to the exponent by $1$, as we already counted one of the $p$ factor already. Similarly, one apply this for all $p^i$ and result $p^{\sum_{i=1}^\infty \lfloor \frac{n}{p^i} \rfloor} | n!$, and by unique factorization theorem, we get that 
+Let's start by figure out what is the factorization of $n!$. Consider any prime $p$. Certainly all numbers from $1$ to $n$ that is divisible by $p$ contribute to the exponent by $1$, numbers that divisible by $p^2$ contribute to the exponent by $1$, as we already counted one of the $p$ factor already. Similarly, one apply this for all $p^i$ and result $p^{\sum_{i=1}^\infty \lfloor \frac{n}{p^i} \rfloor} | n!$, and by unique factorization theorem, we get that 
 \[
 n! =\prod_{k=1}^\infty p_k^{\sum_{i=1}^\infty \lfloor \frac{n}{p_k^i} \rfloor} 
 \]

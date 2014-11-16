@@ -7,7 +7,7 @@ A sequence is $a_0,\ldots,a_{n-1}$ is *bitonic* if it is a circular shift of a f
 
 Find an algorithm that can find the minimum value in the sequence in $O(m+\log\frac{n}{m})$ time, where $m$ is the maximum number of repeats for a single element. This problem is a generalization of [a previous problem](/posts/2013-07-27-find-the-minimum-of-an-array.html).
 
-A trick about circular shift of an sequence is to consider the sequence as a periodic sequence. Create sequence $b$ such that $b_i = a_i$ for $i < n$ and $b_{i+n} = b_i$ for all $i\geq n$. We only have to find one local minima in any consective subsequence of length $n$. This time we partition a interval into 4 pieces.
+A trick about circular shift of an sequence is to consider the sequence as a periodic sequence. Create sequence $b$ such that $b_i = a_i$ for $i < n$ and $b_{i+n} = b_i$ for all $i\geq n$. We only have to find one local minima in any consecutive subsequence of length $n$. This time we partition a interval into 4 pieces.
 
 We define a valley to be 3 points $x < y < z$ such that $b_x \geq b_y$, $b_y \leq b_z$, but not $b_x=b_y=b_z$. The valley can't be too large ($|z-x|\leq n$). If we have such an valley and this valley contains a local minima, then it is easy to create a smaller(3/4 of the original size) valley that also contain the local minima. 
 
