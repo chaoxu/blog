@@ -53,7 +53,7 @@ But this requires us to store $O(n)$ values after the fold. We can decrease the 
 
 Let $S(k) = \bigtriangleleft_{i=1}^k x_i$. Originally we store $S(k)$ for all $1 \leq k\leq n$. We show how we store only when $k$ is a perfect square and around $\sqrt{n}$ other elements. If $k^2\leq n<(k+1)^2$, we make sure we store $S(i)$ for all $i$ between $k^2$ and $n$, and do not store any non perfect square $i$ smaller than $(k-1)^2$(this means we actively clean them up as $n$ grows large). Assume we are deleting, we can delete around $\sqrt{n}$ elements before we hit a perfect square, in that case we would need to recompute the sums from the previous perfect square. It's not hard to see some amortized analysis, the extra space can be made into $O(\sqrt{n})$.
 
-Actually, there is a entire range of space/time trade-offs possible. $O(1/\epsilon)$ amortized time per operation and $O(n^{\epsilon})$ extra space.
+Actually, there is a entire range of space/time trade-offs possible. $O(1/\epsilon)$ amortized time per operation and $O(n^{\epsilon})$ extra space [@swamy1983].
 
 ## $\bowtie$, combine two stacks to simulate a deque
 
@@ -68,7 +68,26 @@ We can try to simulate the deque with 3 stacks(where $n$ deque operation maps to
 
 # Examples
 
-## Dynamic sum of elements in a stack
+I have the code sample for the entire [framework](https://gist.github.com/Mgccl/8c63f1c7e464f26053e6) along with the examples. There are only $6$ functions.
+
+`emptyDecomposableDequeue` initialize the data structure with the corresponding functions. `pushFront`, `pushBack`, `popFront` and `popBack` manipulates the sequences. `measure` returns the result after apply our decomposable function to the sequence.
+
+
+## Knapsack
+
+Our common dynamic programming formulation is to sequentially compute tables $D_S$, such that $D_S[C]$ contains the maximum value picking objects from $S$ with knapsack capacity $C$.
+
+Usually, we order the objects as $x_1,\ldots,x_n$, and $S_i=\{x_1,\ldots,x_i\}$. We compute table $D_{S_{i+1}}$ from $D_{S_i}$ in $O(C)$ time. This should be the operation for $\triangleright$ and $\triangleleft$. To get the particular entry $D_{S\cup T}[C]$, $O(C)$ time suffice if we are given table for $D_S$ and $D_T$. This would be the $\bowtie$ operation.  
+
+This implies if the sequence size is at most $n$, then for any sequence of $m$ operations, we can dynamically compute all $f$ in $O(mC)$ time using only $O(\sqrt{n}C)$ space. Notice once we convert the general algorithm to work in this special case, it is essentially the [solution by Lei Huang](http://codeforces.com/blog/entry/14366#comment-193779). In fact, this general data structure is inspired by his solution. 
+
+## Maximum subarray sum
+
+The common dynamic programming problem of finding the maximum sum in an array(or, here we consider as a sequence) with both negative and positive numbers. One can compute it in linear time with Kadane's algorithm. This is a decomposable function, too. 
+
+Let $\bigtriangleright_{i=j}^k x_i=(a,b,c,d)$, where $a$ is the maximum sum using the beginning, $b$ is the sum of all elements from the beginning, $c$ is the maximum using the current element and $d$ is the maximum seen so far. $\triangleleft$ is defined similarly. One can see that $(a,b,c,d')\bowtie (a',b',c',d') = \max(a+a',d,d')$. 
+
+## Dynamic sum of a sequence of elements
 
 {Problem}
 	Let $x_1,\ldots,x_n$ be a finite sequence of elements from a monoid $(M,+)$. Dynamically maintain the sum of all element in the sequence if we can add and delete element in both end of the sequence.
@@ -80,34 +99,6 @@ Let $f$ be the sum of elements in the sequence, then $f$ is $(+,+,+)$-decomposab
 {Theorem}
 	$f$ is a homomorphism, then it is decomposable.
 
-Of course, there is already a data structure support this--a finger tree [@Hinze2006]. Because of the monoid structure, we can even allow concatenations.
-
-## Knapsack
-
-Our common dynamic programming formulation is to sequentially compute tables $D_S$, such that $D_S[C]$ contains the maximum value picking objects from $S$ with knapsack capacity $C$.
-
-Usually, we order the objects as $x_1,\ldots,x_n$, and $S_i=\{x_1,\ldots,x_i\}$. We compute table $D_{S_{i+1}}$ from $D_{S_i}$ in $O(C)$ time. This should be the operation for $\triangleright$ and $\triangleleft$. To get the particular entry $D_{S\cup T}[C]$, $O(C)$ time suffice if we are given table for $D_S$ and $D_T$. This would be the $\bowtie$ operation.  
-
-This implies if the sequence size is at most $n$, then for any sequence of $m$ operations, we can dynamically compute all $f$ in $O(mC)$ time using only $O(\sqrt{n}C)$ space. Notice once we convert the general algorithm to work in this special case, it is essentially the [solution by Lei Huang](http://codeforces.com/blog/entry/14366#comment-193779). In fact, this general data structure is inspired by his solution. 
-
-## Levenshtein distance
-
-Let $L(X,Y)$ be the Levenshtein distance between two strings $X$ and $Y$, then we have
-\[
-L(X_1X_2,Y) = \min_{Y=Y_1Y_2} L(X_1,Y_1)+L(X_2,Y_2)
-\]
-The above relation give us an way to combine partial tables of the common DP table for Levenshtein distance in $O(|Y|)$ time. Thus we can dynamically compute Levenshtein distances allowing one of the string to be modified on both ends. In fact, this works for edit distances where mismatch follows some similarity weight. This is useful for, say, when we want to compute the edit distance between a string and some sliding window.
-
-## Cyclic sequence alignment
-
-The Levenshtein distance between two circular strings of length $n$ and $m$ is the minimum possible distance by cutting each one of the string to linear string, and take the min of all possible distance. Gregor and Thomason provided an $O(nm)$ algorithm in 1993 [@gregor1993]. Naive computation cut up each of the string and compute the Levenshtein distance takes $O((nm)^2)$ time. But using the idea in the previous example, we can cut the first string anywhere, and try all possible cut of the second string. But adjacent cuts just form strings of a sliding window. Our data structure for decomposable function comes to play, and reduce the computation time to $O(nm)$. 
-
-# Discussion
-
-While looking at the Levenshtein distance problem that support one of the string to be updated on both end, a natural question arises: can we make it work if both string update?
-
-If we know how to compute $L(X_1X_2,Y_1Y_2)$ by first compute the Levenshtein distance tables by computing $L(X_1,Y_1)$, $L(X_1,Y_2)$, $L(X_2,Y_1)$, $L(X_2,Y_2)$ (and all possible reverse), then we just need some function to combine them in reasonable amount of time. However, this seems to be much harder. 
-
-This idea would generalize to higher dimension tables. Assume there is a way to "grow" the table only in the positive directions, but we are interested in "grow" the table in all possible directions. All we need is a way to combine the grown solutions. I intentionally being vague as I don't think any formalization is that helpful for the intuition. It is still interesting if someone manages to formalize this notion.
+Of course, there is already a data structure support this--a finger tree [@Hinze2006]. Because of the monoid structure, we can even allow concatenations. 
 
 # References

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
+import           Data.Monoid (mappend, Monoid (..))
 import           Hakyll
 import           Hakyll.Core.Compiler
 import           Hakyll.Web.Html
@@ -8,9 +8,7 @@ import           System.FilePath.Posix
 import           Text.Pandoc
 import           MathDoc
 import           Control.Monad
-import           Control.Applicative        ((<$>))
-import           Data.Monoid                   (Monoid (..))
-import           Control.Applicative           (Alternative (..), (<$>))
+import           Control.Applicative        ((<$>), Alternative (..), (<$>))
 import           Data.Maybe
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -28,21 +26,21 @@ main = hakyll $ do
         route $ setExtension "html"
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
+        --    >>= relativizeUrls
     -- posts
     match "posts/*.md" $ do
         route $ setExtension "html"
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
+        --    >>= relativizeUrls
     -- drafts
     match "drafts/*.md" $ do
         route $ setExtension "html"
         compile $ mathCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
+        --    >>= relativizeUrls
     -- raw posts
     match "posts/*" $ version "raw" $ do
         route   idRoute
@@ -73,7 +71,7 @@ main = hakyll $ do
             getResourceBody
                 >>= applyAsTemplate indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" postCtx
-                >>= relativizeUrls
+            --    >>= relativizeUrls
 
     match "templates/*" $ compile templateCompiler
 
