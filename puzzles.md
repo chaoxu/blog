@@ -116,3 +116,5 @@ This collection has some hard problems with optimal solutions.
  - Find the maximum k cover. namly disjoint k intervals that sums to the max value. http://arxiv.org/abs/1410.2847 (with $O(n)$ time preprocessing, you can do it in $O(k)$ time each!)
 
  - Find the shortest subarray such that the sum is at least $k$.
+
+ - Implement a partition refinement data structure. 

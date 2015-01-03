@@ -38,3 +38,5 @@ One can verify it's valid to call the partition functions, namely the preconditi
 When $k$ is small enough we solve the problem by brute force.
 
 Every time we nest a $partition$ call, we spend linear time on the current point sets, then we call the function again but with a point set of size a constant times smaller. This give us the linear time algorithm required.
+
+This is actually a special case of the ham sandwich problem in $2$D. There are $n$ red points and $m$ blue points on the plane. Find a line such that it divides the plane into two half-planes, so the interior of each half-plane contains at most $\lfloor n/2 \rfloor$ red points and $\lfloor m/2 \rfloor$ blue points. So our problem is when the red point is purely the origin.

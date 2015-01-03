@@ -12,15 +12,15 @@ Consider a data structure $S$ that maintains a sequence of monoid elements from 
 
 3. $product(S)$, returns $\prod_{i=1}^n a_i$ in $O(1)$ time.
 
-4. $endomorphism(S,f)$, apply $f$ to every entry in the sequence. So $S$ would represent $f(a_1),\ldots,f(a_n)$. This operation takes $O(1)$ time.
+4. $map(S,f)$, apply $f$ to every entry in the sequence. So $S$ would represent $f(a_1),\ldots,f(a_n)$. This operation takes $O(1)$ time.
 
 There is one operation $Empty()$ that produce an empty sequence.
 
-We have to first make a few assumptions: All monoid operations take $O(1)$ time. All endomorphisms we consider can be evaluated in $O(1)$ time AND we can compute $h = f\circ g$ in $O(1)$ time. Note this means we compute (a representation) of the function $h$ it self, and we can use this representation to compute $h(x)$ in $O(1)$ time.
+We have to first make a few assumptions: All monoid operations take $O(1)$ time. All map we consider can be evaluated in $O(1)$ time AND we can compute $h = f\circ g$ in $O(1)$ time. Note this means we compute (a representation) of the function $h$ itself, and we can use this representation to compute $h(x)$ in $O(1)$ time.
 
-Otherwise, all "$O(T)$ time" should be replaced with "$O(T)$ monoid operation, endomorphism evaluation, endomorphism composition and constant time operations.". 
+Otherwise, all "$O(T)$ time" should be replaced with "$O(T)$ monoid operation, function evaluation, function composition and constant time operations.". 
 
-Such data structure exists. The first $3$ operation are supported by finger tree [@Hinze2006]. It is not hard to add the last operation, the idea is to tag nodes with an endomorphism $f$(in the beginning $f$ is just the identity), and it will mean "apply $f$ to everything below!". It propagate only when the lower level nodes need to be accessed, therefore the cost would be charged into the other operations. Many other binary search trees probably can implement these operations too. For example, if the dynamic optimality conjecture for splay tree is true, it be best to use splay tree for implementation. However, that's beside the point. The point is to have an abstract data structure over a monoid sequence.
+Such data structure exists. The first $3$ operation are supported by finger tree [@Hinze2006]. It is not hard to add the last operation, the idea is to tag nodes with an function $f$(in the beginning $f$ is just the identity), and it means "apply $f$ to everything below!". It propagate only when the lower level nodes need to be accessed, therefore the cost would be charged into the other operations. Many other binary search trees probably can implement these operations too. For example, if the dynamic optimality conjecture for splay tree is true, it be best to use splay tree for implementation. However, that's beside the point. The point is to have an abstract data structure over a monoid sequence.
 
 # Extend its power
 
@@ -52,13 +52,13 @@ Most of the above has been described in [@Hinze2006], but we will talk about two
 
 {Theorem}
 
-    If $S$ and $T$ are two ordered sequences of length $n$ and $m$, respectively. $n\leq m$. Both ordered sequences are represented by finger trees. Compute the finger tree representation of $S\cup T$ takes $O(n\log \frac{n}{m})$ time.
+    If $S$ and $T$ are two ordered sequences of length $n$ and $m$, respectively. $n\leq m$. Both ordered sequences are represented by finger trees. Compute the finger tree representation of $S\cup T$ takes $O(n\log \frac{m}{n})$ time.
 
 Split $T$ into $n$ pieces one by one by split along the $i$th element of $S$ to the second part of the $i$th produced piece for all $i$, then concatenate all of them. The splitting takes $\sum_{i=1}^n \log t_i$ time, where $t_i$ is the size of the $i$th piece. By concavity, we have the time for split is $\sum_{i=1}^n \log t_i \leq n \log \frac{m}{n}$, and concatenation time is similar.
 
 ## Solve the Klee's measure problem
 
-This section shows how the endomorphism operation is quite crucial because we can make *range updates*.
+This section shows how the map operation is quite crucial because we can make *range updates*.
 
 The motivation came from the following question. Can finger tree substitute for the [popular competitive programming data structure segment tree](http://letuskode.blogspot.com/2013/01/segtrees.html), a special case of the real [segment tree](http://en.wikipedia.org/wiki/Segment_tree)? This is not possible, and it's not because the large hidden constants. The abstract definition in this article goes cannot do the following common operation on an sequence of integers: increment the $i$th number by $i$. This operation make little sense if we allow insert and deletions, but many use of segment tree do not consider insert and deletes.
 

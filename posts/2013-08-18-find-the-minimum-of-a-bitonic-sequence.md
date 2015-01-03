@@ -5,7 +5,7 @@ tags: Algorithm
 
 A sequence is $a_0,\ldots,a_{n-1}$ is *bitonic* if it is a circular shift of a first non-increasing then non-decreasing sequence. 
 
-Find an algorithm that can find the minimum value in the sequence in $O(m+\log\frac{n}{m})$ time, where $m$ is the maximum number of repeats for a single element. This problem is a generalization of [a previous problem](/posts/2013-07-27-find-the-minimum-of-an-array.html).
+Find an algorithm that can find the minimum value in the sequence in $O(m+\log n)$ time, where $m$ is the maximum number of repeats for a single element. This problem is a generalization of [a previous problem](/posts/2013-07-27-find-the-minimum-of-an-array.html).
 
 A trick about circular shift of an sequence is to consider the sequence as a periodic sequence. Create sequence $b$ such that $b_i = a_i$ for $i < n$ and $b_{i+n} = b_i$ for all $i\geq n$. We only have to find one local minima in any consecutive subsequence of length $n$. This time we partition a interval into 4 pieces.
 
@@ -16,7 +16,7 @@ $w < y$, then we have an valley $(x,w,y)$. $w>y$, then we have an valley $(w,y,z
 
 If we have $|y-x|<|z-y|$, something similar to above can be done.
 
-It's easy to see the recursion gets us $O(m+\log (\frac{n}{m}))$. So the only problem comes from how do we find the first valley that contains the local minima. Let $0 < k < n$ If $b_0 > b_k$, then $b_0,b_k,b_n$ is a valley. If $b_0 < b_k$, then $b_k,b_n,b_{k+n}$ is a valley. So we pick 3 possible $k$ that is $n/4$ apart, and either one of them allow us to construct a valley, or at least $n/4$ of the points have the same value, and we use linear search.
+It's easy to see the recursion gets us $O(m+\log (\frac{n}{m}))=O(m+\log n)$. So the only problem comes from how do we find the first valley that contains the local minima. Let $0 < k < n$ If $b_0 > b_k$, then $b_0,b_k,b_n$ is a valley. If $b_0 < b_k$, then $b_k,b_n,b_{k+n}$ is a valley. So we pick 3 possible $k$ that is $n/4$ apart, and either one of them allow us to construct a valley, or at least $n/4$ of the points have the same value, and we use linear search.
 
 <script src="https://gist.github.com/Mgccl/6263718.js"></script>
 

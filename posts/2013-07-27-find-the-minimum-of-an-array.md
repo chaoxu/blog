@@ -8,7 +8,7 @@ Consider an array $a$ of $n$ entries from a totally ordered set. There exist a i
 
 How fast can we find such $j$? The worst time is $O(n)$. When all the elements are equal, you must transverse the entire array to figure that out.
 
-If $m$ is the maximum time an element occurs in the array, then we can find an algorithm that solves this problem in $O(m + \log \frac{n}{m})$ time.
+If $m$ is the maximum time an element occurs in the array, then we can find an algorithm that solves this problem in $O(m+\log n)$ time.
 
 # Algorithm
 
@@ -44,7 +44,7 @@ T(m,n)  = \begin{cases}
          \frac{1}{3}T(m,n) + O(1) & \text{otherwise}
          \end{cases}       
 \]
-For $n$ larger than $\frac{m}{6}$, the algorithm will have $O(\log \frac{n}{m})$ recursive calls, each one cost $O(1)$ time. Once it reaches small $n$, it will spend $O(n)=O(m)$ time on a linear search. The algorithm spends a total of $O(m+ \log \frac{n}{m})$ time.
+For $n$ larger than $\frac{m}{6}$, the algorithm will have $O(\log \frac{n}{m})$ recursive calls, each one cost $O(1)$ time. Once it reaches small $n$, it will spend $O(n)=O(m)$ time on a linear search. The algorithm spends a total of $O(m+ \log \frac{n}{m}) = O(m+\log n)$ time. 
 
 # Notes
 
