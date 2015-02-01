@@ -155,11 +155,11 @@ Complexity
 6. Solved
 
 # 99 - Fall (interesting)
-1. Not
-2. Not
-3. Not
+1. Partial (Try this)
+2. Solved
+3. Partial (Try This)
 4. Solved
-5. Not
+5. Open
 6. Not
 
 # 97 - Spring
@@ -176,13 +176,14 @@ Complexity
 1. Solved
 2. Not
 3. Solved
-4. Not
-5. Not (TRY THIS)
+4. Not (Higman's lemma, HARD, Proof by minimal bad example) http://cl-informatik.uibk.ac.at/users/tpowell/talk004.pdf
+5. Solved
 6. Not
 7. Not
 8. Solved
 
-# 95 - Fall
+5. First, as $v$ moves to the right, the set of possible $h_l$ gets smaller, and $h_r$ is getting larger. The idea is we find the median of the points in the $x$ axis, and put down $v$, and test if it's possible to get $h_l$. If it is, then check if it's possible to find a $h_r$. It both possible, we are done. If only one is possible, then we can try to move $v$ to another quadrant. This would be doing a binary search, but the time complexity is at most a half each time.
+As for counterexample... 5 points required I think.
 
 1. [Solved](/posts/2014-03-27-bisect-circle-even-point-set.html)
 2. Not

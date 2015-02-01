@@ -26,7 +26,7 @@ I seek the following opportunities, you are free to contact me about it:
 I want to know more about:
 Category theory, stringology, combinatorics on words, type theory, Haskell, programming languages, metric geometry, rewriting system, algebra, algebraic complexity theory and functional data structures.
 
-Here is [my girlfriend's website](http://vanessa.li).
+Here is [my wife's website](http://vanessa.li).
 
 Timeline of some things about me.
 

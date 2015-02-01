@@ -6,7 +6,7 @@ I have been trying to use the more general frameworks when I encounter dynamic p
 
 {Problem}
     
-    Let $D=(V,A)$ be a directed acyclic graph. $w(e)$ is the weight of an arc. A $s-t$ path $e_1,\ldots,e_m$ is called a $\alpha$-deficient path if $\alpha\geq 0$ is the smallest value such that $\sum_{i=1}^k w(e_i) + \alpha \geq 0$ for all $1 \leq k\leq m$. Find the smallest $\alpha$, such that there is a $\alpha$-deficient $s-t$ path.
+    Let $D=(V,A)$ be a directed acyclic graph. $w(e)$ is the weight of an arc. A $s-t$ path $e_1,\ldots,e_m$ is called a $\alpha$-deficient path if $\sum_{i=1}^k w(e_i) + \alpha \geq 0$ for all $1 \leq k\leq m$. Find the smallest $\alpha$, such that there is a $\alpha$-deficient $s-t$ path.
 
 One can view this problem as how much gas would one require to travel from $s$ to $t$. If one knows how much gas one can gain or lose between arcs.
 

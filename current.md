@@ -2,10 +2,7 @@
 title: Current Links
 ---
 
-- [CS 598](https://courses.engr.illinois.edu/cs598csc/fa2014/)
-- [Machine Learning](http://machinelearning.com/)
-- [MATH 416](http://www.math.uiuc.edu/~jpda/teaching.html)
-- [CS 374](https://courses.engr.illinois.edu/cs498374/)
-- [Weakly Simple](https://github.com/Mgccl/wspolygon)
+- [IE 511](http://web.engr.illinois.edu/~karthe/courses/ie511/ie511.html)
+- [MATH 588](http://www.math.uiuc.edu/~molla/2015_spring_math588/)
 - [cs.DS](http://arxiv.org/list/cs.DS/recent)
 - [Home/Work Stop](http://www.cumtd.com/maps-and-schedules/bus-stops/info/gwnmn?query=Goodwin%20and%20Main)

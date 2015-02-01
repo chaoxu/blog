@@ -118,3 +118,9 @@ This collection has some hard problems with optimal solutions.
  - Find the shortest subarray such that the sum is at least $k$.
 
  - Implement a partition refinement data structure. 
+
+ - Isotonic regression
+
+ - Lipchitz regression
+
+ - Find number of subarrays that sums between a and b
