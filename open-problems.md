@@ -5,7 +5,17 @@ title: Open Problems
 Here are some problems that are either open to the best of my knowledge, or asked by me but unable to answer. If you know a solution, or can offer me more reference on the material, please comment. I appreciate it greatly. :)
 
 # Problems I currently have interest 
+
 These problems ordered by my current interest.
+
+{Problem}
+    Solve the following integer programming problem in polynomial time or prove it's NP-hard.
+    \begin{align*}
+    \text{Minimize:} & \sum_{i=1}^n |a_i-x_i| \\
+    \text{subject to:} & \sum_{i=1}^n w_i x_i = c\\
+    & 0 \leq x_i \leq b_i \text{ for all } 1\leq i \leq n\\
+    \end{align*}
+    Here $w_i|w_{i+1}$ for all $i<n$. Everything is in $\Z$.
 
 {Problem}
     Find the [Fréchet distance](http://en.wikipedia.org/wiki/Fr%C3%A9chet_distance) of two polygonal chain of length $n$ and $m$ respectively in $1$D in $o(nm)$ time.
@@ -17,12 +27,13 @@ For $2$D, there is a $\Omega(nm)$ lower bound assuming SETH. If this is solved, 
 
 I have some preliminary results. Also see the [path version of this problem](http://www.chaoxuprime.com/posts/2014-10-13-maximum-sum-k-disjoint-subarrays.html). I mainly want to see if generalize those techniques to tree if possible. Also, what happens if we consider a cycle? cactus graph? outerplanar graph? This problem for planar graph is NP-hard.
 
+
+# Other problems
+
 {Problem}
     How fast can we [improve the pseudo-polytime algorithm for subset sum](http://cstheory.stackexchange.com/questions/21533/faster-pseudo-polynomial-time-algorithm-for-subset-sum)? 
 
 Interesting to think about but probably can't be improved easily.
-
-# Other problems
 
 {Problem}
 

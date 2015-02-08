@@ -18,10 +18,7 @@ Here is my [CV](/cv) and my [resume](/files/resume.pdf).
 </a>
 </div>
 
-I seek the following opportunities, you are free to contact me about it:
-
-- Internships where I get to use an APL style language.
-- Internships where I get to use Haskell.
+I'm interested in summer internships in NYC.
 
 I want to know more about:
 Category theory, stringology, combinatorics on words, type theory, Haskell, programming languages, metric geometry, rewriting system, algebra, algebraic complexity theory and functional data structures.
@@ -32,7 +29,6 @@ Timeline of some things about me.
 
 <iframe src="/timeline.html" width="800px" height="800px" frameborder="0" scrolling="no" marginwidth="0px" marginheight="0px"></iframe>
 
-The exchange rate for my time is \$100 dollar per hour. This is the rate for me to do something that I don't hate and won't be doing otherwise.
 <!--- [public key](/files/id_rsa.pub). 
 
 Grand Goals in life(subjects to change):
