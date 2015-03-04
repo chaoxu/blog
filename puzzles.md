@@ -124,3 +124,5 @@ This collection has some hard problems with optimal solutions.
  - Lipchitz regression
 
  - Find number of subarrays that sums between a and b
+
+ - Prove that for a non-decreasing, submodular function $f$ such that $f(\emptyset)=0$. There is a greedy algorithm to maximize a linear function with submodular constraints.

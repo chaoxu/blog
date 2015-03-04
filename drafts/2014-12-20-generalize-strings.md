@@ -1,5 +1,5 @@
 ---
-title : Generalize Strings
+title: Generalize Strings
 ---
 
 There are many ways to view strings. The common one is just a finite sequence of symbols.

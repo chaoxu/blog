@@ -1,5 +1,5 @@
 ---
-title : Deterministic acyclic finite state automaton
+title: Deterministic acyclic finite state automaton
 ---
 
 

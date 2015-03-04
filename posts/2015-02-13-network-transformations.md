@@ -37,8 +37,8 @@ The idea is instead of sending flow on $st$, now we send on $sw$. Because the ba
 
 # Applications
 
-Let $C$ be a class of graphs. Let $Sub(C)=\{G| G\subset H, H\in C\}$ be the set of subgraphs of graphs in class $C$. If there is an algorithm that solves min-cost circulation/transshipment problem for $C$, then there is an algorithm that solves min-cost flow problem on $Sub(C)$. The running time of the algorithm is only the extra time spent on complete the graph to some graph in $C$.
+Let $C$ be a class of graphs. Let $Sub(C)=\{G| G\subset H, H\in C\}$ be the set of subgraphs of graphs in class $C$. If there is an algorithm that solves min-cost circulation/transshipment problem for $C$, then there is an algorithm that solves min-cost flow problem on $Sub(C)$. The running time of the algorithm is only the extra time spent on complete the graph to some graph in $C$ by adding edges of $0$ capacity. 
 
-This directly implies min-cost flow on series-parallel graphs can be solved in $O(n\log n)$ time using the algorithm for $2$-terminal series-parallel graphs[@Booth1993416].  As a corollary, one can solve min-cost flow problem on outerplanar graph in the same running time.
+This directly implies min-cost flow on general series-parallel graphs can be solved in $O(n\log n)$ time using the algorithm for min-cost circulation on $2$-terminal series-parallel graphs(Note the article solves the min-cost maximum flow problem, one can see it also works for min-cost circulation)[@Booth1993416]. As a corollary, one can solve min-cost flow problem on outerplanar graph in the same running time.
 
 # References

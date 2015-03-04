@@ -1,5 +1,5 @@
 ---
-title : Cactus graph
+title: Cactus graph
 ---
 
 Many algorithm on paths gets generalized to algorithm on cycles and trees without lose of efficiency. Because both generalization maintain some of the best properties about a path:

@@ -20,9 +20,6 @@ Here is my [CV](/cv) and my [resume](/files/resume.pdf).
 
 I'm interested in summer internships in NYC.
 
-I want to know more about:
-Category theory, stringology, combinatorics on words, type theory, Haskell, programming languages, metric geometry, rewriting system, algebra, algebraic complexity theory and functional data structures.
-
 Here is [my wife's website](http://vanessa.li).
 
 Timeline of some things about me.

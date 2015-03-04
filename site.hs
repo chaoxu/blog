@@ -89,14 +89,14 @@ idPages = ["favicon.ico",
            "googled46bf4e1cd540289.html"]
 ----
 htmlTitleField :: Context String
-htmlTitleField = Context $ \k i -> 
+htmlTitleField = Context $ \k _ i -> 
     if (k /= "htmltitle")
     then do empty
     else do value <- getMetadataField (itemIdentifier i) "title"
             return $ StringField (if isNothing value then "" else fromJust value)
                                                                     
 betterTitleField :: Context String
-betterTitleField = Context $ \k i -> 
+betterTitleField = Context $ \k _ i -> 
     if (k /= "title")
     then do empty
     else do value <- getMetadataField (itemIdentifier i) "title"
@@ -112,7 +112,7 @@ postCtx :: Context String
 postCtx =
     sourceField "source"  `mappend`
     htmlTitleField        `mappend`
-    dateField "date" "%F" `mappend`
+--    dateField "date" "%F" `mappend`
     bodyField     "body"  `mappend`
     betterTitleField      `mappend`
     defaultContext        `mappend`
