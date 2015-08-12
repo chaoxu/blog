@@ -15,6 +15,6 @@ A continued fraction is canonical if the sign of all the numbers are the same. O
 
 Order operations does not work with non-canonical representations. 
 
-The code will stay in [this page](https://github.com/Mgccl/mgccl-haskell/blob/master/random/ContinuedFraction.hs) until one day I have the patience and motivation to make this into a package. This is why I need a internship in a company that actually use Haskell.
+The code will stay in [this page](https://github.com/chaoxu/mgccl-haskell/blob/master/random/ContinuedFraction.hs) until one day I have the patience and motivation to make this into a package. This is why I need a internship in a company that actually use Haskell.
 
 I hope people can catch possible bugs. I'm open to suggestions!

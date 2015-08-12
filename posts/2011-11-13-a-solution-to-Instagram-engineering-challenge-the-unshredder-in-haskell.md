@@ -5,7 +5,7 @@ tags: Haskell
 
 I have done many Haskell exercises, however, I have never done anything that have a engineering flavor, i.e. useful in real life.
 
-I saw this challenge and believe it's the perfect chance to practice my real life Haskell skills AND get a t-shirt. [The code on github](https://github.com/Mgccl/mgccl-haskell/blob/master/random/unshredder.hs).
+I saw this challenge and believe it's the perfect chance to practice my real life Haskell skills AND get a t-shirt. [The code on github](https://github.com/chaoxu/mgccl-haskell/blob/master/random/unshredder.hs).
 
 The problem is not well defined. Therefore I gave the following abstraction:
 

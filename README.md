@@ -2,12 +2,12 @@
 title: README
 ---
 
-I choosed to make this blog because I want to use [Haskell](http://www.haskell.org/) and save some hosting money by not hosting a [Drupal](http://drupal.org/) on [A2 Hosting](http://www.a2hosting.com/).
+I chose to make this blog because I want to use [Haskell](http://www.haskell.org/) and save some hosting money by not hosting a [Drupal](http://drupal.org/) on [A2 Hosting](http://www.a2hosting.com/).
 
 # Technology
 
 1.  The source of the blog is on a [git repository](https://github.com/Mgccl/blog). 
-2.  html files are hosted on [site44](http://http://www.site44.com/). 
+2.  html files are hosted on [site44](http://www.site44.com/). 
 3.  Using site44's rewrite system to direct all `/files` request to [amazon s3](http://aws.amazon.com/s3/), see [`/redirects.site44.txt`](/redirects.site44.txt). Also the mimetypes texts are useful. See [`/mimetypes.site44.txt`](/mimetypes.site44.txt)
 4.  The blog source is compiled by [hakyll](http://jaspervdj.be/hakyll/).
 5.  The content is written use my variation of [Pandoc's Markdown](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown), I call it [Xu's MathDoc](https://github.com/Mgccl/blog/blob/master/MathDoc.hs).
@@ -29,4 +29,4 @@ I choosed to make this blog because I want to use [Haskell](http://www.haskell.o
 
 - Under mac, MathDoc require you to `export LANG=C` for it to work, I have no idea why.
 - Remember to set cache to amazon s3 . Say, set `Cache-Control` to `public, max-age=31536000`
-- I made an [syntax highlighting file](https://gist.github.com/Mgccl/195ce33124f384a2f4e4) for sublime 3, so in Markdown it can also highlight latex codes.
+- I made an [syntax highlighting file](https://gist.github.com/chaoxu/195ce33124f384a2f4e4) for sublime 3, so in Markdown it can also highlight latex codes.

@@ -31,7 +31,7 @@ Consider we want to find the minima from index $l$ to $r$ (not including $r$), a
 
 Here is the code in Go:
 
-<script src="https://gist.github.com/Mgccl/6094392.js"></script>
+<script src="https://gist.github.com/chaoxu/6094392.js"></script>
 
 # Complexity
 

@@ -68,7 +68,7 @@ We can try to simulate the deque with 3 stacks(where $n$ deque operation maps to
 
 # Examples
 
-I have the code sample for the entire [framework](https://gist.github.com/Mgccl/8c63f1c7e464f26053e6) along with the examples. There are only $6$ functions.
+I have the code sample for the entire [framework](https://gist.github.com/chaoxu/8c63f1c7e464f26053e6) along with the examples. There are only $6$ functions.
 
 `emptyDecomposableDequeue` initialize the data structure with the corresponding functions. `pushFront`, `pushBack`, `popFront` and `popBack` manipulates the sequences. `measure` returns the result after apply our decomposable function to the sequence.
 

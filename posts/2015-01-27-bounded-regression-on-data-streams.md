@@ -52,7 +52,7 @@ Because all edge has a cost function with at most $1$ breakpoint. The bounded re
 
 We can try to minimize $\sqrt{\sum_{i=1}^n w_i (a_i-x_i)^2}$ instead($L_2$ error). Note in that case, it is basically a generalization of the lipschitz isotonic regression problem [@ISI:000279661700033] when $l_i=0$ and $u_i=u$ for some constant $u$. We can even ask to minimize the $L_\infty$ error.
 
-For the further special case where the upper bounds are $\infty$, then this problem is called the isotonic regression problem. Express all these problems in min-cost circulation formulation and getting the same time bound as the current best algorithm would implies there is something larger going on behind the scene. Here is what we have.
+For the further special case where the upper bounds are $\infty$, then this problem is called the isotonic regression problem. [^2]: Express all these problems in min-cost circulation formulation and getting the same time bound as the current best algorithm would implies there is something larger going on behind the scene. Here is what we have.
 
 1. $L_1$ error: This post shows it can be solved in $O(n\log n)$ time using the min-cost circulation formulation. It matches the running time of specialized algorithms.
 2. $L_2$ error: Currently, the best algorithm can solve it in $O(n)$ time, but doesn't come from the quadratic cost min-cost circulation formulation!
@@ -68,3 +68,4 @@ This prompt the following two natural problems:
 # References
 
 [^1]: For a sufficiently general definition of "natural".
+[^2]: [A interesting problem solved using isotonic regression](http://cs.stackexchange.com/questions/41519/efficient-algorithm-for-this-optimization-problem-dynamic-programming/).

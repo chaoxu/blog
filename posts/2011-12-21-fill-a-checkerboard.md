@@ -2,7 +2,7 @@
 title: Fill a checkerboard
 tags: puzzle
 ---
-This was a homework problem for CSE 548. I decide to work on it after hearing a set of AMS graduate students worked on it for the entire afternoon and failed to solve it. My logic, if a lot of people can't solve a problem, then solving it must be worth a while.
+This was a homework problem for CSE 548. It's also a very common puzzle. 
 
 {Problem}
     Given a $n\times n$ checkerboard, one can put a few checkers on it. A rule transform a checkerboard to the next. The rule states one can put a new checker if and only if at least two of it's adjacent positions (up, down, left, right) has a checker. Apply the rule until no more checker can be added. Show that if originally the checkerboard has only $n-1$ checkers, then when the process terminates, there exist cells not filled by a checker.
@@ -19,3 +19,4 @@ This was a homework problem for CSE 548. I decide to work on it after hearing a 
     If any two of the rectangles can form a larger one, then the perimeter of the new rectangle is at most the sum of the two smaller one. To show this, one can consider two cases: If they overlap, then it's clearly true. If they do not overlap, there are only 2 distinct positions. Either their diagonal touch, or their diagonals doesn't touch. Try both and you will see this is true. (It's hard to draw things and post on a blog).
 
     This shows the largest filled rectangle can be produced from $n-1$ checkers have perimeter $4(n-1)$, but to fill the $n\times n$ board, one need $4n$ as a perimeter. Therefore no configuration of $n-1$ checkers can result a filled board.
+    

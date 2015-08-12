@@ -23,12 +23,19 @@ Everything here is in the Karger and Levine's paper[@Karger1998], I'm writing th
 	$v\leq 2(n/d)^2$, thus $d\leq n\sqrt{2}/\sqrt{v}$. If we take the shortest path successively, we have the number of edges we use in each augmenting path is
 
 	\[
-		\sum_{i=1}^v n\sqrt{2}/sqrt{i} = O(n\sqrt{v})
+		\sum_{i=1}^v n\sqrt{2}/\sqrt{i} = O(n\sqrt{v})
 	\]
 
 For the above theorem, one might ask what happens if we use $v\leq 2m/d$ inequality instead. Then we get the sum of the length of all the augmenting paths we ever route is $O(m\log m)$, pretty neat. 
 
 {Proof}(Main theorem)
 	Let $f$ be an acyclic flow of value $v$ in $G$. Remove all edges outside $f$, and let the remaining graph be $G'$. Consider use shortest augmenting path algorithm sending a flow of value $v$ in $G'$. Notice this would produce $f$. Thus this shows $f$ has $O(n\sqrt{v})$ edges.
+
+{Corollary}
+    Let $G$ be a simple graph on $n$ vertices. There exist $\lambda(s,t)$ $st$-edge disjoint paths, such that the $k$ shortest paths has total of $O(\sqrt{k}n)$ edges for all $k\leq \lambda(s,t)$.
+
+{Proof}
+    There exist $\lambda(s,t)$ $st$-edge disjoint paths with total length $O(\sqrt{\lambda(s,t)}n)$. The average length is $O(\frac{n}{\sqrt{\lambda(s,t)}})$. The $k$ shortest paths has total length $O(k\frac{n}{\sqrt{\lambda(s,t)}})=O(k\frac{n}{\sqrt{k}}) = O(\sqrt{k}n)$.  
+
 
 # References

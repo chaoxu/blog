@@ -12,7 +12,7 @@ This is a common interview question.
 
 There are [many ways to do it](http://en.wikipedia.org/wiki/Methods_of_computing_square_roots). I want to come up with a way no one else would think of, something that could amaze the interviewer. I mean, she might interviewed enough people to get bored with the standard answers. 
 
-I present the following highly inefficient but somewhat creative solution. [The code is here](https://github.com/Mgccl/mgccl-haskell/blob/master/random/sqrtOfInteger.hs).
+I present the following highly inefficient but somewhat creative solution. [The code is here](https://github.com/chaoxu/mgccl-haskell/blob/master/random/sqrtOfInteger.hs).
 
 How does it work?
 

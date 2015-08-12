@@ -50,4 +50,4 @@ Here $\min$ return any of the expressions that achieves the minimum weight. This
 
 Here is an Haskell code for it. It is designed to show the algorithm instead of been efficient. This has real life usage to [compress regular expressions](/posts/2013-03-21-regular-expression-for-a-interval-of-non-negative-integers.html).
  
-<script src="https://gist.github.com/Mgccl/72a82300b9750f9c0374.js"></script>
+<script src="https://gist.github.com/chaoxu/72a82300b9750f9c0374.js"></script>

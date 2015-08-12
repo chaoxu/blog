@@ -3,7 +3,7 @@ title: Regular expression for a interval of non-negative integers
 tags: Haskell, regular expression
 ---
 
-Let $m,n \in \N$ and $m\leq n$. I wrote [a program in Haskell that generate a regular expression that matches all decimal representation of some number in between $a$ and $b$ inclusive](https://gist.github.com/Mgccl/5210853). The regular expression would have length $O(\log n \log \log n)$. I also included a simple version, which shows how the algorithm is done.
+Let $m,n \in \N$ and $m\leq n$. I wrote [a program in Haskell that generate a regular expression that matches all decimal representation of some number in between $a$ and $b$ inclusive](https://gist.github.com/chaoxu/5210853). The regular expression would have length $O(\log n \log \log n)$. I also included a simple version, which shows how the algorithm is done.
 
 The code was made for the decimal system, but of course it can be generalized to any base.  
 
@@ -23,4 +23,4 @@ It is important to also handle cases where we will have repeated elements
 
 This is done by recursively try to compress a free monoid element with the [FreeMonoidCompress](/posts/2013-03-26-represent-an-element-in-a-free-monoid-with-minimum-weight.html) module.
 
-<script src="https://gist.github.com/Mgccl/5210853.js"></script>
+<script src="https://gist.github.com/chaoxu/5210853.js"></script>

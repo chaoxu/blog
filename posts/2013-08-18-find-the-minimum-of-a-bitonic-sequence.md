@@ -18,6 +18,6 @@ If we have $|y-x|<|z-y|$, something similar to above can be done.
 
 It's easy to see the recursion gets us $O(m+\log (\frac{n}{m}))=O(m+\log n)$. So the only problem comes from how do we find the first valley that contains the local minima. Let $0 < k < n$ If $b_0 > b_k$, then $b_0,b_k,b_n$ is a valley. If $b_0 < b_k$, then $b_k,b_n,b_{k+n}$ is a valley. So we pick 3 possible $k$ that is $n/4$ apart, and either one of them allow us to construct a valley, or at least $n/4$ of the points have the same value, and we use linear search.
 
-<script src="https://gist.github.com/Mgccl/6263718.js"></script>
+<script src="https://gist.github.com/chaoxu/6263718.js"></script>
 
 This algorithm is basically the simplified version of the algorithm in [Boris Veroy's paper](http://www.sciencedirect.com/science/article/pii/0885064X8990006X) that can handles repeats. 

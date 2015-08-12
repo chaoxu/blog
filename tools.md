@@ -4,7 +4,7 @@ title: Tools
 
 Here are some tools I wrote for some common tasks.
 
-Scripts(bash,python,etc)
+Scripts(bash, python, etc)
 
 - [Simple keystroke counter.](/posts/2011-03-05-simple-keystroke-counter.html)
 - [Take screenshot and upload to imageshack.us.](https://gist.github.com/769905)
@@ -16,5 +16,5 @@ Scripts(bash,python,etc)
 - [word problem for braid group solver.](https://gist.github.com/1041985)
 - [buggy latex 2 html program.](https://gist.github.com/1039506)
 - [Write the latest message in Freetalk to a file, useful with xmobar/dzen.](https://gist.github.com/1059622)
-- [Some tools related to Chinese, include break certain characters into radicals, and a text file of chengyu.](https://github.com/Mgccl/chinese)
+- [Some tools related to Chinese, include break certain characters into radicals, and a text file of chengyu.](https://github.com/chaoxu/chinese)
 - [Build PCRE to match non-negative integer ranges.](/posts/2013-03-21-regular-expression-for-a-interval-of-non-negative-integers.html)
