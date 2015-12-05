@@ -20,7 +20,7 @@ Nevertheless, in real applications, the exact definition doesn't matter that muc
 
 $a_i = W_i/H_i$ is the aspect ratio. This article will explore the techniques to solve the problem in $O(kn)$ time. It is only a high level overview, and leaves the details unfilled. 
 
-# 1. Minimize total difference
+# Minimize total difference
 
 Let's first consider a simpler problem for demonstration.
 
@@ -37,7 +37,7 @@ We have a weight function $w(i,j)$ that assign weights to arc $(v_i,v_j)$. Defin
 
 If we find a $k$-edge path of minimum weight from $v_1$ to $v_n$, then this implies a solution to [Problem 3].
 
-# 2. Solve the minimum weight $k$-edge path problem
+# Solve the minimum weight $k$-edge path problem
 Define $C(d,i)$ to be the $d$-edge path from $v_1$ to $v_i$ with minimum weight. We want to find $C(k,n)$.
 
 \[
@@ -52,7 +52,7 @@ C(d,i) = \min_{1\leq j\leq n} {C(d-1,j) + w(j,i)}
 
 There are $kn$ entries in the DP table for $C$, and $C(d,i)$ requires $O(n)$ time to compute. This means the algorithm will take $O(kn^2)$ time. 
 
-# 3. Improve the time complexity
+# Improve the time complexity
 There is a standard technique on totally monotone matrices that can reduce the complexity of the problem to $O(kn)$. 
 
 {Definition}
@@ -128,7 +128,7 @@ Here is the very simple code to show how this can be done easily if we have a [H
             m   = sum xs
             avg = m/fromIntegral k
 
-# 4. Solve the linear partition problem
+# Solve the linear partition problem
 
 Now, returning to the original problem. Again, we can reduce the problem to a problem on a directed graph. This time, $w(i,j) = \sum_{k=i}^{j-1} a_i$. The weight of a path is the maximum weight of the edges in the path. A $k$-edge path with minimum weight implies the solution to the original problem.
 
@@ -140,7 +140,7 @@ where $M^d_{j,i} = \max (C(d-1,j),w(j,i))$.
 
 Just like [Problem 3], this describes a $O(kn^2)$ time algorithm. Compare $w,C$ and $M^d$ with the previous problem to see there isn't much difference. 
 
-# 5. Improve the time complexity, again
+# Improve the time complexity, again
 
 Can we define an alternative to the Monge property? Yes, we can extend this to *algebraic Monge property*. Just replace $+$ with some associative operation $\oplus$, $\leq$ with a total order that is ordered with respect to $\oplus$, i.e. $a \leq a\oplus b$. 
 
@@ -184,7 +184,7 @@ The final punchline.
 
     Change the last `(+)` in `minCostkEdgePath` to `max`, and change how `w` is computed in `minCostMuPartition` solves [Problem 2].
 
-# 6. Rethink the original problem
+# Rethink the original problem
 
 We have developed a $O(kn)$ algorithm for [Problem 2]. As we can see from the practical application, this is a $O(n^2)$ algorithm because the $k$ is of the order $n$.
 

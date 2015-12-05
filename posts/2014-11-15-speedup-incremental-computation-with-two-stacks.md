@@ -1,5 +1,5 @@
 ---
-title: Speedup incremental computation with two stacks
+title: Speed up incremental computation with two stacks
 tags: algorithmic toolkit
 ---
 

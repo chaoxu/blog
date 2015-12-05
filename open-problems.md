@@ -7,16 +7,12 @@ Here are some problems that are either open to the best of my knowledge, or aske
 # Probably NP-hard
 
 {Problem}
-    Solve the following integer programming problem in polynomial time or prove it's NP-hard.
-    \begin{align*}
-    \text{Minimize:} & \sum_{i=1}^n x_i \\
-    \text{subject to:} & \sum_{i=1}^n w_i x_i = c\\
-    & 0 \leq x_i \leq b_i \text{ for all } 1\leq i \leq n\\
-    \end{align*}
-    Here $w_i$ divides $w_{i+1}$ for all $i<n$. All input is in $\Z$, so $w_i$ can be negative. (If all $w_i$ are positive then the problem is fairly trivial.)
 
-This is basically the simplest version of the [more general problem](http://cs.stackexchange.com/questions/12441/is-it-np-hard-to-fill-up-bins-with-minimum-moves).
-One can also see this as coin-change problem with negative divisible coins.
+    Given a directed graph $G$ and a vertex $v$, what's the minimum number of vertices has to be removed such that there exist a vertex $u$ such that there is no path from $v$ to $u$ or $u$ to $v$.
+
+{Problem}
+
+    [This one](http://cs.stackexchange.com/questions/12441/is-it-np-hard-to-fill-up-bins-with-minimum-moves).
 
 {Problem}
     Given $a_1,\ldots,a_n$ and $b_1,\ldots,b_n$. Does there exist a permutation such that

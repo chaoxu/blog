@@ -20,7 +20,7 @@ We have to first make a few assumptions: All monoid operations take $O(1)$ time.
 
 Otherwise, all "$O(T)$ time" should be replaced with "$O(T)$ monoid operation, function evaluation, function composition and constant time operations.". 
 
-Such data structure exists. The first $3$ operation are supported by finger tree [@Hinze2006]. It is not hard to add the last operation, the idea is to tag nodes with an function $f$(in the beginning $f$ is just the identity), and it means "apply $f$ to everything below!". It propagate only when the lower level nodes need to be accessed, therefore the cost would be charged into the other operations. Many other binary search trees probably can implement these operations too. For example, if the dynamic optimality conjecture for splay tree is true, it be best to use splay tree for implementation. However, that's beside the point. The point is to have an abstract data structure over a monoid sequence.
+Such data structure exists. The first $3$ operation are supported by finger tree [@Hinze2006]. It is not hard to add the last operation, the idea is to tag nodes with an function $f$(in the beginning $f$ is just the identity), and it means "apply $f$ to everything below!". It propagate only when the lower level nodes need to be accessed, therefore the cost would be charged into the other operations. Many other binary search trees probably can implement these operations too. For example, if the dynamic optimality conjecture for splay tree is true, it be best to use splay tree for implementation. However, that's beside the point. The point is to have an abstract data structure over a monoid sequence. The abstraction deals away with all the mess hidden by the data structure. 
 
 # Extend its power
 
@@ -31,6 +31,8 @@ Finger tree can be extended to query elements by giving indices of the element: 
 2. $insertAt(S,i, x)$, insert element to the $i$th position.
 
 3. $delete(S,i)$, delete the element at $i$th position.
+
+Another interesting extension is allowing one to $reverse(S)$ the sequence in $O(\log n)$ time. This become much more complicated. 
 
 # Application
 
@@ -81,5 +83,11 @@ The finger tree stores a sequence of elementary intervals that partitions the sp
 To insert a interval, consider it's left point $l$. The data structure find a elementary interval contains $l$, and split it into two elementary intervals. Similarly, we do the same with the right endpoint. This takes $O(\log n)$ time, and we increase the number of elementary intervals by at most $2$. $increment$ is an automorphism defined as $increment(((a,b),c))=((a,b),c+1)$. For each insertion of interval $(a,b)$, $increment$ gets applied to all elementary interval in the range. For deletion, we apply $decrement = increment^{-1}$ instead. 
 
 The monoid product is simply $\prod_{i=1}^n ( (l_i, r_i),c) = \sum_{i=1}^n \min(c,1)(r_i-l_i)$, and this is exactly what $measure(D)$ should output.
+
+## The local ranking sequence
+The ranking sequence of a sequence of distinct numbers $a_1,\ldots,a_n$ is defined as $b_1,\ldots,b_n$, where $a_i$ is the $b_i$th smallest element.
+Given a sequence of unique integers $a_1,\ldots,a_n$, we want to design a data structure to query $Q(i,j)$, which returns the ranking sequence of $a_i,\ldots,a_j$. 
+
+This can be solved by storing sorted subsequences. We just have to return sorted sequence of $a_i,\ldots,a_j$ during the query, and then it become simple to figure out the ranking sequence. This will make sure the running time for $Q(i,j)$ to be $O(j-i)$. There are a few other variants, but seems quite hard to adopt a finger tree for [@Chang2012517]. 
 
 # Reference

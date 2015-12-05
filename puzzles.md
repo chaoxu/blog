@@ -56,7 +56,9 @@ This collection has some hard problems with optimal solutions.
 
  - Putnam B3. Tournament, 2n-1 days, can one pick a winning team such that no team is picked twice?
 
- - A vertex is a celebrity if it has only incoming edges and no outgoing edges. Find the celebrity in a graph.
+ - A vertex is a celebrity if it has only incoming edges and no outgoing edges. Find the celebrity in a graph if know of the existence.
+
+ - A subset of vertices is a celebrity clique, if the subset induces a clique, and only have incoming edges. 
 
  - Pipes, horizontal must go, n balls drop. 1 to 1. 
 
@@ -113,7 +115,7 @@ This collection has some hard problems with optimal solutions.
 
  - Given $a_1\leq \ldots \leq a_k$, partition a set of $n$ numbers into $k$ sets, such that each set contains numbers of the rank between $a_i$ and $a_{i+1}$.
 
- - Find the maximum k cover. namly disjoint k intervals that sums to the max value. http://arxiv.org/abs/1410.2847 (with $O(n)$ time preprocessing, you can do it in $O(k)$ time each!)
+ - Find the maximum k cover. namely disjoint k intervals that sums to the max value. http://arxiv.org/abs/1410.2847 (with $O(n)$ time preprocessing, you can do it in $O(k)$ time each!)
 
  - Find the shortest subarray such that the sum is at least $k$.
 
@@ -126,3 +128,15 @@ This collection has some hard problems with optimal solutions.
  - Find number of subarrays that sums between a and b
 
  - Prove that for a non-decreasing, submodular function $f$ such that $f(\emptyset)=0$. There is a greedy algorithm to maximize a linear function with submodular constraints.
+
+ - Let $X_A,X_B,Y_A,Y_B$ be intervals, if $A=X_A \times Y_A$ and $B=X_B\times Y_B$. Define $A\oplus_0 B = (X_A\cup X_B) \times (Y_A\cap Y_B)$ and $A\oplus_1 B = (X_A\cap X_B) \times (Y_A\cup Y_B)$. Find an algorithm such that if we are given a set of axis-aligned rectangles $S$ and a axis-aligned rectangle $R$. Device an algorithm that either find an expression using $\oplus_0$, $\oplus_1$ and rectangles in $S$, such that it covers the rectangle $R$, or return it is impossible.
+
+ - Given a set of integers (given as a list), find the smallest natural number not in the set. (linear time, functional code, no arrays)
+
+ - Given Integers $a_1,\ldots,a_n$, each one is either a power of 2 or a negative of a power of 2. Associated with each integer, a cost $c_1,\ldots,c_n$. Finally a integer $m$. Output $x_1,\ldots,x_n$, such that $x_i\in \{0,1\}$ such that $\sum_{i=1}^n a_i x_i = m$ and $\sum_{i=1}^n c_ix_i$ is minimized.
+
+ - sliding window maximum
+
+ - selection in $k$ sorted arrays
+
+ - maintain a data structure that allows insert (object,frequency), and query a random object based on frequency. O(log n) update time, better than O(log n) query time.
