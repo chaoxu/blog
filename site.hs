@@ -1,5 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE FlexibleContexts #-}
 import           Data.Monoid (mappend, Monoid (..))
 import           Hakyll
 import           Hakyll.Core.Compiler
@@ -112,7 +113,7 @@ postCtx :: Context String
 postCtx =
     sourceField "source"  `mappend`
     htmlTitleField        `mappend`
---    dateField "date" "%F" `mappend`
+    dateField "date" "%F" `mappend`
     bodyField     "body"  `mappend`
     betterTitleField      `mappend`
     defaultContext        `mappend`

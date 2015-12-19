@@ -140,3 +140,7 @@ This collection has some hard problems with optimal solutions.
  - selection in $k$ sorted arrays
 
  - maintain a data structure that allows insert (object,frequency), and query a random object based on frequency. O(log n) update time, better than O(log n) query time.
+
+ - Discrete tomography 2D
+
+ - Given $a_1,\ldots,a_{2n}$, pair the numbers to maximize the sum of min of pairs.

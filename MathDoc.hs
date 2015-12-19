@@ -11,6 +11,7 @@ import Text.CSL.Pandoc
 import System.IO.Unsafe
 import Data.Array((!))
 import Data.Bits((.|.))
+import Data.Either
 
 import qualified Data.Map as M
 
@@ -26,7 +27,7 @@ mathdocWrite = def{writerHTMLMathMethod = MathJax "",
                    writerNumberSections = True}
 
 readDoc :: String -> Pandoc
-readDoc = readMarkdown mathdocRead
+readDoc x = head $ rights [readMarkdown mathdocRead x]
 
 writeDoc :: Pandoc -> String
 writeDoc x = writeHtmlString mathdocWrite (unsafePerformIO $ processCites' complete)
