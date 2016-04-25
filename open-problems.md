@@ -41,7 +41,7 @@ This problem doesn't seem hard. Common computational geometry technique should h
 {Problem}
     Hypergraph minimum cut in near linear time?
 
-# Flows
+# Connectivity
 
 {Problem}
     Given a simple unit edge capacity undirected graph $G=(V,E)$ with a subset of vertices $T$ with unit capacity, and remaining vertices with infinite capacity. Can one find a $st$-maximum flow in deterministic $O(n^{2.5})$ time?
@@ -52,6 +52,17 @@ This problem doesn't seem hard. Common computational geometry technique should h
 {Problem}
     [Maximum local edge connectivity](http://cstheory.stackexchange.com/questions/25531/maximum-local-edge-connectivity)
 
+{Problem}
+    There are disjoint sets of red vertices $R$ and blue vertices $B$. Let $V=R\cup B$. $|R|,|B|$ are odd.
+
+    Consider any submodular function $f:2^V\to \mathbb{R}$, such that $f(V)\leq f(Y)$ for all $Y$, where $|Y\cap R|$ and $|Y\cap B|$ are odd.
+
+    Show that there exist $r\in R$ and $b\in B$, s.t. for any set $S$ where $r,b\in S$, we have $f(S)\geq f(V)$.
+
+{Problem}
+    
+    Let the min-cutset of a hypergraph to be a set of minimum size such that removing it disconnects the hypergraph. What is the maximum number of min-cutset there can be given the number of vertices?
+    
 # Other problems
 
 {Problem}

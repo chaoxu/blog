@@ -11,7 +11,7 @@ This collection has some hard problems with optimal solutions.
 
  - http://stackoverflow.com/questions/5739024/finding-duplicates-in-on-time-and-o1-space
 
- - When does the greedy algorithm work for the coin change problem http://graal.ens-lyon.fr/~abenoit/algo09/coins2.pdf
+ - When does the greedy algorithm work for the coin change problem http://graal.ens-lyon.fr/~abenoit/algo09/coins2.pd0f
 
  - How many distinct substrings/subsequences can there be for a string of length n over alphabet of size m.
 
@@ -144,3 +144,22 @@ This collection has some hard problems with optimal solutions.
  - Discrete tomography 2D
 
  - Given $a_1,\ldots,a_{2n}$, pair the numbers to maximize the sum of min of pairs.
+ 
+ - Find a matching that saturates $S$, running time should only depend on $|S|$.
+
+ - http://cstheory.stackexchange.com/questions/33857/is-two-or-zero-matching-in-a-bipartite-graph-np-complete
+
+ - minimum cost path with gas stations
+
+ - Given a bipartite graph G=(A\cup B, E) with weight function w on the vertices, in strongly polynomial time, one can find S a non-empty subset of B such that w(N(S))/w(S) is minimized.
+
+ - Find minimum number of edges such that the removal increase the weight of the minimum spanning tree
+.
+
+ - Given a directed graph, find the minimum number of edges to remove so there is no arborescence.
+ 
+ - compute minimum double cut. Namely find nonempty disjoint $Z_1$, $Z_2$ such that number of in-edges of $Z_1$ and $Z_2$ is minimized. 
+
+ - find the minimum cut under the constraint that each side has at least $2$ vertices.
+
+ - find the minimum cut under the constraint that each side is connected and has at least $2$ vertices.
