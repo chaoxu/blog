@@ -63,5 +63,5 @@ This implies a simple $O(n \log n)$ algorithm. Find the permutation that sort th
 
 Actually this problem is a special case of the TSP problem on a product matrix. A matrix is called a product matrix if $M_{i,j} = a_ib_j$ for vectors $(a_1,\ldots,a_n)$ and $(b_1,\ldots,b_n)$. It is solvable in polynomial time if $M$ is a symmetric matrix [@burkard1998].
 
-# References
+
 

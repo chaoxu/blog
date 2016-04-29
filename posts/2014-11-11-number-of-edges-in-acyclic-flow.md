@@ -38,4 +38,4 @@ For the above theorem, one might ask what happens if we use $v\leq 2m/d$ inequal
     There exist $\lambda(s,t)$ $st$-edge disjoint paths with total length $O(\sqrt{\lambda(s,t)}n)$. The average length is $O(\frac{n}{\sqrt{\lambda(s,t)}})$. The $k$ shortest paths has total length $O(k\frac{n}{\sqrt{\lambda(s,t)}})=O(k\frac{n}{\sqrt{k}}) = O(\sqrt{k}n)$.  
 
 
-# References
+

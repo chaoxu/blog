@@ -67,4 +67,3 @@ This implies a extremely simple algorithm
 3. For every vertex $v$, if it has a back edge to some vertex $u$, then check if $d(v)-d(u)$ is odd. If it is, return true.
 4. Return false.
 
-# References

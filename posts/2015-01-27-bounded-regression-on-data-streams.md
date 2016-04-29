@@ -65,7 +65,7 @@ This prompt the following two natural problems:
 
 2. *What about minimax circulation?* We can't find any study of minimax circulation on series-parallel graphs. 
 
-# References
+
 
 [^1]: For a sufficiently general definition of "natural".
 [^2]: [A interesting problem solved using isotonic regression](http://cs.stackexchange.com/questions/41519/efficient-algorithm-for-this-optimization-problem-dynamic-programming/).

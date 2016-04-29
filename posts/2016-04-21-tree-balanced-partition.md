@@ -32,4 +32,3 @@ Note that $D(v,k)$ for a particular $k$ can be computed $O(k \min\{W(u),W(w)\})$
 
 Hence the running time would obey $T(n) \leq \max_{a+b=n} T(a)+T(b)+O(ab)$. One can show $T(n)=O(n^2)$ is a solution by induction.
 
-# References

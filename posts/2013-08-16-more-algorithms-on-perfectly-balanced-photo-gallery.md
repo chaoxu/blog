@@ -199,4 +199,4 @@ Can we do better? Yes, by considering a different kind of reduction(thank god we
 
 This is the exact same problem described on section 5 of [@Bein2005455]. It can be solve in $O(n)$ time. 
 
-# References
+

@@ -101,4 +101,3 @@ Let $f$ be the sum of elements in the sequence, then $f$ is $(+,+,+)$-decomposab
 
 Of course, there is already a data structure support this--a finger tree [@Hinze2006]. Because of the monoid structure, we can even allow concatenations. 
 
-# References

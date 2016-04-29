@@ -46,5 +46,3 @@ $\lambda_2(G)$ can be found in $O(m^2)$ flow computations. The idea is to contra
 It can be improved with the idea of fixing a partial solution. Consider a single edge $e$ that incident to a vertex with lowest degree, contract it to vertex $s$. Pick another edge $e'$ that not incident to $s$, we contract it to $t$. The min-cut between $s$ and $t$ reflects a $2$-restricted cut. If $e$ is on one side of the min-$2$-restricted cut, then this algorithm finds it in $O(m)$ flow computations by trying all possible $e'$.
 
 Otherwise, $e$ is an edge crossing every min-$2$-restricted cut. Let $e=uv$ and and wlog $\deg(u)=\delta$, the min degree. We fix another partial solutions where $u$ and $v$ are on different side of the min-$2$-restricted cut. One can contract any edge incident to $u$ and any edge incident to $v$ and apply a flow computation. There are at most $\deg(u) \deg(v)\leq \delta n = O(m)$ flow computations.
-
-# References

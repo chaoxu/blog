@@ -32,4 +32,3 @@ Bengtsson and Chen uses this idea[@Bengtsson06]. They showed they can guess $t$ 
 
 Open problem: Can we find a linear time algorithm for trees? (either weights on edges or on vertices)
 
-# References

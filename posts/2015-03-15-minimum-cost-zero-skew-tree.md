@@ -21,4 +21,3 @@ Let $G=S(r)$, where $r$ is the root of $T$. There is a bijection between the edg
 
 Finding the minimum cost flow of value $t$ in $G$ with the two terminals gives us the desired solution by going back to the original edge using the bijection.
 
-# References

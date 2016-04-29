@@ -67,4 +67,4 @@ If it reaches the $\epsilon$ vertex, we return true, else we return false.
 
 I have an implementation in Haskell [here](https://github.com/chaoxu/haskell-algorithm/blob/master/SardinasPatterson.hs). Note it doesn't run in exactly $O(nk)$ time because of the `Map` takes $O(\log n)$ time. It can, however, be easily modified to run in $O(nk)$ time.
 
-# References
+

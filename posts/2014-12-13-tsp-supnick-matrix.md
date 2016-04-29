@@ -34,4 +34,3 @@ Supnick matrices appears at many places. For example, [maximize the area of a ra
 
 It is a special case of a even larger class of problem that has the above permutation as solution: Quadratic assignment problem where the matrices are monotone antimonge and benevolent symmetric toeplitz matrix [@burkardQA]. 
  
-# References

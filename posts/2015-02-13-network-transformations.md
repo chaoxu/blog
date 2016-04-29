@@ -41,4 +41,3 @@ Let $C$ be a class of graphs. Let $Sub(C)=\{G| G\subset H, H\in C\}$ be the set 
 
 This directly implies min-cost flow on general series-parallel graphs can be solved in $O(n\log n)$ time using the algorithm for min-cost circulation on $2$-terminal series-parallel graphs(Note the article solves the min-cost maximum flow problem, one can see it also works for min-cost circulation)[@Booth1993416]. As a corollary, one can solve min-cost flow problem on outerplanar graph in the same running time.
 
-# References

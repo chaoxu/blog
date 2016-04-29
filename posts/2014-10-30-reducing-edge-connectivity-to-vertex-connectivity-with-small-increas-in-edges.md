@@ -26,4 +26,3 @@ $n$-connector seems to be what we need here, but it forces us to have input and 
 
 Let $G$ be a $n$-connected with inputs $I$ and outputs $O$, we construct a $n$-symmetric connector by make a copy of $O$ as $O'$, maintaining the edges of the copies too. Then we pick $f$ any bijection between $I$ and $O$, and contract $v$ and $f(v)$ into one vertex. The contracted vertex will be the set $T$, and the new graph is a $n$-symmetric-connector.
 
-# References

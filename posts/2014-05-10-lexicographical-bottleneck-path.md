@@ -93,4 +93,3 @@ Before proving the theorem, we consider a useful lemma.
     
     **Inductive Step:** Consider two vertices $s$ and $t$. The tree induces a $st$-BSP with bottleneck edge $xy$. By the inductive hypothesis, removing $xy$ result a $sx$-LBSP and $yt$-LBSP in $G$. The previous lemma demonstrates that $st$-BSP in $T$ is a $st$-LBSP in $G$.
 
-# References

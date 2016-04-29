@@ -34,4 +34,3 @@ Can we extend the problem to directed graph with cycles? Yes. This semiring has 
 
 
 
-# References

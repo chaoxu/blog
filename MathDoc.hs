@@ -33,6 +33,7 @@ writeDoc :: Pandoc -> String
 writeDoc x = writeHtmlString mathdocWrite (unsafePerformIO $ processCites' complete)
   where complete = setMeta "csl" (MetaInlines [Str "bib_style.csl"])
                    $ setMeta "link-citations" (MetaBool True)
+                   $ setMeta "reference-section-title" (MetaInlines [Str "References"])
                    $ setMeta "bibliography" (MetaInlines [Str "reference.bib"]) x
 
 writeDocT :: Pandoc -> String
