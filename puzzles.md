@@ -163,3 +163,7 @@ This collection has some hard problems with optimal solutions.
  - find the minimum cut under the constraint that each side has at least $2$ vertices.
 
  - find the minimum cut under the constraint that each side is connected and has at least $2$ vertices.
+
+ - $f$ is a symmetric function, find the value of min-$st$ separating set for all $s,t$, using the oracle for min-$ST$ separating set $n-1$ times.
+
+ - Find maximum perimeter triangle.

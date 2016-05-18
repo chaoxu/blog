@@ -20,7 +20,7 @@ We know $n$ is an integer. By [Lagrange's four-square theorem](http://en.wikiped
 
 Note a simple improvement of the naive algorithm can reduce the computation time to $O(n^\frac{3}{2} \log n)$ by doing a binary search for the last square.
 
-[A much smarter randomized algorithm](http://onlinelibrary.wiley.com/doi/10.1002/cpa.3160390713/abstract) by Michael O. Rabin and Jeffrey Shallit have a running time of $O(\log^2 n)$. I don't have the access to the paper to understand how they did it.
+[A much smarter randomized algorithm](http://onlinelibrary.wiley.com/doi/10.1002/cpa.3160390713/abstract) by Michael O. Rabin and Jeffrey Shallit have a running time of $O(\log^2 n)$.
 
 A recursive algorithm using the following relation can find the magnitude of any vector(assume $a_i\neq 0$)
 $|[a_0,...,a_{n-1},a_n]| = \frac{a_n}{\sin(\tan^{-1}(\frac{a_n}{|[a_0,...,a_{n-1}]|}))}$
